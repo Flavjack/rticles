@@ -1,0 +1,8 @@
+
+`r if (knitr:::is_html_output()) '# Referencias {-}'`
+
+```{r include=FALSE}
+knitr::write_bib(c(
+  .packages(), 'shiny', 'agricolae', 'ggplot2', 'bookdown', 'knitr', 'rmarkdown', 'DT', 'GerminaR'), 'packages.bib')
+```
+

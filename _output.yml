@@ -1,0 +1,21 @@
+bookdown::gitbook:
+  css: style.css
+  split_by: chapter # chapter none
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      before: |
+        <li> <a href="./">Flavio Lozano Isla</a> </li>
+      after:  |
+        <li> <a href="mailto:flavjack@gmail.com" target="blank"> Send a comment </a> </li>
+    fontsettings:
+      theme: sepia
+      family: sans
+      size: 2
+    search: yes
+    edit: https://github.com/Flavjack/bookdown-doctemp/blob/master/%s
+    sharing:
+      github: yes
+      twitter: no
+      facebook: no

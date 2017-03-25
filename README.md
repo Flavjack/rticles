@@ -1,2 +1,3 @@
 # bookdown-paper
-Paper or these template
+
+Template for paper or these document using bookdown package.
