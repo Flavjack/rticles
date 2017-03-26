@@ -13,10 +13,11 @@ bookdown::gitbook:
 output: word_document
 link-citations: yes
 colorlinks: yes
-bibliography:
+bibliography: 
 - book.bib
 - packages.bib
 csl: plos-one.csl
+# https://www.zotero.org/styles
 ---
 
 
