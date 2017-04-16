@@ -10,7 +10,7 @@ favicon: img/favicon.ico
 site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
-output: word_document
+output: bookdown::word_document2
 link-citations: yes
 colorlinks: yes
 bibliography: 
