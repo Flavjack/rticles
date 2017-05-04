@@ -31,15 +31,16 @@ knitr::opts_chunk$set(
 
 options(digits = 2)
 
+library(dplyr)
+library(tidyr)
 library(GerminaR)
 library(agricolae)
 library(gsheet)
-library(tables)
+library(htmlTable)
 library(knitr)
 library(cowplot)
 library(png)
 library(jpeg)
-library(DT)
 library(citr)
 
 ```

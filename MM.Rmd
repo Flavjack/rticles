@@ -7,7 +7,7 @@ Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. M
 
 ```{r functions, echo=FALSE}
 
-funct <- data.frame(
+funct <- dplyr::data_frame(
   
   "Function" = c("ger_summary", "ger_intime", "fplot", "GerminaQuant", "prosopis"),
   
