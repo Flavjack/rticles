@@ -36,7 +36,6 @@ library(tidyr)
 library(GerminaR)
 library(agricolae)
 library(gsheet)
-library(htmlTable)
 library(knitr)
 library(cowplot)
 library(png)
@@ -52,5 +51,28 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
 
 
 **Key words:** Lorem, ipsum, dolor, sit amet, consectetur.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
