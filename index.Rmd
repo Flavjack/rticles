@@ -17,7 +17,9 @@ bibliography:
 - book.bib
 - packages.bib
 csl: plos-one.csl
+
 # https://www.zotero.org/styles
+# http://search.crossref.org/
 ---
 
 
@@ -31,16 +33,16 @@ knitr::opts_chunk$set(
 
 options(digits = 2)
 
-library(dplyr)
-library(tidyr)
-library(GerminaR)
 library(agricolae)
+library(GerminaR)
 library(gsheet)
 library(knitr)
 library(cowplot)
 library(png)
 library(jpeg)
 library(citr)
+library(tidyverse)
+
 
 ```
 
@@ -51,28 +53,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
 
 
 **Key words:** Lorem, ipsum, dolor, sit amet, consectetur.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
