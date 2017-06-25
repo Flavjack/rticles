@@ -3,8 +3,9 @@ output_dir: docs
 rmd_files: [
   "index.Rmd",
   "intro.Rmd",
-  "MM.Rmd", 
-  "RD.Rmd",
+  "mmt.Rmd", 
+  "result.Rmd",
+  "discussion.Rmd",
   "conclusion.Rmd",
   "code.Rmd",
   "ref.Rmd"

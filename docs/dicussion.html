@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="prev" href="materials-and-methods.html">
-<link rel="next" href="dicussion.html">
+<link rel="prev" href="result-and-discusion.html">
+<link rel="next" href="conclusions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -142,59 +142,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="result-and-discusion" class="section level1">
-<h1><span class="header-section-number">3</span> Result and discusion</h1>
-<div id="sed-convallis-tristique-sem" class="section level2">
-<h2><span class="header-section-number">3.1</span> Sed convallis tristique sem</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos <span class="math inline">\(g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100\)</span>.</p>
-<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum <span class="citation">[<a href="#ref-dabbish2012social">5</a>–<a href="#ref-wickham2015dplyr">7</a>]</span>.</p>
-</div>
-<div id="class-aptent-taciti" class="section level2">
-<h2><span class="header-section-number">3.2</span> Class aptent taciti</h2>
-<p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load data</span>
+<div id="dicussion" class="section level1">
+<h1><span class="header-section-number">4</span> Dicussion</h1>
+<p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table <a href="figures-tables.html#tab:functions">7.1</a>).</p>
+<p>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor.</p>
+<p>Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in purus aliquam imperdiet.</p>
 
-<span class="kw">library</span>(GerminaR)
-
-fb &lt;-<span class="st"> </span>prosopis %&gt;%<span class="st"> </span>dplyr::<span class="kw">mutate</span>( <span class="dt">nacl =</span> <span class="kw">as.factor</span>(nacl), <span class="dt">temp =</span> <span class="kw">as.factor</span>(temp), <span class="dt">rep =</span> <span class="kw">as.factor</span>(rep))
-
-<span class="co"># germination analysis</span>
-
-gsm &lt;-<span class="st"> </span><span class="kw">ger_summary</span>(<span class="dt">SeedN =</span> <span class="st">&quot;seeds&quot;</span>, <span class="dt">evalName =</span> <span class="st">&quot;D&quot;</span>, <span class="dt">data =</span> fb)
-<span class="kw">str</span>(gsm)
-
-<span class="co"># analisys of variance</span>
-
-av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">formula =</span> GRP ~<span class="st"> </span>nacl*temp +<span class="st"> </span>rep, <span class="dt">data =</span> gsm)
-<span class="kw">summary</span>(av)
-
-<span class="co"># mean comparision test</span>
-
-mc &lt;-<span class="st"> </span><span class="kw">ger_testcomp</span>(<span class="dt">aov =</span> av, <span class="dt">comp =</span> <span class="kw">c</span>(<span class="st">&quot;temp&quot;</span>, <span class="st">&quot;nacl&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;snk&quot;</span>)</code></pre></div>
-<p>Suspendisse in justo <span class="citation">[<a href="#ref-R-knitr">8</a>]</span> eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris .</p>
-<p>Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Figure: <a href="figures-tables.html#fig:germplot">7.1</a>.</p>
-
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-dabbish2012social">
-<p>5. Dabbish L, Stuart C, Tsay J, Herbsleb J. Social coding in github: Transparency and collaboration in an open software repository. ACM; 2012. pp. 1277–1286. </p>
-</div>
-<div id="ref-wickham2015dplyr">
-<p>7. Wickham H, Francois R. Dplyr: A grammar of data manipulation. R package version 04. 2015;1: 20. </p>
-</div>
-<div id="ref-R-knitr">
-<p>8. Xie Y. Knitr: A general-purpose package for dynamic report generation in r [Internet]. 2017. Available: <a href="https://CRAN.R-project.org/package=knitr" class="uri">https://CRAN.R-project.org/package=knitr</a></p>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="materials-and-methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dicussion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="result-and-discusion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -223,7 +184,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/Flavjack/bookdown-doctemp/blob/master/result.Rmd",
+"link": "https://github.com/Flavjack/bookdown-doctemp/blob/master/discussion.Rmd",
 "text": "Edit"
 },
 "download": null,
