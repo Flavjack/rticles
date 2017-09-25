@@ -35,6 +35,7 @@ options(digits = 2)
 
 library(agricolae)
 library(GerminaR)
+library(googlesheets)
 library(gsheet)
 library(knitr)
 library(cowplot)
