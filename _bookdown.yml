@@ -7,6 +7,6 @@ rmd_files: [
   "result.Rmd",
   "discussion.Rmd",
   "conclusion.Rmd",
-  "ref.Rmd",
-  "code.Rmd"
+  "code.Rmd",
+  "ref.Rmd"
   ]
