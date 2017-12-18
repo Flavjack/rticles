@@ -3,10 +3,12 @@ title: Bookdown tecnichal document template
 author: 'Flavio Lozano Isla'
 description: Document template for scientific report
 date: '`r Sys.Date()`'
-url: https\://flavjack.github.io/bookdown-doctemp/
+#
 github-repo: flavjack/bookdown-doctemp
 cover-image: img/cover.jpg
 favicon: img/favicon.ico
+url: https\://www.lozanoisla.com
+#
 site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
@@ -17,7 +19,7 @@ bibliography:
 - book.bib
 - packages.bib
 csl: plos-one.csl
-
+#
 # https://www.zotero.org/styles
 # http://search.crossref.org/
 ---
@@ -30,7 +32,6 @@ knitr::opts_chunk$set(
 	message = FALSE,
 	warning = FALSE
 )
-
 options(digits = 2)
 
 library(agricolae)
@@ -43,8 +44,6 @@ library(png)
 library(jpeg)
 library(citr)
 library(tidyverse)
-
-
 ```
 
 
