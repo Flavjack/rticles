@@ -1,9 +1,9 @@
 ---
 title: Bookdown tecnichal document template
-author: 'Flavio Lozano Isla'
-description: Document template for scientific report
-date: '`r Sys.Date()`'
+author: Flavio Lozano Isla ^(1)^; Jimmy R. Gomez Carrion ^(2)^
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
 #
+description: Document template for scientific report
 github-repo: flavjack/bookdown-doctemp
 cover-image: img/cover.jpg
 favicon: img/favicon.ico
@@ -12,13 +12,16 @@ url: https\://www.lozanoisla.com
 site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
-output: bookdown::word_document2
+output:
+  bookdown::word_document2:
+    reference_docx: style.docx
+#
 link-citations: yes
 colorlinks: yes
 bibliography: 
 - book.bib
 - packages.bib
-csl: plos-one.csl
+csl: iica-catie.csl
 #
 # https://www.zotero.org/styles
 # http://search.crossref.org/
@@ -46,6 +49,10 @@ library(citr)
 library(tidyverse)
 ```
 
+# Authors {-}
+
+(1) Crop Biodiversity and Breeding Informatics Lab, University of Hohenheim, Stuttgart, Germany.
+(2) Agronomist, co-founder of Quipo.org, Lima,Perú.
 
 # Abstract {-}
 
