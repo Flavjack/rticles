@@ -1,3 +1,3 @@
 # bookdown-doctemp
 
-Template for paper or these document using bookdown package.
+Template for paper or thesis document using bookdown package.
