@@ -27,7 +27,6 @@ csl: iica-catie.csl
 # http://search.crossref.org/
 ---
 
-
 ```{r setup, include=FALSE}
 
 knitr::opts_chunk$set(
@@ -61,6 +60,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
 
 
 **Key words:** Lorem, ipsum, dolor, sit amet, consectetur.
-
-
 

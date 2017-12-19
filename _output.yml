@@ -9,13 +9,14 @@ bookdown::gitbook:
       before: |
         <li> <a href="./">Flavio Lozano Isla</a> </li>
       after:  |
-        <li> <a href="www.quipo.org" target="blank"> www.quipo.org </a> </li>
+        <li> <a href="http://www.quipo.org" target="blank"> www.quipo.org </a> </li>
     fontsettings:
       theme: sepia
       family: sans
       size: 2
     search: yes
     edit: https://github.com/Flavjack/bookdown-doctemp/blob/master/%s
+    download: ["docx"]
     sharing:
       github: yes
       twitter: no
