@@ -1,5 +1,5 @@
 ---
-title: Bookdown tecnichal document template
+title: Bookdown technical document template
 author: Flavio Lozano Isla ^(1)^; Jimmy R. Gomez Carrion ^(2)^
 date: '`r Sys.Date()`'
 #
