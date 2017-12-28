@@ -1,6 +1,4 @@
-# Table & Figures
-
-## Tables
+# Tables {-}
 
 ```{r functions, echo=FALSE}
 
@@ -25,13 +23,9 @@ knitr::kable(
 
 ```
 
-
-## Figures
-
-
+# Figures {-}
 
 (ref:gerplot) Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. A) Bar graph with germination percentage in a factorial analisys. B)  Line graph from cumulative germination under different osmotic potentials.
-
 
 ```{r, germplot, fig.cap= '(ref:gerplot)'}
 
