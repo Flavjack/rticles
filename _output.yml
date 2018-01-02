@@ -7,11 +7,11 @@ bookdown::gitbook:
       collapse: section
       scroll_highlight: yes
       before: |
-        <li> <a href="./">Flavio Lozano Isla</a> </li>
+        <li> <a href="http://www.lozanoisla.com" target="blank"> Flavio Lozano Isla </a> </li>
       after:  |
-        <li> <a href="http://www.quipo.org" target="blank"> www.quipo.org </a> </li>
+        <li> <a href="http://www.quipo.org" target="blank"> QUIPO.ORG </a> </li>
     fontsettings:
-      theme: white
+      theme: sepia
       family: sans
       size: 2
     search: yes

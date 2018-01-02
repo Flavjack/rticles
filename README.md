@@ -7,9 +7,7 @@ Features:
 - Export in word and html document
 - Word improve template
 - Bibliography citation
-- R work flow for analysis
+- R workflow for data analysis
 - Scientific graphic quality
 
 Example: https://flavjack.github.io/bookdown-doctemp/
-
-https://www.quipo.org
