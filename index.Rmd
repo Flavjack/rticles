@@ -6,7 +6,7 @@ date: '`r Sys.Date()`'
 description: Document template for scientific report
 github-repo: flavjack/bookdown-doctemp
 cover-image: img/cover.jpg
-favicon: img/favicon.ico
+favicon: img/icon.png
 url: https\://www.lozanoisla.com
 #
 site: bookdown::bookdown_site

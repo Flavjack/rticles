@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Bookdown technical document template</title>
   <meta name="description" content="Document template for scientific report">
-  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
 
   <meta property="og:title" content="Bookdown technical document template" />
   <meta property="og:type" content="book" />
@@ -25,13 +25,13 @@
 <meta name="author" content="Lozano-Isla, Flavio(1,*); Gomez, Jimmy(2)">
 
 
-<meta name="date" content="2018-01-02">
+<meta name="date" content="2018-02-15">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 <link rel="prev" href="materials-and-methods.html">
 <link rel="next" href="discussion.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -170,7 +170,7 @@ av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">fo
 <span class="co"># mean comparision test</span>
 
 mc &lt;-<span class="st"> </span><span class="kw">ger_testcomp</span>(<span class="dt">aov =</span> av, <span class="dt">comp =</span> <span class="kw">c</span>(<span class="st">&quot;temp&quot;</span>, <span class="st">&quot;nacl&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;snk&quot;</span>)</code></pre></div>
-<p>Suspendisse in justo <span class="citation">Xie (<a href="#ref-R-knitr">2017</a>)</span> eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris .</p>
+<p>Suspendisse in justo <span class="citation">Xie (<a href="#ref-R-knitr">2018</a>)</span> eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris .</p>
 <p>Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Figure: <a href="figures.html#fig:germplot">6.1</a>.</p>
 
 </div>
@@ -187,7 +187,7 @@ mc &lt;-<span class="st"> </span><span class="kw">ger_testcomp</span>(<span clas
 <p>Wickham, H., Francois, R., 2015. Dplyr: A grammar of data manipulation. R package version 0.4 1, 20.</p>
 </div>
 <div id="ref-R-knitr">
-<p>Xie, Y., 2017. Knitr: A general-purpose package for dynamic report generation in r.</p>
+<p>Xie, Y., 2018. Knitr: A general-purpose package for dynamic report generation in r.</p>
 </div>
 </div>
             </section>
@@ -243,9 +243,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
