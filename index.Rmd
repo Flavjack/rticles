@@ -46,6 +46,7 @@ library(png)
 library(jpeg)
 library(citr)
 library(tidyverse)
+library(grid)
 ```
 
 # Affiliation {-}
