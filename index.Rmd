@@ -23,11 +23,12 @@ bibliography:
 - packages.bib
 csl: ICP.csl
 #
-# https://www.zotero.org/styles
-# http://search.crossref.org/
 ---
 
 ```{r setup, include=FALSE}
+
+# browseURL("https://www.zotero.org/styles")
+# browseURL("http://search.crossref.org/")
 
 knitr::opts_chunk$set(
 	echo = FALSE,
