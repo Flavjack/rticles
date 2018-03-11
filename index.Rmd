@@ -20,7 +20,7 @@ link-citations: yes
 colorlinks: yes
 bibliography: 
 - book.bib
-- packages.bib
+- pkgs.bib
 csl: ICP.csl
 #
 ---
@@ -29,25 +29,26 @@ csl: ICP.csl
 
 # browseURL("https://www.zotero.org/styles")
 # browseURL("http://search.crossref.org/")
+# browseURL("")
 
 knitr::opts_chunk$set(
 	echo = FALSE,
 	message = FALSE,
 	warning = FALSE
 )
-options(digits = 2)
+options(digits = 4)
 
-library(agricolae)
-library(GerminaR)
 library(googlesheets)
-library(gsheet)
+library(tidyverse)
+library(agricolae)
+library(FactoMineR)
+library(GerminaR)
 library(knitr)
+library(citr)
 library(cowplot)
+library(grid)
 library(png)
 library(jpeg)
-library(citr)
-library(tidyverse)
-library(grid)
 ```
 
 # Affiliation {-}
