@@ -3,15 +3,6 @@
 `r if (!knitr:::is_html_output()) '# References'`
 
 ```{r include=FALSE}
-knitr::write_bib(c(
-  .packages(), 
-  'shiny', 
-  'agricolae',
-  'ggplot2',
-  'bookdown',
-  'knitr', 
-  'rmarkdown', 
-  'GerminaR'),
-  'pkgs.bib')
+knitr::write_bib(c(.packages()),'pkgs.bib')
 ```
 
