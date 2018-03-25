@@ -36,15 +36,17 @@ knitr::opts_chunk$set(
 	message = FALSE,
 	warning = FALSE
 )
-options(digits = 4)
+options(digits = 4, knitr.kable.NA = '')
 
+library(bookdown)
+library(knitr)
+library(citr)
+library(clipr)
 library(googlesheets)
 library(tidyverse)
 library(agricolae)
 library(FactoMineR)
 library(GerminaR)
-library(knitr)
-library(citr)
 library(cowplot)
 library(grid)
 library(png)
