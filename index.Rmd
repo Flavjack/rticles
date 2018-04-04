@@ -1,34 +1,31 @@
 ---
-title: Bookdown technical document template
+title: "Bookdown technical document template"
 author: Lozano-Isla, Flavio^(1,^*^)^; Gomez, Jimmy^(2)^
 date: '`r Sys.Date()`'
-#
 description: Document template for scientific report
 github-repo: flavjack/bookdown-doctemp
 cover-image: img/cover.jpg
 favicon: img/icon.png
 url: https\://www.lozanoisla.com
-#
 site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
 output:
   bookdown::word_document2:
     reference_docx: style.docx
-#
 link-citations: yes
 colorlinks: yes
 bibliography: 
 - book.bib
 - pkgs.bib
 csl: ICP.csl
-#
 ---
 
 ```{r setup, include=FALSE}
 
 # browseURL("https://www.zotero.org/styles")
 # browseURL("http://search.crossref.org/")
+# browseURL("http://truben.no/latex/bibtex/")
 # browseURL("")
 
 knitr::opts_chunk$set(
@@ -39,6 +36,7 @@ knitr::opts_chunk$set(
 options(digits = 4, knitr.kable.NA = '')
 
 library(bookdown)
+library(inserttable) # devtools::install_github("lbusett/insert_table")
 library(knitr)
 library(citr)
 library(clipr)
@@ -65,3 +63,5 @@ library(jpeg)
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. _Nulla facilisi_ Ut fringilla. **Suspendisse potenti** Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. 
 
 **Key words:** Lorem, ipsum, dolor, sit amet, consectetur.
+
+
