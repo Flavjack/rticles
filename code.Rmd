@@ -110,5 +110,3 @@ include_graphics("img/fg2.png")
 
 ```
 
-
-

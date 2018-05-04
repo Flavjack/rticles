@@ -35,20 +35,20 @@ knitr::opts_chunk$set(
 )
 options(digits = 4, knitr.kable.NA = '')
 
-library(bookdown)
+library(bookdown) 
 library(inserttable) # devtools::install_github("lbusett/insert_table")
 library(knitr)
 library(citr)
-library(clipr)
 library(googlesheets)
 library(tidyverse)
 library(agricolae)
 library(FactoMineR)
 library(GerminaR)
 library(cowplot)
-library(grid)
+library(grid) 
 library(png)
 library(jpeg)
+
 ```
 
 # Affiliation {-}
