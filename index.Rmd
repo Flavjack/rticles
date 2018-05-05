@@ -12,7 +12,7 @@ documentclass: book
 bookdown::gitbook:
 output:
   bookdown::word_document2:
-    reference_docx: style.docx
+    reference_docx: style_1.docx
 link-citations: yes
 colorlinks: yes
 bibliography: 
