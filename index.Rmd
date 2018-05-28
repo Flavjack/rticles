@@ -33,7 +33,11 @@ knitr::opts_chunk$set(
 	message = FALSE,
 	warning = FALSE
 )
-options(digits = 4, knitr.kable.NA = '')
+
+options(
+  digits = 4, 
+  knitr.kable.NA = '',
+  OutDec= ",")
 
 library(bookdown) 
 library(inserttable) # devtools::install_github("lbusett/insert_table")
