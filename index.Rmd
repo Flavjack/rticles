@@ -25,7 +25,7 @@ csl: ICP.csl
 
 # browseURL("https://www.zotero.org/styles")
 # browseURL("http://search.crossref.org/")
-# browseURL("http://truben.no/latex/bibtex/")
+# browseURL("https://retorque.re/zotero-better-bibtex/")
 # browseURL("")
 
 knitr::opts_chunk$set(
