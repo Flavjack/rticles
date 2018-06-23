@@ -1,5 +1,5 @@
 ---
-title: "Bookdown technical document template"
+title: "Rticles: scientific documents with bookdown package"
 author: Lozano-Isla, Flavio^(1,^*^)^; Gomez, Jimmy^(2)^
 date: '`r Sys.Date()`'
 description: Document template for scientific report
