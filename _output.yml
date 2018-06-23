@@ -15,7 +15,7 @@ bookdown::gitbook:
       family: sans
       size: 2
     search: yes
-    edit: https://github.com/Flavjack/bookdown-doctemp/blob/master/%s
+    edit: https://github.com/Flavjack/rticles/blob/master/%s
     download: ["docx"]
     sharing:
       github: yes

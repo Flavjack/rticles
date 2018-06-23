@@ -1,4 +1,4 @@
-book_filename: "bookdown-doctemp"
+book_filename: "rticles"
 output_dir: docs
 rmd_files: [
   "index.Rmd",

@@ -3,7 +3,7 @@ title: "Bookdown technical document template"
 author: Lozano-Isla, Flavio^(1,^*^)^; Gomez, Jimmy^(2)^
 date: '`r Sys.Date()`'
 description: Document template for scientific report
-github-repo: flavjack/bookdown-doctemp
+github-repo: flavjack/rticles
 cover-image: img/cover.jpg
 favicon: img/icon.png
 url: https\://www.lozanoisla.com
