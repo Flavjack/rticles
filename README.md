@@ -1,4 +1,4 @@
-# bookdown-doctemp
+# Rticles
 
 Template for paper or thesis document using bookdown package.
 
@@ -10,4 +10,4 @@ Features:
 - R workflow for data analysis
 - Scientific graphic quality
 
-Example: https://flavjack.github.io/bookdown-doctemp/
+Example: https://flavjack.github.io/rticles/
