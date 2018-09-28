@@ -2,11 +2,6 @@ book_filename: "rticles"
 output_dir: docs
 rmd_files: [
   "index.Rmd",
-  "intr.Rmd",
-  "mtrm.Rmd", 
-  "rslt.Rmd",
-  "disc.Rmd",
-  "conc.Rmd",
   "code.Rmd",
   "ref.Rmd"
   ]
