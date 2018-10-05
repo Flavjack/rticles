@@ -25,7 +25,7 @@
 <meta name="author" content="Lozano-Isla, Flavio(1,*); Gomez, Jimmy(1)">
 
 
-<meta name="date" content="2018-09-27">
+<meta name="date" content="2018-10-04">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -107,9 +107,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="abstract.html"><a href="abstract.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
-<li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#nulla-metus-metus"><i class="fa fa-check"></i><b>2.1</b> Nulla metus metus</a></li>
-<li class="chapter" data-level="2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#morbi-lacinia"><i class="fa fa-check"></i><b>2.2</b> Morbi lacinia</a></li>
-<li class="chapter" data-level="2.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#proin-sodales"><i class="fa fa-check"></i><b>2.3</b> Proin sodales</a></li>
+<li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#data-set"><i class="fa fa-check"></i><b>2.1</b> Data set</a></li>
+<li class="chapter" data-level="2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#nulla-metus-metus"><i class="fa fa-check"></i><b>2.2</b> Nulla metus metus</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="result.html"><a href="result.html"><i class="fa fa-check"></i><b>3</b> Result</a><ul>
 <li class="chapter" data-level="3.1" data-path="result.html"><a href="result.html#sed-convallis-tristique-sem"><i class="fa fa-check"></i><b>3.1</b> Sed convallis tristique sem</a></li>
@@ -146,11 +145,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="sed-convallis-tristique-sem" class="section level2">
 <h2><span class="header-section-number">3.1</span> Sed convallis tristique sem</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos <span class="math inline">\(g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100\)</span>.</p>
-<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum <span class="citation">(Dabbish et al., <a href="#ref-dabbish2012social">2012</a>; R Core Team, <a href="#ref-R-base">2018</a>; Wickham and Francois, <a href="#ref-wickham2015dplyr">2015</a>)</span>.</p>
-</div>
-<div id="class-aptent-taciti" class="section level2">
-<h2><span class="header-section-number">3.2</span> Class aptent taciti</h2>
-<p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.</p>
+<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load data</span>
 
 <span class="kw">library</span>(GerminaR)
@@ -170,22 +165,10 @@ av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">fo
 <span class="co"># mean comparision test</span>
 
 mc &lt;-<span class="st"> </span><span class="kw">ger_testcomp</span>(<span class="dt">aov =</span> av, <span class="dt">comp =</span> <span class="kw">c</span>(<span class="st">&quot;temp&quot;</span>, <span class="st">&quot;nacl&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;snk&quot;</span>)</code></pre></div>
-<p>Suspendisse in justo <span class="citation">Xie (<a href="#ref-R-knitr">2018</a>)</span> eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Figure: <a href="figures.html#fig:germplot">6.1</a>.</p>
 </div>
-</div>
-<h3> References</h3>
-<div id="refs" class="references">
-<div id="ref-dabbish2012social">
-<p>Dabbish, L., Stuart, C., Tsay, J., Herbsleb, J., 2012. Social coding in github: Transparency and collaboration in an open software repository. ACM.</p>
-</div>
-<div id="ref-R-base">
-<p>R Core Team, 2018. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria.</p>
-</div>
-<div id="ref-wickham2015dplyr">
-<p>Wickham, H., Francois, R., 2015. Dplyr: A grammar of data manipulation. R package version 0.4 1, 20.</p>
-</div>
-<div id="ref-R-knitr">
-<p>Xie, Y., 2018. Knitr: A general-purpose package for dynamic report generation in r.</p>
+<div id="class-aptent-taciti" class="section level2">
+<h2><span class="header-section-number">3.2</span> Class aptent taciti</h2>
+<p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Figure: <a href="figures.html#fig:germplot">6.1</a>.</p>
 </div>
 </div>
             </section>

@@ -1,5 +1,5 @@
 
-```{r import data}
+```{r import_data}
 
 aut <- gs_ls()
 gs <- gs_url("https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581") 
@@ -105,7 +105,7 @@ knitr::include_graphics("img/fig_gerplot.png")
 
 ```{r, fig.align='center', fig.cap= "Plant of *Jatropha curcas*. A) Foliage, B) Leaf, C) Fruit."}
 
-fg <- jpeg::readJPEG("img/jc.jpg") %>% 
+fg <- jpeg::readJPEG("img/fig_jc.jpg") %>% 
   grid::rasterGrob(interpolate = TRUE)
 
 plot <- cowplot::ggdraw(xlim = c(0, 0.5), ylim = c(0, 0.5))+
@@ -114,12 +114,116 @@ plot <- cowplot::ggdraw(xlim = c(0, 0.5), ylim = c(0, 0.5))+
                   x = c(0.01, 0.26, 0.01), 
                   y = c(0.48, 0.48, 0.15))
 
-cowplot::ggsave("img/fig_jcurcas.tiff", dpi= 300, width = 210*0.5 , height = 297*0.3, units = "mm")
 cowplot::ggsave("img/fig_jcurcas.png", dpi= 300, width = 210*0.5 , height = 297*0.3, units = "mm")
+cowplot::ggsave("img/fig_jcurcas.tiff", dpi= 300, width = 210*0.5 , height = 297*0.3, units = "mm")
 
 include_graphics("img/fig_jcurcas.png")
 
 ```
 
-<a href="img/fig_jcurcas.tiff" download><button>Download</button> </a>
+
+```{r, fig.align= 'center', fig.cap= "Multivariate Analysis: Principal component Analysis and Hierarchical Clustering Analysis."}
+
+library(FactoInvestigate)
+
+# Principal componet Analysis
+
+pca <- gsm %>% 
+  drop_na() %>% 
+  # select_if(., is.numeric) %>% 
+  select(nacl, temp, GRP, MGT, UNC, SYN) %>% 
+  
+  PCA(X = ., 
+      scale.unit = T,
+      graph = F,
+      quali.sup = c(1,2))
+
+
+# summary.PCA(pca, nb.dec = 2, nbelements = Inf)
+# dimdesc(pca)
+# Investigate(pca, document = "pdf_document")
+
+ppi <- 300
+png("img/fig_pca_var.png", width=7*ppi, height=7*ppi, res=ppi)
+
+plot.PCA(pca,
+         choix="var",
+         title="",
+         autoLab = "y", 
+         cex = 0.8,
+         shadowtext = T)
+
+graphics.off()
+
+ppi <- 300
+png("img/fig_pca_ind.png", width=7*ppi, height=7*ppi, res=ppi)
+
+plot.PCA(pca,
+         choix="ind",
+         habillage = 1,
+         title="",
+         autoLab = "y", 
+         cex = 0.8,
+         shadowtext = T,
+         label = "ind",
+         legend = list(bty = "y", x = "topright"))
+
+graphics.off()
+
+
+# Hierarchical Clustering Analysis
+
+clt <- pca %>% 
+  FactoMineR::HCPC(., nb.clust=-1, graph = F)
+
+# clt$desc.ind
+
+ppi <- 300
+png("img/fig_cluster_tree.png", width=7*ppi, height=7*ppi, res=ppi)
+
+plot.HCPC(x = clt, 
+          choice = "tree")
+
+graphics.off()
+
+
+ppi <- 300
+png("img/fig_cluster_map.png", width=7*ppi, height=7*ppi, res=ppi)
+
+plot.HCPC(x = clt, choice = "map")
+
+graphics.off()
+
+
+fg_01 <- png::readPNG("img/fig_pca_var.png") %>% 
+  grid::rasterGrob(interpolate = TRUE)
+
+fg_02 <- png::readPNG("img/fig_pca_ind.png") %>% 
+  grid::rasterGrob(interpolate = TRUE)
+
+fg_03 <- png::readPNG("img/fig_cluster_tree.png") %>% 
+  grid::rasterGrob(interpolate = TRUE)
+
+fg_04 <- png::readPNG("img/fig_cluster_map.png") %>% 
+  grid::rasterGrob(interpolate = TRUE)
+
+
+plot <- cowplot::ggdraw(xlim = c(0, 1), ylim = c(0, 1))+
+  draw_plot(fg_01, width = 0.5, height = 0.5, x = 0.0, y = 0.5) +
+  draw_plot(fg_02, width = 0.5, height = 0.5, x = 0.5, y = 0.5) +
+  draw_plot(fg_03, width = 0.5, height = 0.5, x = 0.0, y = 0.0) +
+  draw_plot(fg_04, width = 0.5, height = 0.5, x = 0.5, y = 0.0) +
+  draw_plot_label(label = c("A", "B", "C", "D"),
+                  x = c(0.0, 0.5, 0.0, 0.5 ), 
+                  y = c(0.98, 0.98, 0.48, 0.48))
+
+
+cowplot::ggsave("img/fig_mv.png", dpi= 300, width = 210*1 , height = 297*0.7, units = "mm")
+cowplot::ggsave("img/fig_mv.tiff", dpi= 300, width = 210*1 , height = 297*0.7, units = "mm")
+
+include_graphics("img/fig_mv.png")
+
+```
+
+<a href="img/fig_mv.tiff" download><button>Download</button> </a>
 
