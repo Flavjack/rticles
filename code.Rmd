@@ -36,7 +36,7 @@ tb <- dplyr::data_frame(
 
 knitr::kable(
   tb,
-  booktabs = TRUE,
+  booktabs = TRUE, format = "pandoc",
   caption = "Main functions in the GerminaR R package for seed germination variables and graphical analysis."
   )
 

@@ -1,6 +1,9 @@
 ---
-title: "Rticles: scientific documents with bookdown package"
-author: Lozano-Isla, Flavio^(1,^*^)^; Gomez, Jimmy^(1)^
+title: "QUIPO.ORG"
+subtitle: "Rticles: scientific documents with bookdown package"
+author: 
+- Lozano-Isla, Flavio^(1,^*^)^
+- Gomez, Jimmy^(1)^
 date: '`r Sys.Date()`'
 description: Document template for scientific report
 github-repo: flavjack/rticles/issues
@@ -12,7 +15,8 @@ documentclass: book
 bookdown::gitbook:
 output:
   bookdown::word_document2:
-    reference_docx: style_1.docx
+    reference_docx: style_article.docx
+always_allow_html: yes
 link-citations: yes
 colorlinks: yes
 bibliography:  
@@ -35,7 +39,8 @@ knitr::opts_chunk$set(
 options(
   digits = 4, 
   knitr.kable.NA = '',
-  OutDec= ".")
+  OutDec= ".",
+  citr.use_betterbiblatex = FALSE)
 
 library(bookdown) 
 library(inserttable) # devtools::install_github("lbusett/insert_table")
