@@ -227,3 +227,7 @@ include_graphics("img/fig_mv.png")
 
 <a href="img/fig_mv.tiff" download><button>Download</button> </a>
 
+# Anexos {-}
+
+<embed src="img/Mensh_&_Kording_2017" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+

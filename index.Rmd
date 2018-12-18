@@ -29,6 +29,7 @@ csl: apa.csl
 
 # browseURL("https://www.zotero.org/styles")
 # browseURL("https://retorque.re/zotero-better-bibtex/")
+# browseURL("http://zotfile.com/")
 
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -85,8 +86,9 @@ The vertical bars represent the means (±SE). The mean differences between the g
 
 More information about multivarite analysis in http://factominer.free.fr/index.html. Explanation for intepretation and analysis:
 
-PCA: https://www.youtube.com/watch?v=pks8m2ka7Pk&feature=youtu.be
-HCPC: https://www.youtube.com/watch?v=4XrgWmN9erg
+**PCA:** https://www.youtube.com/watch?v=pks8m2ka7Pk&feature=youtu.be
+
+**HCPC:** https://www.youtube.com/watch?v=4XrgWmN9erg
 
 ## Data set
 
@@ -96,7 +98,7 @@ The data set used for this analysis is available in the following link: [DATA SE
 
 Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table \@ref(tab:functions)).
 
-# Result
+# Results
 
 ##  Sed convallis tristique sem
 
