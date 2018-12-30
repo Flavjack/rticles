@@ -4,7 +4,7 @@ subtitle: "Rticles: scientific documents with bookdown package"
 author: 
 - Lozano-Isla, Flavio^(1,^*^)^
 - Gomez, Jimmy^(1)^
-date: '`r Sys.Date()`'
+date: "`r Sys.Date()`"
 description: Document template for scientific report
 github-repo: flavjack/rticles/issues
 cover-image: img/cover.jpg
