@@ -14,6 +14,9 @@ fb <- gs %>%
   
   mutate_at(vars(rep, nacl, temp), funs(as.character))
 
+openxlsx::write.xlsx(x = fb, file = "img/data_set.xlsx")
+utils::zip(zipfile = "docs/files.zip", files = "img/data_set.xlsx")
+
 ```
 
 # Tables {-}
