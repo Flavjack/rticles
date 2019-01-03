@@ -19,7 +19,7 @@ utils::zip(zipfile = "docs/files.zip", files = "img/data_set.xlsx")
 
 ```
 
-# Tables {-}
+
 
 ```{r functions}
 
@@ -45,7 +45,6 @@ tb %>%
 
 ```
 
-# Figures {-}
 
 (ref:gerplot) Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. A) Bar graph with germination percentage in a factorial analisys. B)  Line graph from cumulative germination under different osmotic potentials.
 

@@ -1,11 +1,9 @@
 ---
 title: "QUIPO.ORG"
 subtitle: "Rticles: scientific documents with bookdown package"
-author: 
-- Lozano-Isla, Flavio^(1,^*^)^
-- Gomez, Jimmy^(1)^
-date: "`r Sys.Date()`"
-description: Document template for scientific report
+author: "Lozano-Isla, Flavio^(1,^*^)^; Gomez, Jimmy^(1)^"
+date: "`r if (knitr:::is_html_output()) Sys.Date()`"
+description: document template for scientific report
 github-repo: flavjack/rticles/issues
 cover-image: img/cover.jpg
 favicon: img/icon.png
@@ -22,7 +20,7 @@ colorlinks: yes
 bibliography:  
 - book.bib
 - pkgs.bib
-csl: apa.csl
+csl: http://www.zotero.org/styles/apa
 ---
 
 ```{r setup, include=FALSE}
