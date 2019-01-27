@@ -1,10 +1,6 @@
 
 ```{r import_data}
 
-aut <- gs_ls()
-gs <- gs_url("https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581") 
-# browseURL(gs$browser_url)
-
 fb <- gs %>% 
   gs_read(ws = "prosopis") %>% 
   select_all(funs(tolower)) %>%            
@@ -19,7 +15,7 @@ utils::zip(zipfile = "docs/files.zip", files = "img/data_set.xlsx")
 
 ```
 
-
+# Tables {-}
 
 ```{r functions}
 
@@ -45,6 +41,7 @@ tb %>%
 
 ```
 
+# Figures {-}
 
 (ref:gerplot) Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. A) Bar graph with germination percentage in a factorial analisys. B)  Line graph from cumulative germination under different osmotic potentials.
 
@@ -231,5 +228,5 @@ include_graphics("img/fig_mv.png")
 
 # Anexos {-}
 
-<embed src="img/Mensh_&_Kording_2017" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+<embed src="img/docx/mensh_&_kording_2017.pdf" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 

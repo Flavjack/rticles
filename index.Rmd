@@ -28,6 +28,7 @@ csl: http://www.zotero.org/styles/apa
 # browseURL("https://www.zotero.org/styles")
 # browseURL("https://retorque.re/zotero-better-bibtex/")
 # browseURL("http://zotfile.com/")
+# browseURL("")
 
 knitr::opts_chunk$set(
 	echo = FALSE,
@@ -38,6 +39,7 @@ knitr::opts_chunk$set(
 options(
   digits = 4, 
   knitr.kable.NA = '',
+  knitr.table.format = "pandoc",
   OutDec= ".",
   citr.use_betterbiblatex = FALSE)
 
@@ -55,6 +57,10 @@ library(cowplot)
 library(grid) 
 library(png)
 library(jpeg)
+
+aut <- gs_ls()
+gs <- gs_url("https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581") 
+# browseURL(gs$browser_url)
 
 ```
 
