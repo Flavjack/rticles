@@ -1,7 +1,7 @@
 ---
 title: "QUIPO.ORG"
 subtitle: "Rticles: scientific documents with bookdown package"
-author: "Lozano-Isla, Flavio^(1,^*^)^; Gomez, Jimmy^(1)^"
+author: "Lozano-Isla, Flavio^1`*`^; Gomez, Jimmy^1^"
 date: "`r if (knitr:::is_html_output()) Sys.Date()`"
 description: document template for scientific report
 github-repo: flavjack/rticles/issues
@@ -66,9 +66,9 @@ gs <- gs_url("https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7
 
 # {-}
 
-(1) Agronomist, Co-founder of Quipo.org, Lima, Perú.
+1. Agronomist, Co-founder of Quipo.org, Lima, Perú.
 
-`*` Corresponding author. E-mail address: flavjack@gmail.com (F. Lozano-Isla). Tel.: +51 999997400
+`*` Corresponding author.: flavjack@gmail.com; Tel. +51 999997400
 
 # Abstract {-}
 
