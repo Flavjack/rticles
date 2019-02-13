@@ -31,10 +31,11 @@ csl: http://www.zotero.org/styles/apa
 # browseURL("")
 
 knitr::opts_chunk$set(
+  out.width="90%",
+  fig.align = "center",
 	echo = FALSE,
 	message = FALSE,
-	warning = FALSE
-)
+	warning = FALSE)
 
 options(
   digits = 4, 
@@ -43,7 +44,8 @@ options(
   OutDec= ".",
   citr.use_betterbiblatex = FALSE)
 
-library(bookdown) 
+library(rosr)
+library(bookdown)
 library(inserttable) # devtools::install_github("lbusett/insert_table")
 library(knitr)
 library(citr)
