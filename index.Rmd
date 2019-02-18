@@ -28,7 +28,6 @@ csl: http://www.zotero.org/styles/apa
 # browseURL("https://www.zotero.org/styles")
 # browseURL("https://retorque.re/zotero-better-bibtex/")
 # browseURL("http://zotfile.com/")
-# browseURL("")
 
 knitr::opts_chunk$set(
   out.width="90%",
@@ -63,6 +62,7 @@ library(jpeg)
 aut <- gs_ls()
 gs <- gs_url("https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581") 
 # browseURL(gs$browser_url)
+# browseURL("https://flavjack.github.io/rticles/")
 
 ```
 
@@ -86,7 +86,7 @@ Curabitur tortor [@avenot2009Characterizationa; @zarate2017Respuesta] Pellentesq
 
 # Materials and Methods
 
-The data was analyzed in the statistical software R [@R-base]. The germination analysis and graphics was carried out with the package GerminaR [@R-GerminaR]. Each variable was submitted at analysis of variance (ANOVA) and the mean comparison test used was Student-Newman Keuls (P<0.05)[@R-agricolae]. For the multivariate analysis, the principal components analysis (PCA) and cluster hierarchical classification analysis (HCPC) will be used [@R-FactoMineR]. The report was generated with the FactoInvestigate package [@R-FactoInvestigate].
+The data was analyzed in the statistical software R [@R-base]. The germination analysis and graphics was carried out with the package GerminaR [@R-GerminaR]. Each variable was submitted at analysis of variance (ANOVA) and the mean comparison test used was Student-Newman Keuls (P<0.05)[@R-agricolae]. For the multivariate analysis, the principal components analysis (PCA) and cluster hierarchical classification analysis (HCPC) will be used [@R-FactoMineR]. 
 
 The vertical bars represent the means (±SE). The mean differences between the groups are represented by different capital letters and into the group different lowercase letters (SNK, p = 0.05) [@gutierrez2018Contribution].
 

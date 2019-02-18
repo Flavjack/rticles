@@ -123,8 +123,6 @@ include_graphics("img/fig_jcurcas.png")
 
 ```{r, fig.align= 'center', fig.cap= "Multivariate Analysis: Principal component Analysis and Hierarchical Clustering Analysis."}
 
-library(FactoInvestigate)
-
 # Principal componet Analysis
 
 pca <- gsm %>% 
@@ -140,6 +138,8 @@ pca <- gsm %>%
 
 # summary.PCA(pca, nb.dec = 2, nbelements = Inf)
 # dimdesc(pca)
+
+# library(FactoInvestigate)
 # Investigate(pca, document = "pdf_document")
 
 ppi <- 300
@@ -175,7 +175,9 @@ graphics.off()
 clt <- pca %>% 
   FactoMineR::HCPC(., nb.clust=-1, graph = F)
 
+# clt$call$t$tree
 # clt$desc.ind
+# clt$desc.var
 
 ppi <- 300
 png("img/fig_cluster_tree.png", width=7*ppi, height=7*ppi, res=ppi)
