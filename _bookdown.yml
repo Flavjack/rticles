@@ -2,7 +2,6 @@ book_filename: "rticles"
 output_dir: docs
 rmd_files: [
   "index.Rmd",
-  "code.Rmd",
   "ref.Rmd"
   ]
   
