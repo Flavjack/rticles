@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Introduction | Rticles: scientific documents with bookdown package</title>
+  <title>1 Introduction | Rticles: Scientific Documents with Bookdown R Package</title>
   <meta name="description" content="document template for scientific report" />
-  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Introduction | Rticles: scientific documents with bookdown package" />
+  <meta property="og:title" content="1 Introduction | Rticles: Scientific Documents with Bookdown R Package" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://www.lozanoisla.com" />
   <meta property="og:image" content="https://www.lozanoisla.comimg/cover.jpg" />
@@ -16,22 +16,24 @@
   <meta name="github-repo" content="flavjack/rticles/issues" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Introduction | Rticles: scientific documents with bookdown package" />
+  <meta name="twitter:title" content="1 Introduction | Rticles: Scientific Documents with Bookdown R Package" />
   
   <meta name="twitter:description" content="document template for scientific report" />
   <meta name="twitter:image" content="https://www.lozanoisla.comimg/cover.jpg" />
 
-<meta name="author" content="Lozano-Isla, Flavio1*; Gomez, Jimmy1" />
+<meta name="author" content="Flavio Lozano-Isla ^{1*}, Jimmy Gomez ^{2}" />
+<meta name="author" content="^{1} Agronomist MSc, E-mail: flavjack@gmail.com" />
+<meta name="author" content="^{2} Agronomist, Co-founder quipo.org" />
 
 
-<meta name="date" content="2019-07-11" />
+<meta name="date" content="2019-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
-<link rel="prev" href="abstract.html">
+<link rel="prev" href="index.html">
 <link rel="next" href="materials-and-methods.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -67,26 +69,27 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -95,9 +98,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -130,7 +133,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="style\style.css" type="text/css" />
 </head>
 
 <body>
@@ -146,8 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li> <a href="http://www.lozanoisla.com" target="blank"> Flavio Lozano Isla </a> </li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
-<li class="chapter" data-level="" data-path="abstract.html"><a href="abstract.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
 <li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#data-set"><i class="fa fa-check"></i><b>2.1</b> Data set</a></li>
@@ -176,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Rticles: scientific documents with bookdown package</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Rticles: Scientific Documents with Bookdown R Package</a>
           </h1>
         </div>
 
@@ -186,25 +188,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
-<p>Lorem ipsum <span class="citation">Lozano-Isla, Campos, Endres, Bezerra-Neto, &amp; Pompelli (<a href="#ref-lozano-isla2018Effects">2018</a>)</span> dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc <span class="citation">(Maluszynski, Szarejko, Bhatia, Nichterlein, &amp; Lagoda, <a href="#ref-maluszynski2009Methodologies">2009</a>; Pompelli et al., <a href="#ref-pompelliAllometricModelsNondestructive2012">2012</a>)</span>.</p>
-<p>Curabitur tortor <span class="citation">(Avenot, Sellam, &amp; Michailides, <a href="#ref-avenot2009Characterizationa">2009</a>; Zárate &amp; Gianina, <a href="#ref-zarate2017Respuesta">2017</a>)</span> Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrice. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.</p>
+<p>Lorem ipsum <span class="citation">Lozano-Isla et al. (<a href="#ref-lozano-isla2018Effects" role="doc-biblioref">2018</a>)</span> dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc <span class="citation">(Maluszynski et al. <a href="#ref-maluszynski2009Methodologies" role="doc-biblioref">2009</a>, Pompelli et al. <a href="#ref-pompelliAllometricModelsNondestructive2012" role="doc-biblioref">2012</a>)</span>.</p>
+<p>Curabitur tortor <span class="citation">(Avenot et al. <a href="#ref-avenot2009Characterizationa" role="doc-biblioref">2009</a>, Zárate y Gianina <a href="#ref-zarate2017Respuesta" role="doc-biblioref">2017</a>)</span> Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrice. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.</p>
 </div>
 <h3> References</h3>
 <div id="refs" class="references">
 <div id="ref-avenot2009Characterizationa">
-<p>Avenot, H., Sellam, A., &amp; Michailides, T. (2009). Characterization of mutations in the membrane-anchored subunits AaSDHC and AaSDHD of succinate dehydrogenase from Alternaria alternata isolates conferring field resistance to the fungicide boscalid. <em>Plant Pathology</em>, <em>58</em>(6), 1134–1143. <a href="https://doi.org/10.1111/j.1365-3059.2009.02154.x">https://doi.org/10.1111/j.1365-3059.2009.02154.x</a></p>
+<p>Avenot, H; Sellam, A; Michailides, T. 2009. Characterization of Mutations in the Membrane-Anchored Subunits AaSDHC and AaSDHD of Succinate Dehydrogenase from Alternaria Alternata Isolates Conferring Field Resistance to the Fungicide Boscalid. Plant Pathology 58(6):1134-1143. DOI: <a href="https://doi.org/10.1111/j.1365-3059.2009.02154.x">https://doi.org/10.1111/j.1365-3059.2009.02154.x</a>.</p>
 </div>
 <div id="ref-lozano-isla2018Effects">
-<p>Lozano-Isla, F., Campos, M. L., Endres, L., Bezerra-Neto, E., &amp; Pompelli, M. F. (2018). Effects of seed storage time and salt stress on the germination of <em>Jatropha</em> <em>Curcas</em> L. <em>Industrial Crops and Products</em>, <em>118</em>, 214–224. <a href="https://doi.org/10.1016/j.indcrop.2018.03.052">https://doi.org/10.1016/j.indcrop.2018.03.052</a></p>
+<p>Lozano-Isla, F; Campos, MLO; Endres, L; Bezerra-Neto, E; Pompelli, MF. 2018. Effects of Seed Storage Time and Salt Stress on the Germination of <em>Jatropha</em> <em>Curcas</em> L. Industrial Crops and Products 118:214-224. DOI: <a href="https://doi.org/10.1016/j.indcrop.2018.03.052">https://doi.org/10.1016/j.indcrop.2018.03.052</a>.</p>
 </div>
 <div id="ref-maluszynski2009Methodologies">
-<p>Maluszynski, M., Szarejko, I., Bhatia, C. R., Nichterlein, K., &amp; Lagoda, P. J. L. (2009). Methodologies for generating variability. Part 4: Mutation techniques. <em>Plant Breeding and Farmer Participation</em>, 159–194.</p>
+<p>Maluszynski, M; Szarejko, I; Bhatia, CR; Nichterlein, K; Lagoda, PJL. 2009. Methodologies for Generating Variability. Part 4: Mutation Techniques. Plant breeding and farmer participation:159-194.</p>
 </div>
 <div id="ref-pompelliAllometricModelsNondestructive2012">
-<p>Pompelli, M., Antunes, W., Ferreira, D., Cavalcante, P., Wanderley-Filho, H., &amp; Endres, L. (2012). Allometric models for non-destructive leaf area estimation of <em>Jatropha</em> <em>Curcas</em>. <em>Biomass and Bioenergy</em>, <em>36</em>, 77–85. <a href="https://doi.org/10.1016/j.biombioe.2011.10.010">https://doi.org/10.1016/j.biombioe.2011.10.010</a></p>
+<p>Pompelli, MF; Antunes, WC; Ferreira, DTRG; Cavalcante, PGS; Wanderley-Filho, HCL; Endres, L. 2012. Allometric Models for Non-Destructive Leaf Area Estimation of <em>Jatropha</em> <em>Curcas</em>. Biomass and Bioenergy 36:77-85. DOI: <a href="https://doi.org/10.1016/j.biombioe.2011.10.010">https://doi.org/10.1016/j.biombioe.2011.10.010</a>.</p>
 </div>
 <div id="ref-zarate2017Respuesta">
-<p>Zárate, C., &amp; Gianina, M. (2017). <em>Respuesta de 100 accesiones de quinua a la infección natural de mildiu (Peronospora variabilis Gäum) en el Valle del Mantaro</em>.</p>
+<p>Zárate, C; Gianina, M. 2017. Respuesta de 100 Accesiones de Quinua a La Infección Natural de Mildiu (Peronospora Variabilis Gäum) En El Valle Del Mantaro..</p>
 </div>
 </div>
             </section>
@@ -212,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="abstract.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="materials-and-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -250,7 +252,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": [["rticles.docx", "WORD"], ["files.zip", "ZIP"]],
+"download": [["rticles.docx", "word"], ["../img/files.zip", "files"]],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

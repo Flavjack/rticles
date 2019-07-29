@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Results | Rticles: scientific documents with bookdown package</title>
+  <title>3 Results | Rticles: Scientific Documents with Bookdown R Package</title>
   <meta name="description" content="document template for scientific report" />
-  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Results | Rticles: scientific documents with bookdown package" />
+  <meta property="og:title" content="3 Results | Rticles: Scientific Documents with Bookdown R Package" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://www.lozanoisla.com" />
   <meta property="og:image" content="https://www.lozanoisla.comimg/cover.jpg" />
@@ -16,15 +16,17 @@
   <meta name="github-repo" content="flavjack/rticles/issues" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Results | Rticles: scientific documents with bookdown package" />
+  <meta name="twitter:title" content="3 Results | Rticles: Scientific Documents with Bookdown R Package" />
   
   <meta name="twitter:description" content="document template for scientific report" />
   <meta name="twitter:image" content="https://www.lozanoisla.comimg/cover.jpg" />
 
-<meta name="author" content="Lozano-Isla, Flavio1*; Gomez, Jimmy1" />
+<meta name="author" content="Flavio Lozano-Isla ^{1*}, Jimmy Gomez ^{2}" />
+<meta name="author" content="^{1} Agronomist MSc, E-mail: flavjack@gmail.com" />
+<meta name="author" content="^{2} Agronomist, Co-founder quipo.org" />
 
 
-<meta name="date" content="2019-07-11" />
+<meta name="date" content="2019-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -67,26 +69,27 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -95,9 +98,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -130,7 +133,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="style\style.css" type="text/css" />
 </head>
 
 <body>
@@ -146,8 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li> <a href="http://www.lozanoisla.com" target="blank"> Flavio Lozano Isla </a> </li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
-<li class="chapter" data-level="" data-path="abstract.html"><a href="abstract.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
 <li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#data-set"><i class="fa fa-check"></i><b>2.1</b> Data set</a></li>
@@ -176,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Rticles: scientific documents with bookdown package</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Rticles: Scientific Documents with Bookdown R Package</a>
           </h1>
         </div>
 
@@ -190,25 +192,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.1</span> Sed convallis tristique sem</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos <span class="math inline">\(g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100\)</span>.</p>
 <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load data</span>
-
-<span class="kw">library</span>(GerminaR)
-
-fb &lt;-<span class="st"> </span>prosopis <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw">mutate</span>( <span class="dt">nacl =</span> <span class="kw">as.factor</span>(nacl), <span class="dt">temp =</span> <span class="kw">as.factor</span>(temp), <span class="dt">rep =</span> <span class="kw">as.factor</span>(rep))
-
-<span class="co"># germination analysis</span>
-
-gsm &lt;-<span class="st"> </span><span class="kw">ger_summary</span>(<span class="dt">SeedN =</span> <span class="st">&quot;seeds&quot;</span>, <span class="dt">evalName =</span> <span class="st">&quot;D&quot;</span>, <span class="dt">data =</span> fb)
-<span class="kw">str</span>(gsm)
-
-<span class="co"># analisys of variance</span>
-
-av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">formula =</span> GRP <span class="op">~</span><span class="st"> </span>nacl<span class="op">*</span>temp <span class="op">+</span><span class="st"> </span>rep, <span class="dt">data =</span> gsm)
-<span class="kw">summary</span>(av)
-
-<span class="co"># mean comparision test</span>
-
-mc &lt;-<span class="st"> </span><span class="kw">ger_testcomp</span>(<span class="dt">aov =</span> av, <span class="dt">comp =</span> <span class="kw">c</span>(<span class="st">&quot;temp&quot;</span>, <span class="st">&quot;nacl&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;snk&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="results.html#cb1-1"></a><span class="co"># load data</span></span>
+<span id="cb1-2"><a href="results.html#cb1-2"></a></span>
+<span id="cb1-3"><a href="results.html#cb1-3"></a><span class="kw">library</span>(GerminaR) </span>
+<span id="cb1-4"><a href="results.html#cb1-4"></a></span>
+<span id="cb1-5"><a href="results.html#cb1-5"></a>fb &lt;-<span class="st"> </span>prosopis <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-6"><a href="results.html#cb1-6"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate_at</span>(<span class="kw">vars</span>(rep, nacl, temp), as.character)</span>
+<span id="cb1-7"><a href="results.html#cb1-7"></a></span>
+<span id="cb1-8"><a href="results.html#cb1-8"></a><span class="co"># germination analysis</span></span>
+<span id="cb1-9"><a href="results.html#cb1-9"></a></span>
+<span id="cb1-10"><a href="results.html#cb1-10"></a>gsm &lt;-<span class="st"> </span><span class="kw">ger_summary</span>(<span class="dt">SeedN =</span> <span class="st">&quot;seeds&quot;</span>, <span class="dt">evalName =</span> <span class="st">&quot;D&quot;</span>, <span class="dt">data =</span> fb)</span>
+<span id="cb1-11"><a href="results.html#cb1-11"></a><span class="kw">str</span>(gsm)</span>
+<span id="cb1-12"><a href="results.html#cb1-12"></a></span>
+<span id="cb1-13"><a href="results.html#cb1-13"></a><span class="co"># analisys of variance</span></span>
+<span id="cb1-14"><a href="results.html#cb1-14"></a></span>
+<span id="cb1-15"><a href="results.html#cb1-15"></a>av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">formula =</span> GRP <span class="op">~</span><span class="st"> </span>nacl<span class="op">*</span>temp <span class="op">+</span><span class="st"> </span>rep, <span class="dt">data =</span> gsm)</span>
+<span id="cb1-16"><a href="results.html#cb1-16"></a><span class="kw">summary</span>(av)</span>
+<span id="cb1-17"><a href="results.html#cb1-17"></a></span>
+<span id="cb1-18"><a href="results.html#cb1-18"></a><span class="co"># mean comparision test</span></span>
+<span id="cb1-19"><a href="results.html#cb1-19"></a></span>
+<span id="cb1-20"><a href="results.html#cb1-20"></a>mc &lt;-<span class="st"> </span><span class="kw">ger_testcomp</span>(<span class="dt">aov =</span> av, <span class="dt">comp =</span> <span class="kw">c</span>(<span class="st">&quot;temp&quot;</span>, <span class="st">&quot;nacl&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;snk&quot;</span>)</span></code></pre></div>
 </div>
 <div id="class-aptent-taciti" class="section level2">
 <h2><span class="header-section-number">3.2</span> Class aptent taciti</h2>
@@ -258,7 +261,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": [["rticles.docx", "WORD"], ["files.zip", "ZIP"]],
+"download": [["rticles.docx", "word"], ["../img/files.zip", "files"]],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

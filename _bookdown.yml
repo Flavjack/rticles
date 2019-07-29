@@ -1,10 +1,6 @@
 book_filename: "rticles"
 output_dir: docs
-rmd_files: [
-  "index.Rmd",
-  "ref.Rmd"
-  ]
-  
+rmd_files: ["index.Rmd", "ref.Rmd"]
 language:
   label:
     fig: 'Figure '

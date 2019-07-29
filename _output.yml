@@ -1,5 +1,5 @@
 bookdown::gitbook:
-  css: style.css
+  css: style/style.css
   split_by: chapter # chapter none
   split_bib: TRUE
   config:
@@ -17,8 +17,8 @@ bookdown::gitbook:
     search: yes
     edit: https://github.com/Flavjack/rticles/blob/master/%s
     download: 
-      - ["rticles.docx", "WORD"]
-      - ["files.zip", "ZIP"]
+      - ["rticles.docx", "word"]
+      - ["../img/files.zip", "files"]
     sharing:
       github: yes
       twitter: no

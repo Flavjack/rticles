@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Discussion | Rticles: scientific documents with bookdown package</title>
+  <title>4 Discussion | Rticles: Scientific Documents with Bookdown R Package</title>
   <meta name="description" content="document template for scientific report" />
-  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Discussion | Rticles: scientific documents with bookdown package" />
+  <meta property="og:title" content="4 Discussion | Rticles: Scientific Documents with Bookdown R Package" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://www.lozanoisla.com" />
   <meta property="og:image" content="https://www.lozanoisla.comimg/cover.jpg" />
@@ -16,15 +16,17 @@
   <meta name="github-repo" content="flavjack/rticles/issues" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Discussion | Rticles: scientific documents with bookdown package" />
+  <meta name="twitter:title" content="4 Discussion | Rticles: Scientific Documents with Bookdown R Package" />
   
   <meta name="twitter:description" content="document template for scientific report" />
   <meta name="twitter:image" content="https://www.lozanoisla.comimg/cover.jpg" />
 
-<meta name="author" content="Lozano-Isla, Flavio1*; Gomez, Jimmy1" />
+<meta name="author" content="Flavio Lozano-Isla ^{1*}, Jimmy Gomez ^{2}" />
+<meta name="author" content="^{1} Agronomist MSc, E-mail: flavjack@gmail.com" />
+<meta name="author" content="^{2} Agronomist, Co-founder quipo.org" />
 
 
-<meta name="date" content="2019-07-11" />
+<meta name="date" content="2019-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -67,26 +69,27 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -95,9 +98,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -130,7 +133,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="style\style.css" type="text/css" />
 </head>
 
 <body>
@@ -146,8 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li> <a href="http://www.lozanoisla.com" target="blank"> Flavio Lozano Isla </a> </li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
-<li class="chapter" data-level="" data-path="abstract.html"><a href="abstract.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
 <li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#data-set"><i class="fa fa-check"></i><b>2.1</b> Data set</a></li>
@@ -176,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Rticles: scientific documents with bookdown package</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Rticles: Scientific Documents with Bookdown R Package</a>
           </h1>
         </div>
 
@@ -186,19 +188,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="discussion" class="section level1">
 <h1><span class="header-section-number">4</span> Discussion</h1>
-<p>Curabitur tortor <span class="citation">León, Gutierrez, Riojas, &amp; Casas (<a href="#ref-leon2018Nitrogen">2018</a>)</span> and <span class="citation">Dixit (<a href="#ref-dixit2015Adaptacion">2015</a>)</span>, Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table <a href="tables.html#tab:functions">6.1</a>).</p>
-<p>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor <span class="citation">(Blum, <a href="#ref-blum2005Drought">2005</a>)</span>.</p>
+<p>Curabitur tortor <span class="citation">León et al. (<a href="#ref-leon2018Nitrogen" role="doc-biblioref">2018</a>)</span> and <span class="citation">Dixit (<a href="#ref-dixit2015Adaptacion" role="doc-biblioref">2015</a>)</span>, Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table <a href="tables.html#tab:functions">6.1</a>).</p>
+<p>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor <span class="citation">(Blum <a href="#ref-blum2005Drought" role="doc-biblioref">2005</a>)</span>.</p>
 </div>
 <h3> References</h3>
 <div id="refs" class="references">
 <div id="ref-blum2005Drought">
-<p>Blum, A. (2005). Drought resistance, water-use efficiency, and yield potentialAre they compatible, dissonant, or mutually exclusive? <em>Australian Journal of Agricultural Research</em>, <em>56</em>(11), 1159. <a href="https://doi.org/10.1071/AR05069">https://doi.org/10.1071/AR05069</a></p>
+<p>Blum, A. 2005. Drought Resistance, Water-Use Efficiency, and Yield PotentialAre They Compatible, Dissonant, or Mutually Exclusive? Australian Journal of Agricultural Research 56(11):1159. DOI: <a href="https://doi.org/10.1071/AR05069">https://doi.org/10.1071/AR05069</a>.</p>
 </div>
 <div id="ref-dixit2015Adaptacion">
-<p>Dixit, A. (2015). <em>Adaptación al cambio climático: aumento de la producción de quinua mediante técnicas nucleares</em>.</p>
+<p>Dixit, A. 2015. Adaptación al cambio climático: aumento de la producción de quinua mediante técnicas nucleares..</p>
 </div>
 <div id="ref-leon2018Nitrogen">
-<p>León, D., Gutierrez, P., Riojas, R., &amp; Casas, A. (2018). Nitrogen, phosphorus and potassium levels in asparagus production. <em>Acta Horticulturae</em>, (1223), 81–87. <a href="https://doi.org/10.17660/ActaHortic.2018.1223.12">https://doi.org/10.17660/ActaHortic.2018.1223.12</a></p>
+<p>León, D; Gutierrez, P; Riojas, R; Casas, A. 2018. Nitrogen, Phosphorus and Potassium Levels in Asparagus Production. Acta Horticulturae (1223):81-87. DOI: <a href="https://doi.org/10.17660/ActaHortic.2018.1223.12">https://doi.org/10.17660/ActaHortic.2018.1223.12</a>.</p>
 </div>
 </div>
             </section>
@@ -244,7 +246,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": [["rticles.docx", "WORD"], ["files.zip", "ZIP"]],
+"download": [["rticles.docx", "word"], ["../img/files.zip", "files"]],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
