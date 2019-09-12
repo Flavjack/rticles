@@ -140,7 +140,6 @@ Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
 
 Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. 
 
-
 # Tables {-}
 
 ```{r functions}
