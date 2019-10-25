@@ -3,8 +3,8 @@ title: "Rticles: Scientific Documents with Bookdown R Package"
 subtitle: "www.quipo.org"
 author:
   - "Flavio Lozano-Isla $^{1*}$, Jimmy Gomez $^{2}$"
-  - "$^{1}$ Agronomist MSc, E-mail: flavjack@gmail.com"
   - "$^{2}$ Agronomist, Co-founder quipo.org"
+  - "$^{1}$ Agronomist MSc, E-mail: flavjack@gmail.com"
 date: "`r if (knitr:::is_html_output()) Sys.Date()`"
 description: document template for scientific report
 github-repo: flavjack/rticles/issues
@@ -24,8 +24,8 @@ bibliography:
 - style/book.bib
 - style/pkgs.bib
 csl: https://www.zotero.org/styles/iica-catie
-# browseURL("https://www.zotero.org/styles")
-# browseURL("https://retorque.re/zotero-better-bibtex/")
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -38,15 +38,16 @@ options(digits = 4, OutDec= ".",
         knitr.table.format = "pandoc", 
         citr.use_betterbiblatex = FALSE)
 
+library(devtools)
 library(bookdown)
 library(citr)
 library(knitr) 
-library(inserttable) # devtools::install_github("lbusett/insert_table")
+library(inserttable)
 library(tidyverse)
 library(googlesheets)
 library(agricolae)
 library(GerminaR)
-library(compareGroups)
+#library(compareGroups)
 library(FactoMineR)
 library(cowplot)
 library(grid)
@@ -56,7 +57,6 @@ library(jpeg)
 aut <- gs_ls()
 gs <- gs_url("https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581") 
 # browseURL(gs$browser_url)
-# browseURL("https://flavjack.github.io/rticles/")
 
 fb <- gs %>% 
   gs_read(ws = "prosopis") %>% 

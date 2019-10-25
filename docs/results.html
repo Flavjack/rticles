@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Results | Rticles: Scientific Documents with Bookdown R Package</title>
   <meta name="description" content="document template for scientific report" />
-  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Results | Rticles: Scientific Documents with Bookdown R Package" />
   <meta property="og:type" content="book" />
@@ -22,11 +22,11 @@
   <meta name="twitter:image" content="https://www.lozanoisla.comimg/cover.jpg" />
 
 <meta name="author" content="Flavio Lozano-Isla ^{1*}, Jimmy Gomez ^{2}" />
-<meta name="author" content="^{1} Agronomist MSc, E-mail: flavjack@gmail.com" />
 <meta name="author" content="^{2} Agronomist, Co-founder quipo.org" />
+<meta name="author" content="^{1} Agronomist MSc, E-mail: flavjack@gmail.com" />
 
 
-<meta name="date" content="2019-09-29" />
+<meta name="date" content="2019-10-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -42,6 +42,7 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -49,7 +50,9 @@
 
 
 
-<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.9/datatables.js"></script>
 <link href="libs/dt-core-1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -69,9 +72,9 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -80,16 +83,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -98,9 +99,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -133,7 +134,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style\style.css" type="text/css" />
+<link rel="stylesheet" href="style/style.css" type="text/css" />
 </head>
 
 <body>
@@ -192,26 +193,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.1</span> Sed convallis tristique sem</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos <span class="math inline">\(g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100\)</span>.</p>
 <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="results.html#cb1-1"></a><span class="co"># load data</span></span>
-<span id="cb1-2"><a href="results.html#cb1-2"></a></span>
-<span id="cb1-3"><a href="results.html#cb1-3"></a><span class="kw">library</span>(GerminaR) </span>
-<span id="cb1-4"><a href="results.html#cb1-4"></a></span>
-<span id="cb1-5"><a href="results.html#cb1-5"></a>fb &lt;-<span class="st"> </span>prosopis <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1-6"><a href="results.html#cb1-6"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate_at</span>(<span class="kw">vars</span>(rep, nacl, temp), as.character)</span>
-<span id="cb1-7"><a href="results.html#cb1-7"></a></span>
-<span id="cb1-8"><a href="results.html#cb1-8"></a><span class="co"># germination analysis</span></span>
-<span id="cb1-9"><a href="results.html#cb1-9"></a></span>
-<span id="cb1-10"><a href="results.html#cb1-10"></a>gsm &lt;-<span class="st"> </span><span class="kw">ger_summary</span>(<span class="dt">SeedN =</span> <span class="st">&quot;seeds&quot;</span>, <span class="dt">evalName =</span> <span class="st">&quot;D&quot;</span>, <span class="dt">data =</span> fb)</span>
-<span id="cb1-11"><a href="results.html#cb1-11"></a><span class="kw">str</span>(gsm)</span>
-<span id="cb1-12"><a href="results.html#cb1-12"></a></span>
-<span id="cb1-13"><a href="results.html#cb1-13"></a><span class="co"># analisys of variance</span></span>
-<span id="cb1-14"><a href="results.html#cb1-14"></a></span>
-<span id="cb1-15"><a href="results.html#cb1-15"></a>av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">formula =</span> GRP <span class="op">~</span><span class="st"> </span>nacl<span class="op">*</span>temp <span class="op">+</span><span class="st"> </span>rep, <span class="dt">data =</span> gsm)</span>
-<span id="cb1-16"><a href="results.html#cb1-16"></a><span class="kw">summary</span>(av)</span>
-<span id="cb1-17"><a href="results.html#cb1-17"></a></span>
-<span id="cb1-18"><a href="results.html#cb1-18"></a><span class="co"># mean comparision test</span></span>
-<span id="cb1-19"><a href="results.html#cb1-19"></a></span>
-<span id="cb1-20"><a href="results.html#cb1-20"></a>mc &lt;-<span class="st"> </span><span class="kw">ger_testcomp</span>(<span class="dt">aov =</span> av, <span class="dt">comp =</span> <span class="kw">c</span>(<span class="st">&quot;temp&quot;</span>, <span class="st">&quot;nacl&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;snk&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># load data</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">library</span>(GerminaR) </a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">fb &lt;-<span class="st"> </span>prosopis <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate_at</span>(<span class="kw">vars</span>(rep, nacl, temp), as.character)</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co"># germination analysis</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">gsm &lt;-<span class="st"> </span><span class="kw">ger_summary</span>(<span class="dt">SeedN =</span> <span class="st">&quot;seeds&quot;</span>, <span class="dt">evalName =</span> <span class="st">&quot;D&quot;</span>, <span class="dt">data =</span> fb)</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="kw">str</span>(gsm)</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co"># analisys of variance</span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">formula =</span> GRP <span class="op">~</span><span class="st"> </span>nacl<span class="op">*</span>temp <span class="op">+</span><span class="st"> </span>rep, <span class="dt">data =</span> gsm)</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16"><span class="kw">summary</span>(av)</a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18"><span class="co"># mean comparision test</span></a>
+<a class="sourceLine" id="cb1-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">mc &lt;-<span class="st"> </span><span class="kw">ger_testcomp</span>(<span class="dt">aov =</span> av, <span class="dt">comp =</span> <span class="kw">c</span>(<span class="st">&quot;temp&quot;</span>, <span class="st">&quot;nacl&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;snk&quot;</span>)</a></code></pre></div>
 </div>
 <div id="class-aptent-taciti" class="section level2">
 <h2><span class="header-section-number">3.2</span> Class aptent taciti</h2>
@@ -229,11 +230,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

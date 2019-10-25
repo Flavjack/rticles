@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Tables | Rticles: Scientific Documents with Bookdown R Package</title>
   <meta name="description" content="document template for scientific report" />
-  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Tables | Rticles: Scientific Documents with Bookdown R Package" />
   <meta property="og:type" content="book" />
@@ -22,11 +22,11 @@
   <meta name="twitter:image" content="https://www.lozanoisla.comimg/cover.jpg" />
 
 <meta name="author" content="Flavio Lozano-Isla ^{1*}, Jimmy Gomez ^{2}" />
-<meta name="author" content="^{1} Agronomist MSc, E-mail: flavjack@gmail.com" />
 <meta name="author" content="^{2} Agronomist, Co-founder quipo.org" />
+<meta name="author" content="^{1} Agronomist MSc, E-mail: flavjack@gmail.com" />
 
 
-<meta name="date" content="2019-09-29" />
+<meta name="date" content="2019-10-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -42,6 +42,7 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -49,7 +50,9 @@
 
 
 
-<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.9/datatables.js"></script>
 <link href="libs/dt-core-1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -69,9 +72,9 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -80,16 +83,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -98,9 +99,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -133,7 +134,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style\style.css" type="text/css" />
+<link rel="stylesheet" href="style/style.css" type="text/css" />
 </head>
 
 <body>
@@ -189,64 +190,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="tables" class="section level1 unnumbered">
 <h1>Tables</h1>
 <table>
-<caption>
-<span id="tab:functions">Table 6.1: </span>Main functions in the GerminaR R package for seed germination variables and graphical analysis.
-</caption>
+<caption><span id="tab:functions">Table 6.1: </span>Main functions in the GerminaR R package for seed germination variables and graphical analysis.</caption>
 <thead>
-<tr>
-<th style="text-align:left;">
-Function
-</th>
-<th style="text-align:left;">
-Description
-</th>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-ger_summary
-</td>
-<td style="text-align:left;">
-Calculate ten germination indices maintaining the factors levels for analysis of variance
-</td>
+<tr class="odd">
+<td align="left">ger_summary</td>
+<td align="left">Calculate ten germination indices maintaining the factors levels for analysis of variance</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-ger_intime
-</td>
-<td style="text-align:left;">
-Calculates and displays cumulative germination data.
-</td>
+<tr class="even">
+<td align="left">ger_intime</td>
+<td align="left">Calculates and displays cumulative germination data.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-fplot
-</td>
-<td style="text-align:left;">
-Function that allows to graphic the results in bar or line plot.
-</td>
+<tr class="odd">
+<td align="left">fplot</td>
+<td align="left">Function that allows to graphic the results in bar or line plot.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-GerminaQuant
-</td>
-<td style="text-align:left;">
-Runs the interactive application in offline mode for use on a personal computer.
-</td>
+<tr class="even">
+<td align="left">GerminaQuant</td>
+<td align="left">Runs the interactive application in offline mode for use on a personal computer.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-prosopis
-</td>
-<td style="text-align:left;">
-Dataset with germination experiment in <em>Prosopis juliflor</em> seeds under under different osmotic potentials and temperatures.
-</td>
+<tr class="odd">
+<td align="left">prosopis</td>
+<td align="left">Dataset with germination experiment in <em>Prosopis juliflor</em> seeds under under different osmotic potentials and temperatures.</td>
 </tr>
 </tbody>
 </table>
-<div id="htmlwidget-eb91ab116f23219d3e84" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-eb91ab116f23219d3e84">{"x":{"filter":"none","extensions":["Buttons","Scroller"],"caption":"<caption>Germination Dataset<\/caption>","data":[["1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4"],["0","0","0","0","0","0","0","0","0.5","0.5","0.5","0.5","0.5","0.5","0.5","0.5","1","1","1","1","1","1","1","1","1.5","1.5","1.5","1.5","1.5","1.5","1.5","1.5","2","2","2","2","2","2","2","2","0","0","0","0","0","0","0","0","0.5","0.5","0.5","0.5","0.5","0.5","0.5","0.5","1","1","1","1","1","1","1","1","1.5","1.5","1.5","1.5","1.5","1.5","1.5","1.5","2","2","2","2","2","2","2","2"],["25","25","25","25","30","30","30","30","25","25","25","25","30","30","30","30","25","25","25","25","30","30","30","30","25","25","25","25","30","30","30","30","25","25","25","25","30","30","30","30","35","35","35","35","40","40","40","40","35","35","35","35","40","40","40","40","35","35","35","35","40","40","40","40","35","35","35","35","40","40","40","40","35","35","35","35","40","40","40","40"],[50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[39,40,34,43,48,47,50,49,10,18,6,8,45,42,46,47,0,0,3,0,6,5,8,7,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,48,50,49,50,47,48,49,49,47,45,48,45,15,12,12,12,19,20,14,15,2,6,6,5,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0],[8,9,16,7,2,3,0,1,37,30,44,42,5,8,4,3,22,27,27,15,39,43,40,43,0,0,0,0,5,7,11,7,0,0,0,1,0,0,0,2,2,0,1,0,3,2,1,1,0,3,1,3,2,8,6,11,28,21,10,33,7,14,11,5,7,2,5,6,1,2,1,1,0,0,0,0,0,0,0,0],[3,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,20,8,6,24,4,2,0,0,1,5,8,9,34,38,34,35,0,0,0,0,3,5,4,4,0,0,0,0,0,0,0,0,3,0,1,0,31,29,30,24,2,7,22,1,33,25,23,38,21,27,24,17,2,1,1,1,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,6,13,11,10,0,0,0,0,14,8,0,0,6,5,4,5,0,1,0,0,25,22,21,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,3,9,2,19,15,19,24,3,3,2,3,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,15,20,20,3,0,1,0,3,15,5,0,18,21,19,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,2,0,0,0,0,0,1,3,5,3,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,14,15,13,18,0,0,3,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,20,19,20,0,0,0,0,26,13,21,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,1,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,2,5,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,3,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,5,3,3,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>rep<\/th>\n      <th>nacl<\/th>\n      <th>temp<\/th>\n      <th>seeds<\/th>\n      <th>d0<\/th>\n      <th>d1<\/th>\n      <th>d2<\/th>\n      <th>d3<\/th>\n      <th>d4<\/th>\n      <th>d5<\/th>\n      <th>d6<\/th>\n      <th>d7<\/th>\n      <th>d8<\/th>\n      <th>d9<\/th>\n      <th>d10<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bt","buttons":["copy","excel"],"autoWidth":true,"scroller":true,"scrollY":"50vh","scrollX":true,"columnDefs":[{"className":"dt-right","targets":[3,4,5,6,7,8,9,10,11,12,13,14]}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-63c31ba2d2b5b5155670" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-63c31ba2d2b5b5155670">{"x":{"filter":"none","extensions":["Buttons","Scroller"],"caption":"<caption>Germination Dataset<\/caption>","data":[["1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4"],["0","0","0","0","0","0","0","0","0.5","0.5","0.5","0.5","0.5","0.5","0.5","0.5","1","1","1","1","1","1","1","1","1.5","1.5","1.5","1.5","1.5","1.5","1.5","1.5","2","2","2","2","2","2","2","2","0","0","0","0","0","0","0","0","0.5","0.5","0.5","0.5","0.5","0.5","0.5","0.5","1","1","1","1","1","1","1","1","1.5","1.5","1.5","1.5","1.5","1.5","1.5","1.5","2","2","2","2","2","2","2","2"],["25","25","25","25","30","30","30","30","25","25","25","25","30","30","30","30","25","25","25","25","30","30","30","30","25","25","25","25","30","30","30","30","25","25","25","25","30","30","30","30","35","35","35","35","40","40","40","40","35","35","35","35","40","40","40","40","35","35","35","35","40","40","40","40","35","35","35","35","40","40","40","40","35","35","35","35","40","40","40","40"],[50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[39,40,34,43,48,47,50,49,10,18,6,8,45,42,46,47,0,0,3,0,6,5,8,7,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,48,50,49,50,47,48,49,49,47,45,48,45,15,12,12,12,19,20,14,15,2,6,6,5,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0],[8,9,16,7,2,3,0,1,37,30,44,42,5,8,4,3,22,27,27,15,39,43,40,43,0,0,0,0,5,7,11,7,0,0,0,1,0,0,0,2,2,0,1,0,3,2,1,1,0,3,1,3,2,8,6,11,28,21,10,33,7,14,11,5,7,2,5,6,1,2,1,1,0,0,0,0,0,0,0,0],[3,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,20,8,6,24,4,2,0,0,1,5,8,9,34,38,34,35,0,0,0,0,3,5,4,4,0,0,0,0,0,0,0,0,3,0,1,0,31,29,30,24,2,7,22,1,33,25,23,38,21,27,24,17,2,1,1,1,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,6,13,11,10,0,0,0,0,14,8,0,0,6,5,4,5,0,1,0,0,25,22,21,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,3,9,2,19,15,19,24,3,3,2,3,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,15,20,20,3,0,1,0,3,15,5,0,18,21,19,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,2,0,0,0,0,0,1,3,5,3,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,14,15,13,18,0,0,3,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,20,19,20,0,0,0,0,26,13,21,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,1,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,2,5,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,3,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,5,3,3,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>rep<\/th>\n      <th>nacl<\/th>\n      <th>temp<\/th>\n      <th>seeds<\/th>\n      <th>d0<\/th>\n      <th>d1<\/th>\n      <th>d2<\/th>\n      <th>d3<\/th>\n      <th>d4<\/th>\n      <th>d5<\/th>\n      <th>d6<\/th>\n      <th>d7<\/th>\n      <th>d8<\/th>\n      <th>d9<\/th>\n      <th>d10<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bt","buttons":["copy","excel"],"autoWidth":true,"scroller":true,"scrollY":"50vh","scrollX":true,"columnDefs":[{"className":"dt-right","targets":[3,4,5,6,7,8,9,10,11,12,13,14]}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
             </section>
 
@@ -259,11 +234,13 @@ Dataset with germination experiment in <em>Prosopis juliflor</em> seeds under un
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
