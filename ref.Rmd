@@ -12,7 +12,7 @@ knitr::write_bib(c(.packages()),'style/pkgs.bib')
 
 dir.create("img")
 dir.create("img/files")
-openxlsx::write.xlsx(x = fb, file = "img/files/data_set.xlsx")
+if(exists("fb")){openxlsx::write.xlsx(fb, "img/files/data_set.xlsx")}
 zip::zipr(zipfile = "img/files.zip", files = "img/files")
 
 ```

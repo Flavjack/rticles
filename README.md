@@ -38,12 +38,13 @@ devtools::install_github("lbusett/insert_table")
 
 ```
 
-If all packages are installed correctly shoul be appear the "Build" button in the Rstudio.
-Play the "Build" button and wait until compile and if all is okay a promp windows will be appeare the html version of the template document.
+If all packages are installed correctly shoul be appear the "Build" button in the Rstudio IDE.
 
-If you want to modify the document, open **index.Rmd** file and you add and change the text and code.
+Play the "Build" button and wait until compile and if all is okay a promp windows will be appeare with the html version of the template document.
 
-So, Now you are ready to go and produce your first document!
+If you want to modify the document, open **index.Rmd** file and you can add and change the text and code.
+
+So, now you are ready to go and produce your first document!
 
 ### Folders and files
 
@@ -56,7 +57,7 @@ So, Now you are ready to go and produce your first document!
 - _bookdown.yml (not remove) :: This file you found the compile options
 - _output.yml (not remove) :: html option for the web document
 - docs (removable) :: folder with the files for the html to deploy the webpage (for github pages)
-- img (not remove) :: fOlder with the information and image files for compile the final document
+- img (not remove) :: folder with the information and image files for compile the final document
 - style (not remove) :: Include the webpage style, the bib files and the word style documents
 
 
