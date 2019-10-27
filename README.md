@@ -8,7 +8,7 @@
 - R workflow for data analysis
 - Scientific graphic quality
 
-Example: <https://flavjack.github.io/rticles/>{target="_blank"}
+Example: [flavjack.github.io/rticles/](https://flavjack.github.io/rticles/){target="_blank"}.
 
 ## How to use the template
 
@@ -63,17 +63,17 @@ So, now you are ready to go and produce your first document!
 
 It is recommended install and create an account for the following apps, all are free and can be complemented with reproducible research.
 
-- Github desktop : <https://desktop.github.com/>{target="_blank"}
-- Zotero: <https://www.zotero.org/download/>{target="_blank"}
+- Github desktop : [desktop.github.com/](https://desktop.github.com/){target="_blank"}.
+
+- Zotero: [zotero.org/download/](https://www.zotero.org/download/){target="_blank"}.
 
 ## Dataset
 
 The dataset is a germination data example[^*] with a completely randomized design with four replications per treatment under laboratory conditions. The first factor corresponds to five levels of sodium chloride (NaCl) (0, 0.5, 1.0, 1.5 and 2 MPa), and the second factor corresponds to four levels of temperature (25°C, 30°C, 35°C and 40°C).
 
-Source: <https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581>{target="_blank"}
+Source: [https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581](https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581){target="_blank"}.
 
-
-[^*]: Lozano-Isla, Flavio, Omar E. Benites-Alfaro, and Marcelo F. Pompelli, ‘GerminaR: An R Package for Germination Analysis with the Interactive Web Application “GerminaQuant for R”’, Ecological Research, 34.2 (2019), 339–46 <https://doi.org/10.1111/1440-1703.1275>{target="_blank"}
+[^*]: Lozano-Isla, Flavio, Omar E. Benites-Alfaro, and Marcelo F. Pompelli, ‘GerminaR: An R Package for Germination Analysis with the Interactive Web Application “GerminaQuant for R”’, Ecological Research, 34.2 (2019), 339–46 [https://doi.org/10.1111/1440-1703.1275](https://doi.org/10.1111/1440-1703.1275){target="_blank"}
 
 
 
