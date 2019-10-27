@@ -18,7 +18,7 @@ bookdown::gitbook:
     edit: https://github.com/Flavjack/rticles/blob/master/%s
     download: 
       - ["rticles.docx", "word"]
-      - ["../img/files.zip", "files"]
+      - ["files.zip", "files"]
     sharing:
       github: yes
       twitter: no
