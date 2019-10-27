@@ -2,18 +2,21 @@
 `r if (knitr:::is_html_output()) '# References'`
 `r if (!knitr:::is_html_output()) '# References'`
 
-```{r include=FALSE}
+```{r files}
+
+if(!dir.exists("img")) {dir.create("img")}
+if(!dir.exists("img/files")) {dir.create("img/files")}
+if(exists("fb")){openxlsx::write.xlsx(fb,"img/files/data.xlsx")}
+zip::zipr(zipfile = "img/files.zip", files = "img/files")
 
 knitr::write_bib(c(.packages()),'style/pkgs.bib')
 
 ```
 
-```{r}
+```{r debug, eval=FALSE, include=FALSE}
 
-dir.create("img")
-dir.create("img/files")
-if(exists("fb")){openxlsx::write.xlsx(fb, "img/files/data_set.xlsx")}
-zip::zipr(zipfile = "img/files.zip", files = "img/files")
+if(file.exists("rticles.Rmd")){file.remove("rticles.Rmd")}
+if(dir.exists("docs")){fs::dir_delete("docs")}
 
 ```
 

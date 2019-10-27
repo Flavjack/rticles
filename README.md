@@ -3,7 +3,7 @@
 ## Features
 
 - Export in word and html document
-- Word improve template
+- Word improved template
 - Bibliography citation
 - R workflow for data analysis
 - Scientific graphic quality
@@ -12,7 +12,7 @@ Example: https://flavjack.github.io/rticles/
 
 ## How to use the template
 
-### Install all the packages:
+### Install the following packages:
 
 ```{r}
 
@@ -37,16 +37,15 @@ install.packages(pkgs)
 devtools::install_github("lbusett/insert_table")
 
 ```
+If all packages are installed correctly shoul be appear the "Build" button in the Rstudio IDE (Integrated Development Environment).
 
-If all packages are installed correctly shoul be appear the "Build" button in the Rstudio IDE.
+Play the "Build" button and wait until compile and if all is okay pop-up window will be appeare with webpage version of the document.
 
-Play the "Build" button and wait until compile and if all is okay a promp windows will be appeare with the html version of the template document.
-
-If you want to modify the document, open **index.Rmd** file and you can add and change the text and code.
+If you want to modify the document, open **index.Rmd** file and change the text and code.
 
 So, now you are ready to go and produce your first document!
 
-### Folders and files
+## Folders and files
 
 - index.Rmd (not remove):: file for write the document.
 - ref.Rmd (not remove) :: files with for generate the packages bib file and create the folders needed for the compile.
@@ -60,7 +59,12 @@ So, now you are ready to go and produce your first document!
 - img (not remove) :: folder with the information and image files for compile the final document
 - style (not remove) :: Include the webpage style, the bib files and the word style documents
 
+## Addicional App to install
 
+It is recommended install and create an account for the following apps, all are free and can be complemented with reproducible research.
+
+- Github desktop : https://desktop.github.com/
+- Zotero: https://www.zotero.org/download/
 
 
 
