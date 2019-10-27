@@ -5,7 +5,7 @@ author:
   - "Flavio Lozano-Isla $^{1*}$, Jimmy Gomez $^{2}$"
   - "$^{2}$ Agronomist, Co-founder quipo.org"
   - "$^{1}$ Agronomist MSc, E-mail: flavjack@gmail.com"
-date: "`r if (knitr:::is_html_output()) Sys.Date()`"
+date: "`r if (knitr:::is_html_output()) format(Sys.time(), '%d %b %Y %X')`"
 description: document template for scientific report
 github-repo: flavjack/rticles/issues
 cover-image: img/cover.jpg

@@ -8,7 +8,7 @@
 - R workflow for data analysis
 - Scientific graphic quality
 
-Example: https://flavjack.github.io/rticles/
+Example: <https://flavjack.github.io/rticles/>
 
 ## How to use the template
 
@@ -37,11 +37,11 @@ install.packages(pkgs)
 devtools::install_github("lbusett/insert_table")
 
 ```
-If all packages are installed correctly shoul be appear the "Build" button in the Rstudio IDE (Integrated Development Environment).
+If all packages are installed correctly shoul be appear the **"Build"** button in the Rstudio IDE (Integrated Development Environment).
 
 Play the "Build" button and wait until compile and if all is okay pop-up window will be appeare with webpage version of the document.
 
-If you want to modify the document, open **index.Rmd** file and change the text and code.
+If you want to modify the document, open **"index.Rmd"** file and change the text and code.
 
 So, now you are ready to go and produce your first document!
 
@@ -59,12 +59,21 @@ So, now you are ready to go and produce your first document!
 - img (not remove) :: folder with the information and image files for compile the final document
 - style (not remove) :: Include the webpage style, the bib files and the word style documents
 
-## Addicional App to install
+## Addicional applications to install
 
 It is recommended install and create an account for the following apps, all are free and can be complemented with reproducible research.
 
-- Github desktop : https://desktop.github.com/
-- Zotero: https://www.zotero.org/download/
+- Github desktop : <https://desktop.github.com/>
+- Zotero: <https://www.zotero.org/download/>
+
+## Dataset
+
+The dataset is a germination data example[^*] with a completely randomized design with four replications per treatment under laboratory conditions. The first factor corresponds to five levels of sodium chloride (NaCl) (0, 0.5, 1.0, 1.5 and 2 MPa), and the second factor corresponds to four levels of temperature (25°C, 30°C, 35°C and 40°C).
+
+Source: <https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581>
+
+
+[^*]: Lozano-Isla, Flavio, Omar E. Benites-Alfaro, and Marcelo F. Pompelli, ‘GerminaR: An R Package for Germination Analysis with the Interactive Web Application “GerminaQuant for R”’, Ecological Research, 34.2 (2019), 339–46 <https://doi.org/10.1111/1440-1703.1275>
 
 
 
