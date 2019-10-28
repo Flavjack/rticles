@@ -8,11 +8,9 @@ if(!dir.exists("img/files")) {dir.create("img/files")}
 if(exists("fb")){openxlsx::write.xlsx(fb,"img/files/data.xlsx")}
 if(dir.exists("docs"))
   {zip::zipr(zipfile = "docs/files.zip", files = "img/files")}
-knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
 ```
 
 ```{r packagas, eval=FALSE, include=FALSE}
-
 pkgs <- c(
   "devtools",
   "bookdown",
@@ -32,6 +30,8 @@ pkgs <- c(
 install.packages(pkgs)
 
 devtools::install_github("lbusett/insert_table")
+devtools::install_github("flavjack/GerminaR")
 
+knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
 ```
 
