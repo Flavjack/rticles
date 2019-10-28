@@ -1,0 +1,37 @@
+
+`r if (knitr:::is_html_output()) '# References'`
+`r if (!knitr:::is_html_output()) '# References'`
+
+```{r files, include=FALSE}
+if(!dir.exists("img")) {dir.create("img")}
+if(!dir.exists("img/files")) {dir.create("img/files")}
+if(exists("fb")){openxlsx::write.xlsx(fb,"img/files/data.xlsx")}
+if(dir.exists("docs"))
+  {zip::zipr(zipfile = "docs/files.zip", files = "img/files")}
+knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
+```
+
+```{r packagas, eval=FALSE, include=FALSE}
+
+pkgs <- c(
+  "devtools",
+  "bookdown",
+  "citr",
+  "knitr",
+  "tidyverse",
+  "googlesheets",
+  "agricolae",
+  "GerminaR",
+  "compareGroups",
+  "FactoMineR",
+  "cowplot",
+  "grid",
+  "png",
+  "jpeg")
+
+install.packages(pkgs)
+
+devtools::install_github("lbusett/insert_table")
+
+```
+

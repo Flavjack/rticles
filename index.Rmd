@@ -8,51 +8,24 @@ author:
 date: "`r if (knitr:::is_html_output()) format(Sys.time(), '%d %b %Y %X')`"
 description: document template for scientific report
 github-repo: flavjack/rticles/issues
-cover-image: img/cover.jpg
 favicon: img/icon.png
-url: https\://www.lozanoisla.com
 site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
 output:
   bookdown::word_document2:
-    reference_docx: style/style_article.docx
+    reference_docx: cnfg/style_article.docx
 always_allow_html: yes
-link-citations: yes
+link-citations: true
 colorlinks: yes
-bibliography:  
-- style/book.bib
-- style/pkgs.bib
+bibliography: [cnfg/book.bib, cnfg/pkgs.bib]
 csl: https://www.zotero.org/styles/iica-catie
-editor_options: 
-  chunk_output_type: console
+# source("cnfg/debug.r")
 ---
 
-```{r setup, include=FALSE}
+```{r dataset, include=FALSE}
 
-knitr::opts_chunk$set(fig.align = "center",
-	echo = FALSE, message = FALSE, warning = FALSE)
-
-options(digits = 4, OutDec= ".",
-        knitr.kable.NA = '',
-        knitr.table.format = "pandoc", 
-        citr.use_betterbiblatex = FALSE)
-
-library(devtools)
-library(bookdown)
-library(citr)
-library(knitr) 
-library(inserttable)
-library(tidyverse)
-library(googlesheets)
-library(agricolae)
-library(GerminaR)
-library(compareGroups)
-library(FactoMineR)
-library(cowplot)
-library(grid)
-library(png)
-library(jpeg)
+source("cnfg/setup.r")
 
 aut <- gs_ls()
 gs <- gs_url("https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581") 
