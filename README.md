@@ -80,11 +80,11 @@ It is recommended install and create an account for the following apps, all are 
 
 ## Dataset
 
-The dataset is a germination data example^*^ with a completely randomized design with four replications per treatment under laboratory conditions. The first factor corresponds to five levels of sodium chloride (NaCl) (0, 0.5, 1.0, 1.5 and 2 MPa), and the second factor corresponds to four levels of temperature (25°C, 30°C, 35°C and 40°C).
+The dataset is a germination data example* with a completely randomized design with four replications per treatment under laboratory conditions. The first factor corresponds to five levels of sodium chloride (NaCl) (0, 0.5, 1.0, 1.5 and 2 MPa), and the second factor corresponds to four levels of temperature (25°C, 30°C, 35°C and 40°C).
 
 Source: <https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581>
 
 
-^*^Lozano-Isla, Flavio, Omar E. Benites-Alfaro, and Marcelo F. Pompelli, ‘GerminaR: An R Package for Germination Analysis with the Interactive Web Application “GerminaQuant for R”’, Ecological Research, 34.2 (2019), 339–46 <https://doi.org/10.1111/1440-1703.1275>
+*Lozano-Isla, Flavio, Omar E. Benites-Alfaro, and Marcelo F. Pompelli, ‘GerminaR: An R Package for Germination Analysis with the Interactive Web Application “GerminaQuant for R”’, Ecological Research, 34.2 (2019), 339–46 <https://doi.org/10.1111/1440-1703.1275>
 
 

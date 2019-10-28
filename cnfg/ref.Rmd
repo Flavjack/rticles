@@ -32,6 +32,7 @@ install.packages(pkgs)
 devtools::install_github("lbusett/insert_table")
 devtools::install_github("flavjack/GerminaR")
 
+source("cnfg/setup.r")
 knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
 ```
 
