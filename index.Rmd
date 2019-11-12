@@ -353,4 +353,4 @@ include_graphics("img/files/fig_mv.png")
 
 <embed src="img/files/mensh_&_kording_2017.pdf" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 
-
+\newpage 
