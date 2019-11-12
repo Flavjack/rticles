@@ -122,11 +122,11 @@ Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
 
 Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. 
 
-# Tables {-}
+`r if (knitr:::is_html_output()) '# Tables {-}'`
 
 ```{r functions}
 
-tb <- dplyr::tibble(
+dplyr::tibble(
   
   "Function" = c("ger_summary", "ger_intime", "fplot", "GerminaQuant", "prosopis"),
   
@@ -138,9 +138,8 @@ tb <- dplyr::tibble(
     "Runs the interactive application in offline mode for use on a personal computer.",
     "Dataset with germination experiment in *Prosopis juliflor* seeds under under different osmotic potentials and temperatures.")
   
-)
-
-tb %>% 
+) %>% 
+  
   kable(caption = "Main functions in the GerminaR R package for seed germination variables and graphical analysis.")
 
 ```
@@ -153,7 +152,7 @@ fb %>%
 
 ```
 
-# Figures {-}
+`r if (knitr:::is_html_output()) '# Figures {-}'`
 
 (ref:gerplot) Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. A) Bar graph with germination percentage in a factorial analisys. B)  Line graph from cumulative germination under different osmotic potentials.
 
@@ -350,7 +349,7 @@ include_graphics("img/files/fig_mv.png")
 
 ```
 
-# Anexos {-}
+`r if (knitr:::is_html_output()) '# Anexos {-}'`
 
 <embed src="img/files/mensh_&_kording_2017.pdf" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 
