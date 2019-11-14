@@ -21,7 +21,7 @@ library(citr) # Use Zotero for citations
 library(knitr) # Base of the bookdown template
 library(inserttable) # Insert table with copy and paste
 library(tidyverse) # Data manipulation
-library(googlesheets) # Read/write google sheets files
+library(googlesheets4) # Read/write google sheets files
 library(agricolae) # Agriculture data analisys
 library(GerminaR) # Germination analisys and line and bar easy plots
 library(compareGroups) # Tables for compare treatments 

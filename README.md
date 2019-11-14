@@ -26,27 +26,23 @@ Repository: <https://github.com/Flavjack/rticles>
 ### Install the following packages:
 
 ```{r}
-
-pkgs <- c(
-  "devtools", 
-  "bookdown", 
-  "citr",
-  "knitr",
-  "tidyverse",
-  "googlesheets", 
-  "agricolae",
-  "GerminaR",
-  "compareGroups", 
-  "FactoMineR",
-  "cowplot", 
-  "grid", 
-  "png",
-  "jpeg")
-
-install.packages(pkgs)
+install.packages("devtools")
+install.packages("bookdown")
+install.packages("citr")
+install.packages("knitr")
+install.packages("tidyverse")
+install.packages("googlesheets4")
+install.packages("agricolae")
+install.packages("GerminaR")
+install.packages("compareGroups")
+install.packages("FactoMineR")
+install.packages("cowplot")
+install.packages("grid")
+install.packages("png")
+install.packages("jpeg")
 
 devtools::install_github("lbusett/insert_table")
-
+devtools::install_github("flavjack/GerminaR")
 ```
 If all packages are installed correctly shoul be appear the **"Build"** button in the Rstudio IDE (Integrated Development Environment).
 

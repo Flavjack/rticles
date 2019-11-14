@@ -1,38 +1,41 @@
+\newpage 
 
 `r if (knitr:::is_html_output()) '# References'`
 `r if (!knitr:::is_html_output()) '# References'`
 
 ```{r files, include=FALSE}
-if(!dir.exists("img")) {dir.create("img")}
-if(!dir.exists("img/files")) {dir.create("img/files")}
-if(exists("fb")){openxlsx::write.xlsx(fb,"img/files/data.xlsx")}
+if(!dir.exists("img")) 
+  {dir.create("img")}
+if(!dir.exists("img/files"))
+  {dir.create("img/files")}
+if(exists("fb"))
+  {openxlsx::write.xlsx(fb,"img/files/data.xlsx")}
 if(dir.exists("docs"))
   {zip::zipr(zipfile = "docs/files.zip", files = "img/files")}
 ```
 
 ```{r packagas, eval=FALSE, include=FALSE}
-pkgs <- c(
-  "devtools",
-  "bookdown",
-  "citr",
-  "knitr",
-  "tidyverse",
-  "googlesheets",
-  "agricolae",
-  "GerminaR",
-  "compareGroups",
-  "FactoMineR",
-  "cowplot",
-  "grid",
-  "png",
-  "jpeg")
 
-install.packages(pkgs)
+install.packages("devtools")
+install.packages("bookdown")
+install.packages("citr")
+install.packages("knitr")
+install.packages("tidyverse")
+install.packages("googlesheets4")
+install.packages("agricolae")
+install.packages("GerminaR")
+install.packages("compareGroups")
+install.packages("FactoMineR")
+install.packages("cowplot")
+install.packages("grid")
+install.packages("png")
+install.packages("jpeg")
 
 devtools::install_github("lbusett/insert_table")
 devtools::install_github("flavjack/GerminaR")
 
 source("cnfg/setup.r")
 knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
+
 ```
 

@@ -27,12 +27,13 @@ csl: https://www.zotero.org/styles/iica-catie
 
 source("cnfg/setup.r")
 
-aut <- gs_ls()
-gs <- gs_url("https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581") 
-# browseURL(gs$browser_url)
+sheets_auth(email = T)
+url <- "https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581"
+gs <- as_sheets_id(url)
+# browseURL(url)
 
 fb <- gs %>% 
-  gs_read(ws = "prosopis") %>% 
+  sheets_read(sheet = "prosopis") %>% 
   select_all("tolower") %>% 
   mutate_if(is.character, ~gsub("\\s+|\\.", "_", .)) %>% 
   mutate_at(vars(rep, nacl, temp), as.character)
@@ -353,4 +354,3 @@ include_graphics("img/files/fig_mv.png")
 
 <embed src="img/files/mensh_&_kording_2017.pdf" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 
-\newpage 
