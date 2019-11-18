@@ -3,7 +3,8 @@ knitr::opts_chunk$set(
   fig.align = "center", # Center images in the export file
 	echo = FALSE, # Avoid print code in the export file
   message = FALSE,  # Avoid print messages in the export file
-  warning = FALSE # Avoid print messages in the export file
+  warning = FALSE, # Avoid print messages in the export file
+  gargle_oob_default = TRUE # Authentification process
   )
 
 options(
