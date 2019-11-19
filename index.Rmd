@@ -27,6 +27,7 @@ csl: https://www.zotero.org/styles/iica-catie
 
 source("cnfg/setup.r")
 
+sheets_auth(T)
 url <- "https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581"
 gs <- as_sheets_id(url)
 # browseURL(url)
@@ -126,21 +127,11 @@ Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincid
 
 ```{r functions}
 
-dplyr::tibble(
-  
-  "Function" = c("ger_summary", "ger_intime", "fplot", "GerminaQuant", "prosopis"),
-  
-  "Description"= c(
-    
-    "Calculate ten germination indices maintaining the factors levels for analysis of variance",
-    "Calculates and displays cumulative germination data.",
-    "Function that allows to graphic the results in bar or line plot.",
-    "Runs the interactive application in offline mode for use on a personal computer.",
-    "Dataset with germination experiment in *Prosopis juliflor* seeds under under different osmotic potentials and temperatures.")
-  
-) %>% 
-  
-  kable(caption = "Main functions in the GerminaR R package for seed germination variables and graphical analysis.")
+gs %>% 
+  sheets_read("prosopis") %>% 
+  select(rep:D5) %>% 
+  head(10) %>% 
+  kable(caption = "Germination dataset import from a googlesheet")
 
 ```
 
@@ -148,7 +139,7 @@ dplyr::tibble(
 ```{r}
 
 fb %>% 
-  tb_web("Germination Dataset")
+  tb_web("Germination dataset to download in html")
 
 ```
 
