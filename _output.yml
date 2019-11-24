@@ -15,6 +15,7 @@ bookdown::gitbook:
       family: sans
       size: 2
     search: yes
+    info: no
     edit:
       link: https://github.com/Flavjack/rticles/blob/master/%s
       text: "Edit"

@@ -3,8 +3,7 @@ knitr::opts_chunk$set(
   fig.align = "center", # Center images in the export file
 	echo = FALSE, # Avoid print code in the export file
   message = FALSE,  # Avoid print messages in the export file
-  warning = FALSE, # Avoid print messages in the export file
-  gargle_oob_default = TRUE # Authentification process
+  warning = FALSE # Avoid print messages in the export file
   )
 
 options(
@@ -13,7 +12,8 @@ options(
   scipen = 99, # Avoid use "6e-04"
   knitr.kable.NA = '', # NA values will appear as empty cell
   knitr.table.format = "pandoc", # Format for export tables
-  citr.use_betterbiblatex = FALSE # For zotero addin 
+  citr.use_betterbiblatex = FALSE, # For zotero addin 
+  gargle_oob_default = TRUE # Googlesheets4 auth process
   ) 
 
 library(devtools) # For install packages and complements from dev sources
