@@ -1,23 +1,24 @@
-.rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning {
+.rmd-caution, .rmd-important, .rmd-note, .rmd-tip, .rmd-warning {
   padding: 1em 1em 1em 4em;
   margin-bottom: 10px;
   background: #f5f5f5 5px center/3em no-repeat;
 }
-.rmdcaution {
-  background-image: url("img/caution.png");
+.rmd-caution {
+  background-image: url("icons/caution.png");
 }
-.rmdimportant {
-  background-image: url("img/important.png");
+.rmd-important {
+  background-image: url("icons/important.png");
 }
-.rmdnote {
-  background-image: url("img/note.png");
+.rmd-note {
+  background-image: url("icons/note.png");
 }
-.rmdtip {
-  background-image: url("img/tip.png");
+.rmd-tip {
+  background-image: url("icons/tip.png");
 }
-.rmdwarning {
-  background-image: url("img/warning.png");
+.rmd-warning {
+  background-image: url("icons/warning.png");
 }
+
 p.caption {
   color: #777;
   margin-top: 10px;

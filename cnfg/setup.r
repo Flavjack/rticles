@@ -1,6 +1,7 @@
 
 knitr::opts_chunk$set(
   fig.align = "center", # Center images in the export file
+  out.width = "98%", # Figure width in htlm
 	echo = FALSE, # Avoid print code in the export file
   message = FALSE,  # Avoid print messages in the export file
   warning = FALSE # Avoid print messages in the export file
