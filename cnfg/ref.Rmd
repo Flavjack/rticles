@@ -39,3 +39,19 @@ knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
 
 ```
 
+
+```{git}
+
+# re-write local files with git hub
+
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+
+# Undoing Multiple Commits
+
+git reset --hard hss
+
+```
+
+

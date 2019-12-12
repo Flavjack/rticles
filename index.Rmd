@@ -143,7 +143,7 @@ gs %>%
 ```{r}
 
 fb %>% 
-  tb_web("Germination dataset to download in html")
+  web_table("Germination dataset to download in html")
 
 ```
 
