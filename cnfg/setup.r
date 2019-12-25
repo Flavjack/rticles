@@ -32,7 +32,3 @@ library(cowplot) # For export and mergue figures
 library(grid) # For mergue figures 
 library(png) # Import png files
 library(jpeg) # Import jpeg files
-
-
-
-

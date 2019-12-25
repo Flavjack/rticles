@@ -4,14 +4,12 @@
 `r if (!knitr:::is_html_output()) '# References'`
 
 ```{r files, include=FALSE}
-if(!dir.exists("img")) 
-  {dir.create("img")}
-if(!dir.exists("img/files"))
-  {dir.create("img/files")}
+if(!dir.exists("files"))
+  {dir.create("files")}
 if(exists("fb"))
-  {openxlsx::write.xlsx(fb,"img/files/data.xlsx")}
+  {openxlsx::write.xlsx(fb,"files/data.xlsx")}
 if(dir.exists("docs"))
-  {zip::zipr(zipfile = "docs/files.zip", files = "img/files")}
+  {zip::zipr(zipfile = "docs/files.zip", files = "files")}
 ```
 
 ```{r packagas, eval=FALSE, include=FALSE}
@@ -39,19 +37,15 @@ knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
 
 ```
 
-
-```{git}
-
-# re-write local files with git hub
-
-git fetch --all
-git reset --hard origin/master
-git pull origin master
-
-# Undoing Multiple Commits
-
-git reset --hard hss
-
+```{r eval=FALSE, include=FALSE}
+# # re-write local files with git hub
+# git fetch --all
+# git reset --hard origin/master
+# git pull origin master
+# 
+# # Undoing Multiple Commits
+# git reset --hard hss
+# 
+# # Force push 
+# git push -f origin master
 ```
-
-
