@@ -1,3 +1,6 @@
+# -------------------------------------------------------------------------
+# Knitr options -----------------------------------------------------------
+# -------------------------------------------------------------------------
 
 knitr::opts_chunk$set(
   fig.align = "center", # Center images in the export file
@@ -7,20 +10,40 @@ knitr::opts_chunk$set(
   warning = FALSE # Avoid print messages in the export file
   )
 
+# -------------------------------------------------------------------------
+# Compile options ---------------------------------------------------------
+# -------------------------------------------------------------------------
+
 options(
   digits = 4, # Number of digits in the values
   OutDec= ".", # Use "." insted of "," in the decimal values
   scipen = 99, # Avoid use "6e-04"
-  knitr.kable.NA = '', # NA values will appear as empty cell
+  knitr.kable.NA = "", # NA values will appear as empty cell
   knitr.table.format = "pandoc", # Format for export tables
   citr.use_betterbiblatex = FALSE, # For zotero addin 
   gargle_oob_default = TRUE # Googlesheets4 auth process
   ) 
 
+# -------------------------------------------------------------------------
+# Folder options ----------------------------------------------------------
+# -------------------------------------------------------------------------
+
+if(!dir.exists("files"))
+  {dir.create("files")}
+if(exists("fb"))
+  {openxlsx::write.xlsx(fb,"files/data.xlsx")}
+if(dir.exists("docs"))
+  {zip::zipr(zipfile = "docs/files.zip", files = "files")}
+
+# -------------------------------------------------------------------------
+# Packages ----------------------------------------------------------------
+# -------------------------------------------------------------------------
+
 library(devtools) # For install packages and complements from dev sources
 library(bookdown) # Required for use the present template
 library(citr) # Use Zotero for citations
 library(knitr) # Base of the bookdown template
+library(kableExtra) # Table notes!
 library(inserttable) # Insert table with copy and paste
 library(tidyverse) # Data manipulation
 library(googlesheets4) # Read/write google sheets files
@@ -32,3 +55,4 @@ library(cowplot) # For export and mergue figures
 library(grid) # For mergue figures 
 library(png) # Import png files
 library(jpeg) # Import jpeg files
+

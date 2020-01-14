@@ -1,19 +1,5 @@
-\newpage 
-
-`r if (knitr:::is_html_output()) '# References'`
-`r if (!knitr:::is_html_output()) '# References'`
-
-```{r files, include=FALSE}
-if(!dir.exists("files"))
-  {dir.create("files")}
-if(exists("fb"))
-  {openxlsx::write.xlsx(fb,"files/data.xlsx")}
-if(dir.exists("docs"))
-  {zip::zipr(zipfile = "docs/files.zip", files = "files")}
-```
-
 ```{r packagas, eval=FALSE, include=FALSE}
-
+# source("cnfg/debug.r")
 install.packages("devtools")
 install.packages("bookdown")
 install.packages("citr")
@@ -31,6 +17,7 @@ install.packages("jpeg")
 
 devtools::install_github("lbusett/insert_table")
 devtools::install_github("flavjack/GerminaR")
+devtools::install_github("tidyverse/googlesheets4")
 
 source("cnfg/setup.r")
 knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')

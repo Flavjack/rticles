@@ -1,6 +1,6 @@
 book_filename: "rticles"
 output_dir: docs
-rmd_files: ["index.Rmd", "cnfg/ref.Rmd"]
+rmd_files: ["index.Rmd"]
 
 language:
   label:
