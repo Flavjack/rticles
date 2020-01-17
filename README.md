@@ -31,13 +31,14 @@ Use the terminal in Rstudio
 ```{git}
 
 bash
+prj="project_name"
 mkdir git
 cd git
+git clone https://github.com/Flavjack/rticles.git $prj
+cd $prj
+mv 'rticles.Rproj' $prj.Rproj
+open $prj.Rproj
 open .
-git clone https://github.com/Flavjack/rticles.git project_name
-cd porject_name
-mv 'rticles.Rproj' 'project_name.Rproj'
-open project_name.Rproj
 
 ```
 
@@ -105,12 +106,12 @@ Source: <https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_U
 
 ## Thesis cover page yaml
 
----
+```{yaml}
 title: "UNIVERSIDAD <br> FACULTAD <br> `r if (!knitr:::is_html_output()) knitr::include_graphics('cnfg/icons/unalm.png')`"
 subtitle: "THESIS TITLE"
 author: "TESIS PARA OPTAR EL TITULO DE  <br> NOMBRES Y APELLIDOS"
 date: "`r if (knitr:::is_html_output()) {format(Sys.time(), '%d %b %Y %X')} else {'PLACE <br> YEAR'}`"
----
+```
 
 ## Include section only in the htlm document
 
@@ -132,18 +133,23 @@ Texto!
 # Markdown cheatsheet
 
 Salto de página
+
 \newpage 
 
 Cita textual
+
 @CiteKey
 
 Cita contextual
+
 [@CiteKey]
 
 **negrita**
+
 *italica*
 
 upper^indice^
+
 sub_indice_
 
 Linea horizonatal
@@ -152,11 +158,18 @@ Linea horizonatal
 
 ## Insert table
 
-```{r table_name}
+Create a Gsheet with tabname "tab". The tab should be 3 colums: 
+
+- table: tab name
+- description: title caption
+
+```{r chunk_name}
+sheet <- "chunk_name"
+title <- "Table caption"
 note <- "Nota de pie de página"
 gs %>% # Gsheet dataset
-  sheets_read("Gsheet_tab_name") %>% 
-  kable(caption = "Table caption") %>% 
+  sheets_read(sheet) %>% 
+  kable(caption = title) %>% 
   add_footnote(notation = "none", label = note)
 ```
 
@@ -164,10 +177,17 @@ gs %>% # Gsheet dataset
 
 ## Insert figure
 
-```{r figure_name, fig.cap="Figure caption"}
-fig <- "fig_name"
+Create a Gsheet with tabname "fig". The tab should be 3 colums: 
+
+- figure: "chunk_name"
+- url: image url 
+- description: title caption
+
+```{r chunk_name, fig.cap="Figure caption"}
+fig <- "chunk_name"
+sheet <- "fig"
 gs %>% 
-  sheets_read("fig") %>% 
+  sheets_read(sheet) %>% 
   filter(figure == fig) %>%
   select(url) %>% 
   as_vector() %>% 
