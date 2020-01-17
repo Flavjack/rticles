@@ -1,6 +1,6 @@
 bookdown::gitbook:
   css: cnfg/style.css
-  split_by: chapter # chapter none
+  split_by: chapter # options: chapter or none
   split_bib: TRUE
   config:
     toc:

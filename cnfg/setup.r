@@ -56,3 +56,4 @@ library(grid) # For mergue figures
 library(png) # Import png files
 library(jpeg) # Import jpeg files
 
+knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
