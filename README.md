@@ -103,10 +103,10 @@ Source: <https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_U
 ## Thesis cover page yaml
 
 ```{yaml}
-title: "UNIVERSIDAD <br> FACULTAD <br> `r if (!knitr:::is_html_output()) knitr::include_graphics('cnfg/icons/unalm.png')`"
-subtitle: "THESIS TITLE"
-author: "TESIS PARA OPTAR EL TITULO DE  <br> NOMBRES Y APELLIDOS"
-date: "`r if (knitr:::is_html_output()) {format(Sys.time(), '%d %b %Y %X')} else {'PLACE <br> YEAR'}`"
+title: "Universidad <br> Facultad <br> `r if (!knitr:::is_html_output()) knitr::include_graphics('cnfg/icons/unalm.png')`"
+subtitle: "Thesis Title"
+author: "Tesis para Optar el Título de <br> Nombres y Apellidos"
+date: "`r if (knitr:::is_html_output()) {format(Sys.time(), '%d %b %Y %X')} else {'Place <br> Year'}`"
 ```
 
 ## Include section only in the html document
@@ -152,7 +152,7 @@ Texto!
 
 upper^indice^
 
-sub_indice_
+sub~indice~
 
 # Page 
 
@@ -164,27 +164,6 @@ sub_indice_
 
 ***
 ```
-
-
-## Insert table
-
-Create a Gsheet with tabname "tab". The tab should be 3 colums: 
-
-- table: tab name with the table ("chunk_name")
-- description: title caption
-- note: sub title caption
-
-```{r chunk_name}
-sheet <- "chunk_name"
-title <- "Table caption"
-note <- "Nota de pie de página"
-gs %>% # Gsheet dataset
-  sheets_read(sheet) %>% 
-  kable(caption = title) %>% 
-  add_footnote(notation = "none", label = note)
-```
-
-\@ref(tab:chunk_name) 
 
 ## Insert figure
 
@@ -205,7 +184,31 @@ gs %>%
   include_graphics()
 ```
 
+Cite figure:
+
 \@ref(fig:figure_name)
+
+## Insert table
+
+Create a Gsheet with tabname "tab". The tab should be 3 colums: 
+
+- table: tab name with the table ("chunk_name")
+- description: title caption
+- note: sub title caption
+
+```{r chunk_name}
+sheet <- "chunk_name"
+title <- "Table caption"
+note <- "Nota de pie de página"
+gs %>% # Gsheet dataset
+  sheets_read(sheet) %>% 
+  kable(caption = title) %>% 
+  add_footnote(notation = "none", label = note)
+```
+
+Cite table:
+
+\@ref(tab:chunk_name) 
 
 ## Include references
 
@@ -262,15 +265,14 @@ git reset --hard <commit>
 # Import data from Gsheets to R
 
 ```{r dataset, include=FALSE}
+# source("cnfg/debug.r")
 source("cnfg/setup.r")
-
 sheets_auth(T)
 url <- "url"
 gs <- as_sheets_id(url)
 # browseURL(url)
-
-fb <- gs %>% 
-  sheets_read(sheet = "sheet_name") 
+xl <- gs %>% drive_download("files/fieldbook.xlsx", overwrite = T) %>% pluck(2)
+fb <- xl %>% readxl::read_excel("fb") 
 ```
 
 

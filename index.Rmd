@@ -361,7 +361,6 @@ include_graphics("files/fig_mv.png")
 
 ```
 
-
 <!-- Anexos -->
 
 `r if (knitr:::is_html_output()) '# Anexos {-}'`

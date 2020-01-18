@@ -30,8 +30,6 @@ options(
 
 if(!dir.exists("files"))
   {dir.create("files")}
-if(exists("fb"))
-  {openxlsx::write.xlsx(fb,"files/data.xlsx")}
 if(dir.exists("docs"))
   {zip::zipr(zipfile = "docs/files.zip", files = "files")}
 
@@ -47,6 +45,8 @@ library(kableExtra) # Table notes!
 library(inserttable) # Insert table with copy and paste
 library(tidyverse) # Data manipulation
 library(googlesheets4) # Read/write google sheets files
+library(googledrive) # Dowload files from googledrive
+library(readxl) # Read excel files
 library(agricolae) # Agriculture data analisys
 library(GerminaR) # Germination analisys and line and bar easy plots
 library(compareGroups) # Tables for compare treatments 
