@@ -1,9 +1,9 @@
-# Rticles: template for technical documents using bookdown package.
+# Rticles: template for technical documents using bookdown
 
 ## Features
 
 - Thesis and articles template
-- Export in word and html document
+- Export word and html document
 - Word improved template
 - Bibliography citation
 - R workflow for data analysis
@@ -29,23 +29,21 @@ Clone the **"rticles"** repository in the following link.
 Use the terminal in Rstudio
 
 ```{git}
-
 bash
-prj="project_name"
+cd .
 mkdir git
+prj="project_name"
 cd git
 git clone https://github.com/Flavjack/rticles.git $prj
 cd $prj
 mv 'rticles.Rproj' $prj.Rproj
 open $prj.Rproj
 open .
-
 ```
 
 ### Install the following R packages
 
-```{r packagas}
-
+```{r Rpackagas}
 install.packages("devtools")# For install packages and complements from dev sources
 install.packages("bookdown") # Required for use the present template
 install.packages("citr") # Use Zotero for citations
@@ -64,12 +62,11 @@ install.packages("jpeg") # Import jpeg files
 devtools::install_github("lbusett/insert_table") # Insert table with copy and paste (Not in CRAN)
 devtools::install_github("flavjack/GerminaR")
 devtools::install_github("tidyverse/googlesheets4")
-
 ```
 
 If all packages are installed correctly shoul be appear the **"Build"** button in the Rstudio IDE (Integrated Development Environment).
 
-Play the **"Build"** button and wait until compile and if all is okay pop-up window will be appeare with webpage version of the document.
+Play the **"Build"** button and wait until compile the document and if all is okay pop-up window will be appeare with webpage version of the document.
 
 If you want to modify the document, open **"index.Rmd"** file and change the text and code.
 
@@ -89,10 +86,9 @@ So, now you are ready to go and produce your first document!
 | folder 	| files          	| YES         	| Images and files that are included in the document.        	|
 | folder 	| docs          	| YES         	| Files for deploy the web page using github pages).        	|
 
-
 ## About the docuent
 
-A document is building with _Lorem Ipsum_ and the examples and tables use the dataset from GerminaR package.
+The document is building with _Lorem Ipsum_ text, and the examples and tables use the dataset from GerminaR package.
 
 ###  Dataset
 
@@ -113,13 +109,19 @@ author: "TESIS PARA OPTAR EL TITULO DE  <br> NOMBRES Y APELLIDOS"
 date: "`r if (knitr:::is_html_output()) {format(Sys.time(), '%d %b %Y %X')} else {'PLACE <br> YEAR'}`"
 ```
 
-## Include section only in the htlm document
+## Include section only in the html document
 
+```{section_html}
 `r if (knitr:::is_html_output()) '# Figures'`
+```
 
 ## Include section only in the word document
 
+
+```{section_word}
 `r if (!knitr:::is_html_output()) '# Figures'`
+```
+
 
 ## Blocks
 
@@ -132,17 +134,17 @@ Texto!
 
 # Markdown cheatsheet
 
-Salto de página
 
-\newpage 
-
-Cita textual
+```{markdown}
+# Cita textual
 
 @CiteKey
 
-Cita contextual
+# Cita contextual
 
 [@CiteKey]
+
+# Fonts
 
 **negrita**
 
@@ -152,16 +154,25 @@ upper^indice^
 
 sub_indice_
 
-Linea horizonatal
+# Page 
+
+# Salto de página
+
+\newpage 
+
+# Linea horizonatal
 
 ***
+```
+
 
 ## Insert table
 
 Create a Gsheet with tabname "tab". The tab should be 3 colums: 
 
-- table: tab name
+- table: tab name with the table ("chunk_name")
 - description: title caption
+- note: sub title caption
 
 ```{r chunk_name}
 sheet <- "chunk_name"
@@ -173,13 +184,13 @@ gs %>% # Gsheet dataset
   add_footnote(notation = "none", label = note)
 ```
 
-\@ref(tab:table_name) 
+\@ref(tab:chunk_name) 
 
 ## Insert figure
 
 Create a Gsheet with tabname "fig". The tab should be 3 colums: 
 
-- figure: "chunk_name"
+- figure: name to identify the figure ("chunk_name")
 - url: image url 
 - description: title caption
 
@@ -198,6 +209,7 @@ gs %>%
 
 ## Include references
 
+```{markdown}
 `r if (knitr::is_html_output()){'
 # References 
 <div id="refs"></div>'}`
@@ -205,24 +217,28 @@ gs %>%
 `r if (!knitr::is_html_output()){'
 # References
 <div id="refs"></div>'}`
+```
 
 ## Include another Rmd file
 
 ```{r chunk_name, child = 'file.Rmd'}
-```
+``` 
 
 ## Include pdf
 
+```{html}
 <embed src="files/file_name.pdf" width="100%" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+```
 
 ## Include video or slides
 
+```{html}
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
 
 # Git useful codes
 
 ```{git}
-
 # Import changes from origen
 git pull
 
@@ -241,8 +257,20 @@ git push -f origin master
 
 # Undoing Multiple Commits
 git reset --hard <commit>
-
 ```
 
+# Import data from Gsheets to R
+
+```{r dataset, include=FALSE}
+source("cnfg/setup.r")
+
+sheets_auth(T)
+url <- "url"
+gs <- as_sheets_id(url)
+# browseURL(url)
+
+fb <- gs %>% 
+  sheets_read(sheet = "sheet_name") 
+```
 
 
