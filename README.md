@@ -103,10 +103,21 @@ Source: <https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_U
 ## Thesis cover page yaml
 
 ```{yaml}
-title: "Universidad <br> Facultad <br> `r if (!knitr:::is_html_output()) knitr::include_graphics('cnfg/icons/unalm.png')`"
-subtitle: "Thesis Title"
-author: "Tesis para Optar el Título de <br> Nombres y Apellidos"
-date: "`r if (knitr:::is_html_output()) {format(Sys.time(), '%d %b %Y %X')} else {'Place <br> Year'}`"
+title:  |-  
+  Universidad Nacional  
+  Facultad de  
+  Carrera Profesional de  
+  `r if (!knitr:::is_html_output()) knitr::include_graphics('cnfg/icons/logo.png')`  
+subtitle:  |-  
+  __________________________________________________________  
+  TITLE  
+  __________________________________________________________  
+  *Tesis para Optar el Título *  
+author: "Nombres y Apelidos"
+date:  |-  
+  `r if (knitr:::is_html_output()) {format(Sys.time(), '%d %b %Y %X')}`
+  Lugar-País  
+  2020  
 ```
 
 ## Include section only in the html document
@@ -165,24 +176,44 @@ sub~indice~
 ***
 ```
 
+# Import data from Gsheets to R
+
+```{r dataset, include=FALSE}
+# source("cnfg/debug.r")
+source("cnfg/setup.r")
+sheets_auth(T)
+url <- "googlehseet_url"
+gs <- as_sheets_id(url)
+# browseURL(url)
+xl <- gs %>% drive_download("files/fieldbook.xlsx", overwrite = T) %>% pluck(2)
+fb <- xl %>% readxl::read_excel("fb") 
+```
+
 ## Insert figure
 
 Create a Gsheet with tabname "fig". The tab should be 3 colums: 
 
 - figure: name to identify the figure ("chunk_name")
-- url: image url 
 - description: title caption
+- url: image url 
 
-```{r chunk_name, fig.cap="Figure caption"}
+```{r chunk_name, fig.cap= '(ref:chunk_name)'}
 fig <- "chunk_name"
 sheet <- "fig"
-gs %>% 
-  sheets_read(sheet) %>% 
+title <- xl %>% 
+  read_excel(sheet) %>% 
+  filter(figure == fig) %>%
+  select(description) %>% 
+  as_vector()
+xl %>% 
+  read_excel(sheet) %>% 
   filter(figure == fig) %>%
   select(url) %>% 
   as_vector() %>% 
   include_graphics()
+# \@ref(tab:) 
 ```
+(ref:`r fig`) `r title`
 
 Cite figure:
 
@@ -197,13 +228,23 @@ Create a Gsheet with tabname "tab". The tab should be 3 colums:
 - note: sub title caption
 
 ```{r chunk_name}
-sheet <- "chunk_name"
-title <- "Table caption"
-note <- "Nota de pie de página"
-gs %>% # Gsheet dataset
-  sheets_read(sheet) %>% 
+tab <- "chunk_name"
+sheet <- "tab"
+title <- xl %>% 
+  read_excel(sheet) %>% 
+  filter(table == tab) %>%
+  select(description) %>% 
+  as_vector()
+note <- xl %>% 
+  read_excel(sheet) %>% 
+  filter(table == tab) %>%
+  select(note) %>% 
+  as_vector()
+xl %>% 
+  read_excel(tab) %>% 
   kable(caption = title) %>% 
   add_footnote(notation = "none", label = note)
+# \@ref(tab:) 
 ```
 
 Cite table:
@@ -261,18 +302,3 @@ git push -f origin master
 # Undoing Multiple Commits
 git reset --hard <commit>
 ```
-
-# Import data from Gsheets to R
-
-```{r dataset, include=FALSE}
-# source("cnfg/debug.r")
-source("cnfg/setup.r")
-sheets_auth(T)
-url <- "url"
-gs <- as_sheets_id(url)
-# browseURL(url)
-xl <- gs %>% drive_download("files/fieldbook.xlsx", overwrite = T) %>% pluck(2)
-fb <- xl %>% readxl::read_excel("fb") 
-```
-
-
