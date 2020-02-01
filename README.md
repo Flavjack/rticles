@@ -41,28 +41,9 @@ open $prj.Rproj
 open .
 ```
 
-### Install the following R packages
+### R packages
 
-```{r Rpackagas}
-install.packages("devtools")# For install packages and complements from dev sources
-install.packages("bookdown") # Required for use the present template
-install.packages("citr") # Use Zotero for citations
-install.packages("knitr") # Base of the bookdown template
-install.packages("tidyverse") # Data manipulation
-install.packages("googlesheets4") # Read/write google sheets files
-install.packages("agricolae") # Agriculture data analisys
-install.packages("GerminaR") # Germination analisys and line and bar easy plots
-install.packages("compareGroups")  # Tables for compare treatments 
-install.packages("FactoMineR")  # Multivariate data anallisys
-install.packages("cowplot") # For export and mergue figures 
-install.packages("grid") # For mergue figures 
-install.packages("png") # Import png files
-install.packages("jpeg") # Import jpeg files
-
-devtools::install_github("lbusett/insert_table") # Insert table with copy and paste (Not in CRAN)
-devtools::install_github("flavjack/GerminaR")
-devtools::install_github("tidyverse/googlesheets4")
-```
+Run the first chunk in the "index.Rmd" called "setup" and all the packages will be installed automatically.
 
 If all packages are installed correctly shoul be appear the **"Build"** button in the Rstudio IDE (Integrated Development Environment).
 
@@ -197,8 +178,8 @@ Create a Gsheet with tabname "fig". The tab should be 3 colums:
 - description: title caption
 - url: image url 
 
-```{r chunk_name, fig.cap= '(ref:chunk_name)'}
-fig <- "chunk_name"
+```{r chunk_name, fig.cap = title}
+fig <- opts_current$get('label')
 sheet <- "fig"
 title <- xl %>% 
   read_excel(sheet) %>% 
@@ -211,9 +192,9 @@ xl %>%
   select(url) %>% 
   as_vector() %>% 
   include_graphics()
-# \@ref(tab:) 
+knitr::opts_knit$set(eval.after = 'fig.cap')
+# \@ref(fig:) 
 ```
-(ref:`r fig`) `r title`
 
 Cite figure:
 
@@ -228,7 +209,7 @@ Create a Gsheet with tabname "tab". The tab should be 3 colums:
 - note: sub title caption
 
 ```{r chunk_name}
-tab <- "chunk_name"
+tab <- opts_current$get("label")
 sheet <- "tab"
 title <- xl %>% 
   read_excel(sheet) %>% 
@@ -243,7 +224,7 @@ note <- xl %>%
 xl %>% 
   read_excel(tab) %>% 
   kable(caption = title) %>% 
-  add_footnote(notation = "none", label = note)
+  add_footnote(notation = "symbol", label = note)
 # \@ref(tab:) 
 ```
 

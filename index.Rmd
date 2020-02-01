@@ -22,7 +22,7 @@ bibliography: [cnfg/book.bib, cnfg/pkgs.bib]
 csl: https://www.zotero.org/styles/apa
 ---
 
-```{r dataset, include=FALSE}
+```{r setup, include=FALSE}
 # source("cnfg/debug.r")
 source("cnfg/setup.r")
 

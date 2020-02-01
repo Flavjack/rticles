@@ -37,23 +37,35 @@ if(dir.exists("docs"))
 # Packages ----------------------------------------------------------------
 # -------------------------------------------------------------------------
 
-library(devtools) # For install packages and complements from dev sources
-library(bookdown) # Required for use the present template
-library(citr) # Use Zotero for citations
-library(knitr) # Base of the bookdown template
-library(kableExtra) # Table notes!
-library(inserttable) # Insert table with copy and paste
-library(tidyverse) # Data manipulation
-library(googlesheets4) # Read/write google sheets files
-library(googledrive) # Dowload files from googledrive
-library(readxl) # Read excel files
-library(agricolae) # Agriculture data analisys
-library(GerminaR) # Germination analisys and line and bar easy plots
-library(compareGroups) # Tables for compare treatments 
-library(FactoMineR) # Multivariate data anallisys
-library(cowplot) # For export and mergue figures 
-library(grid) # For mergue figures 
-library(png) # Import png files
-library(jpeg) # Import jpeg files
+packages <- c(
+  "devtools", # For install packages and complements from dev sources
+  "bookdown", # Required for use the present template
+  "citr",  # Use Zotero for citations
+  "knitr", # Base of the bookdown template
+  "kableExtra", # Table notes!
+  "inserttable", # Insert table with copy and paste
+  "tidyverse", # Data manipulation
+  "googlesheets4", # Read/write google sheets files
+  "googledrive", # Dowload files from googledrive
+  "readxl", # Read excel files
+  "agricolae", # Agriculture data analisys
+  "GerminaR", # Germination analisys and line and bar easy plots
+  "compareGroups", # Tables for compare treatments 
+  "FactoMineR", # Multivariate data anallisys
+  "cowplot", # For export and mergue figures 
+  "grid", # For mergue figures 
+  "png", # Import png files
+  "jpeg" # Import jpeg files
+  )
+
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  devtools::install_github("lbusett/insert_table") # Insert table with copy and paste (Not in CRAN)
+  install.packages(packages[!installed_packages])
+}
+lapply(packages, library, character.only = TRUE) 
+rm(packages, installed_packages)
+
+# Packages citation -------------------------------------------------------
 
 knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
