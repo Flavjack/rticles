@@ -63,7 +63,7 @@ if (any(installed_packages == FALSE)) {
   devtools::install_github("lbusett/insert_table") # Insert table with copy and paste (Not in CRAN)
   install.packages(packages[!installed_packages])
 }
-lapply(packages, library, character.only = TRUE) 
+invisible(lapply(packages, library, character.only = TRUE))
 rm(packages, installed_packages)
 
 # Packages citation -------------------------------------------------------
