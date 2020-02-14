@@ -2,9 +2,9 @@
 title: "Rticles: Scientific Documents with Bookdown R Package"
 subtitle: "www.quipo.org"
 author:
-  - "Flavio Lozano-Isla $^{1*}$, Jimmy Gomez $^{2}$"
-  - "$^{2}$ Agronomist, Co-founder quipo.org"
-  - "$^{1}$ Agronomist MSc, E-mail: flavjack@gmail.com"
+  - "Jimmy Gomez $^{1}$, Flavio Lozano-Isla $^{2*}$"
+  - "$^{1}$ Agronomist, Co-founder ww.quipo.org"
+  - "$^{2}$ Agronomist MSc, email: flavjack@gmail.com"
 date: "`r if (knitr:::is_html_output()) format(Sys.time(), '%d %b %Y %X')`"
 description: document template for scientific report
 github-repo: flavjack/rticles/issues

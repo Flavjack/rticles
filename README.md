@@ -30,13 +30,16 @@ Use the terminal in Rstudio
 
 ```{git}
 bash
-cd .
+cd 
 mkdir git
+gituser="flavjack"
 prj="project_name"
 cd git
 git clone https://github.com/Flavjack/rticles.git $prj
 cd $prj
 mv 'rticles.Rproj' $prj.Rproj
+git remote rm origin
+git remote add origin https://github.com/$gituser/$prj.git
 open $prj.Rproj
 open .
 ```
