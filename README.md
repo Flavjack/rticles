@@ -23,23 +23,23 @@ It is recommended install and create an account if is needed for the following a
 
 ## How to use the template
 
-### Clone the repository
+### Use the template or clone the repository
 
-Clone the **"rticles"** repository in the following link.
-Use the terminal in Rstudio
+Use the template from GitHub: <https://github.com/Flavjack/rticles>
+
+Clone the **"rticles"** repository using the terminal in Rstudio
 
 ```{git}
 bash
+prj="project_name"
+gituser="flavjack"
 cd 
 mkdir git
-gituser="flavjack"
-prj="project_name"
 cd git
 git clone https://github.com/Flavjack/rticles.git $prj
 cd $prj
 mv 'rticles.Rproj' $prj.Rproj
 git remote rm origin
-git remote add origin https://github.com/$gituser/$prj.git
 open $prj.Rproj
 open .
 ```
