@@ -31,15 +31,21 @@ Clone the **"rticles"** repository using the terminal in Rstudio
 
 ```{git}
 bash
-prj="project_name"
+prj="new_repo"
 gituser="flavjack"
+rep="https://github.com/flavjack/rticles"
 cd 
 mkdir git
 cd git
-git clone https://github.com/Flavjack/rticles.git $prj
+git clone $rep.git $prj
 cd $prj
 mv 'rticles.Rproj' $prj.Rproj
+curl -u $gituser https://api.github.com/user/repos -d "{\"name\":\"$prj\"}"
+git init
 git remote rm origin
+git commit -m "Starting"
+git remote add origin https://github.com/$gituser/$prj.git
+git push -u origin master
 open $prj.Rproj
 open .
 ```
