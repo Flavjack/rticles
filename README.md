@@ -31,10 +31,10 @@ Clone the **"rticles"** repository using the terminal in Rstudio
 
 ```{git}
 bash
-prj="new_project"
+prj="project_name"
 info="project info"
-gituser="flavjack"
-repo="https://github.com/flavjack/rticles"
+gituser="Flavjack"
+repo="https://github.com/Flavjack/rticles"
 cd
 mkdir git
 cd git
