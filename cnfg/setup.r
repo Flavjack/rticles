@@ -1,4 +1,39 @@
 # -------------------------------------------------------------------------
+# Packages ----------------------------------------------------------------
+# -------------------------------------------------------------------------
+
+packages <- c(
+  "devtools", # For install packages and complements from dev sources
+  "bookdown", # Required for use the present template
+  "citr",  # Use Zotero for citations
+  "knitr", # Base of the bookdown template
+  "kableExtra", # Table notes!
+  "inserttable", # Insert table with copy and paste
+  "tidyverse", # Data manipulation
+  "googlesheets4", # Read/write google sheets files
+  "googledrive", # Dowload files from googledrive
+  "readxl", # Read excel files
+  "agricolae", # Agriculture data analisys
+  "GerminaR", # Germination analisys and line and bar easy plots
+  # "compareGroups", # Tables for compare treatments 
+  "FactoMineR", # Multivariate data anallisys
+  "cowplot", # For export and mergue figures 
+  "grid", # For mergue figures 
+  "png", # Import png files
+  "jpeg" # Import jpeg files
+)
+
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+invisible(lapply(packages, library, character.only = TRUE))
+rm(packages, installed_packages)
+  
+# devtools::install_github("lbusett/insert_table") # Insert table with copy and paste (Not in CRAN)
+# devtools::install_github("Flavjack/GerminaR") # Germination analisys and line and bar easy plots
+
+# -------------------------------------------------------------------------
 # Knitr options -----------------------------------------------------------
 # -------------------------------------------------------------------------
 
@@ -33,38 +68,6 @@ if(!dir.exists("files"))
 if(dir.exists("docs"))
   {zip::zipr(zipfile = "docs/files.zip", files = "files")}
 
-# -------------------------------------------------------------------------
-# Packages ----------------------------------------------------------------
-# -------------------------------------------------------------------------
-
-packages <- c(
-  "devtools", # For install packages and complements from dev sources
-  "bookdown", # Required for use the present template
-  "citr",  # Use Zotero for citations
-  "knitr", # Base of the bookdown template
-  "kableExtra", # Table notes!
-  "inserttable", # Insert table with copy and paste
-  "tidyverse", # Data manipulation
-  "googlesheets4", # Read/write google sheets files
-  "googledrive", # Dowload files from googledrive
-  "readxl", # Read excel files
-  "agricolae", # Agriculture data analisys
-  "GerminaR", # Germination analisys and line and bar easy plots
-  "compareGroups", # Tables for compare treatments 
-  "FactoMineR", # Multivariate data anallisys
-  "cowplot", # For export and mergue figures 
-  "grid", # For mergue figures 
-  "png", # Import png files
-  "jpeg" # Import jpeg files
-  )
-
-installed_packages <- packages %in% rownames(installed.packages())
-if (any(installed_packages == FALSE)) {
-  devtools::install_github("lbusett/insert_table") # Insert table with copy and paste (Not in CRAN)
-  install.packages(packages[!installed_packages])
-}
-invisible(lapply(packages, library, character.only = TRUE))
-rm(packages, installed_packages)
 
 # Packages citation -------------------------------------------------------
 
