@@ -68,7 +68,11 @@ if(!dir.exists("files"))
 if(dir.exists("docs"))
   {zip::zipr(zipfile = "docs/files.zip", files = "files")}
 
-
 # Packages citation -------------------------------------------------------
 
 knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
+
+# authorize googledrive & googlesheets ------------------------------------
+
+sheets_auth(T)
+drive_auth(T)

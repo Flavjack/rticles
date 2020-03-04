@@ -27,8 +27,6 @@ editor_options:
 ```{r setup, include=FALSE}
 # source("cnfg/debug.r")
 source("cnfg/setup.r")
-
-sheets_auth(T)
 url <- "https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581"
 gs <- as_sheets_id(url)
 # browseURL(url)
@@ -38,7 +36,6 @@ fb <- gs %>%
   select_all("tolower") %>% 
   mutate_if(is.character, ~gsub("\\s+|\\.", "_", .)) %>% 
   mutate_at(vars(rep, nacl, temp), as.character)
-
 ```
 
 # Abstract {-}
