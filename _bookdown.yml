@@ -1,5 +1,6 @@
 book_filename: "rticles"
 output_dir: docs
+delete_merged_file: TRUE
 rmd_files: ["index.Rmd"]
 
 language:
