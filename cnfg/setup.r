@@ -35,6 +35,16 @@ rm(packages, installed_packages)
 # devtools::install_github("Flavjack/GerminaR") # Germination analysis and line and bar easy plots
 
 # -------------------------------------------------------------------------
+# yml files ---------------------------------------------------------------
+# -------------------------------------------------------------------------
+
+if(!file.exists("_output.yml"))
+  {file.copy(from = "cnfg/output.yml", to = "_output.yml")}
+
+if(!file.exists("_bookdown.yml"))
+  {file.copy(from = "cnfg/bookdown.yml", to = "_bookdown.yml")}
+
+# -------------------------------------------------------------------------
 # Knitr options -----------------------------------------------------------
 # -------------------------------------------------------------------------
 
@@ -72,9 +82,11 @@ knitr::write_bib(c(.packages()),'cnfg/pkgs.bib')
 # -------------------------------------------------------------------------
 
 if(!dir.exists("files"))
-{dir.create("files")}
+  {dir.create("files")}
 if(dir.exists("docs"))
-{zip::zipr(zipfile = "docs/files.zip", files = "files")}
+  {zip::zipr(zipfile = "docs/files.zip", files = "files")}
+if(dir.exists("docs"))
+  {unlink("_book", recursive = T)}
 
 # -------------------------------------------------------------------------
 # authorize googledrive & googlesheets ------------------------------------
