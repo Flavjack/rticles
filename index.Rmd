@@ -7,7 +7,7 @@ author:
   - "$^{2}$ Agronomist MSc, email: flavjack@gmail.com"
 date: "`r if (knitr:::is_html_output()) format(Sys.time(), '%d %b %Y %X')`"
 description: document template for scientific report
-github-repo: flavjack/rticles/issues
+github-repo: flavjack/rticles
 favicon: cnfg/icons/favicon.png
 site: bookdown::bookdown_site
 documentclass: book
@@ -25,17 +25,21 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-# source("cnfg/debug.r")
 source("cnfg/setup.r")
 url <- "https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581"
 gs <- as_sheets_id(url)
 # browseURL(url)
 
-fb <- gs %>% 
-  sheets_read(sheet = "prosopis") %>% 
+xl <- gs %>% 
+  drive_download("files/fieldbook.xlsx", overwrite = T) %>%
+  pluck(2)
+
+fb <- xl %>% 
+  readxl::read_excel("prosopis")  %>% 
   select_all("tolower") %>% 
   mutate_if(is.character, ~gsub("\\s+|\\.", "_", .)) %>% 
-  mutate_at(vars(rep, nacl, temp), as.character)
+  mutate_at(vars(rep, nacl, temp), as.factor)
+# str(fb)
 ```
 
 # Abstract {-}
@@ -267,8 +271,12 @@ pca <- gsm %>%
       quali.sup = c(1,2))
 
 
-# summary.PCA(pca, nb.dec = 2, nbelements = Inf)
+# sink("files/pca.txt")
+# # Results
+# summary(pca, nbelements = Inf, nb.dec = 2)
+# # Correlation de dimensions
 # dimdesc(pca)
+# sink()
 
 # library(FactoInvestigate)
 # Investigate(pca, document = "pdf_document")
@@ -306,9 +314,11 @@ graphics.off()
 clt <- pca %>% 
   FactoMineR::HCPC(., nb.clust=-1, graph = F)
 
-# clt$call$t$tree
-# clt$desc.ind
-# clt$desc.var
+# sink("files/clu.txt")
+# clus$call$t$tree
+# clus$desc.ind
+# clus$desc.var
+# sink()
 
 ppi <- 300
 png("files/fig_cluster_tree.png", width=7*ppi, height=7*ppi, res=ppi)

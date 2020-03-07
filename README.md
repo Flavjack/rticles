@@ -25,9 +25,11 @@ It is recommended install and create an account if is needed for the following a
 
 ### Use the template or clone the repository
 
-Use the template from GitHub: <https://github.com/Flavjack/rticles>
+- You can use **"rticles"** as template from GitHub: <https://github.com/Flavjack/rticles>
 
-Clone the **"rticles"** repository using the terminal in Rstudio
+or 
+
+- You can clone the **"rticles"** repository using the terminal in Rstudio, for windows user using bash (install Git)
 
 ```{git}
 bash
@@ -50,35 +52,35 @@ open $prj.Rproj
 open .
 ```
 
-### R packages
+### Document Setup
 
-Run the first chunk in the "index.Rmd" called "setup" and all the packages will be installed automatically.
+1. Run the first chunk in the **"index.Rmd"** called "setup" and all the packages will be installed automatically.
 
-If all packages are installed correctly shoul be appear the **"Build"** button in the Rstudio IDE (Integrated Development Environment).
+1. If all packages are installed correctly shoul be appear the **"Build"** button in the Rstudio IDE (Integrated Development Environment).
 
-Play the **"Build"** button and wait until compile the document and if all is okay pop-up window will be appeare with webpage version of the document.
+1. Play the **"Build"** button and wait until compile the document and if all is okay pop-up window will be appeare with the html version of the document.
 
-If you want to modify the document, open **"index.Rmd"** file and change the text and code.
+1. You can modify the document changing the text and code in the **"index.Rmd"** file.
 
-So, now you are ready to go and produce your first document!
+1. Now you are ready to go and produce your first document!
 
 ## Folders and files
 
 | Type   	| Name          	| Removable   	| Description                                                	|
 |--------	|---------------	|-------------	|------------------------------------------------------------	|
-| fle    	| index.Rmd     	| NO          	| File that produce the article (code/figures/tables).      	|
+| folder 	| cnfg          	| NO          	| Contains all document settings.                           	|
+| file  	| index.Rmd     	| NO          	| File that produce the article (code/figures/tables).      	|
 | file   	| rticle.Rproj  	| NO          	| Rename the file according your repository name.            	|
-| file   	| .gitignore    	| NO          	|                                                            	|
-| file   	| _bookdown.yml 	| NO          	| Options to compile the document.                          	|
-| file   	| _output.yml   	| NO          	| html options for the web page.                            	|
-| file   	| README.rmd    	| YES         	| It is the repository description!                          	|
-| folder 	| cnfg          	| NO          	| The web page style, bib files, R and word style templates.	|
+| file   	| .gitignore    	| NO          	| System options.                                            	|
+| file   	| _bookdown.yml 	| YES          	| Options to compile the document.                          	|
+| file   	| _output.yml   	| YES         	| html options for the web page.                            	|
+| file   	| README.rmd    	| YES         	| It is the repository description!                         	|
 | folder 	| files          	| YES         	| Images and files that are included in the document.        	|
 | folder 	| docs          	| YES         	| Files for deploy the web page using github pages).        	|
 
 ## About the docuent
 
-The document is building with _Lorem Ipsum_ text, and the examples and tables use the dataset from GerminaR package.
+The document is building with _Lorem Ipsum_ text, and the dataset, examples and tables used are from `GerminaR` package.
 
 ###  Dataset
 
@@ -169,7 +171,6 @@ sub~indice~
 # Import data from Gsheets to R
 
 ```{r dataset, include=FALSE}
-# source("cnfg/debug.r")
 source("cnfg/setup.r")
 sheets_auth(T)
 url <- "googlehseet_url"

@@ -16,9 +16,6 @@ bookdown::gitbook:
       size: 2
     search: yes
     info: no
-    edit:
-      link: https://github.com/Flavjack/rticles/blob/master/%s
-      text: "Edit"
     download: 
       - ["rticles.docx", "word"]
       - ["files.zip", "files"]

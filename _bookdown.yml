@@ -1,4 +1,7 @@
 book_filename: "rticles"
+view: https://github.com/flavjack/rticles/blob/master/%s
+favicon: cnfg/icons/favicon.png
+clean: ["docs", "libs", "_book", "rticles.Rmd"]
 output_dir: docs
 delete_merged_file: TRUE
 rmd_files: ["index.Rmd"]
@@ -23,4 +26,3 @@ language:
     edit: Edit
     chapter_name: ''
     appendix_name: ''
-
