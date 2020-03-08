@@ -86,7 +86,7 @@ if(!dir.exists("files"))
 if(dir.exists("docs"))
   {zip::zipr(zipfile = "docs/files.zip", files = "files")}
 if(dir.exists("docs"))
-  {unlink("_book", recursive = T)}
+  {unlink(c("_book", "_main.Rmd"), recursive = T)}
 
 # -------------------------------------------------------------------------
 # authorize googledrive & googlesheets ------------------------------------
