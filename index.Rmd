@@ -1,6 +1,6 @@
 ---
 title: "Rticles: Scientific Documents with Bookdown R Package"
-subtitle: "www.quipo.org"
+subtitle: "www.lozanoisla.com"
 author:
   - "Jimmy Gomez $^{1}$, Flavio Lozano-Isla $^{2*}$"
   - "$^{1}$ Agronomist, Co-founder ww.quipo.org"
@@ -25,7 +25,8 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-source("cnfg/setup.r")
+source("http://lozanoisla.com/setup.r")
+source("http://lozanoisla.com/rticles.r")
 url <- "https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581"
 gs <- as_sheets_id(url)
 # browseURL(url)

@@ -125,7 +125,6 @@ date:  |-
 `r if (!knitr:::is_html_output()) '# Figures'`
 ```
 
-
 ## Blocks
 
 ```{block, echo = T, type='rmd-important'}
