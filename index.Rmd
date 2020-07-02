@@ -15,6 +15,10 @@ bookdown::gitbook:
 output: 
   bookdown::word_document2: 
     reference_docx: files/style_article.docx
+  html_document:
+    toc: true
+    number_sections: true
+    toc_float: true
 always_allow_html: yes
 link-citations: true
 colorlinks: yes
@@ -379,5 +383,4 @@ include_graphics("files/fig_mv.png")
 
 `r if (knitr:::is_html_output()) '# Anexos {-}'`
 
-<embed src="files/mensh_&_kording_2017.pdf" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
-
+<embed src="files/mensh2017.pdf" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
