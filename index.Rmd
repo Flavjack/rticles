@@ -5,7 +5,7 @@ author:
   - "Jimmy Gomez $^{1}$, Flavio Lozano-Isla $^{2*}$"
   - "$^{1}$ Agronomist, Co-founder ww.quipo.org"
   - "$^{2}$ Agronomist MSc, email: flavjack@gmail.com"
-date: "`r if (knitr:::is_html_output()) format(Sys.time(), '%d %b %Y %X')`"
+date: "`r if (knitr:::is_html_output()) format(Sys.time(), '%Y-%m-%d  %H:%M')`"
 description: document template for scientific report
 favicon: files/logo.png
 github-repo: flavjack/rticles
@@ -15,10 +15,10 @@ bookdown::gitbook:
 output: 
   bookdown::word_document2: 
     reference_docx: files/style_article.docx
-  html_document:
-    toc: true
-    number_sections: true
-    toc_float: true
+  bookdown::html_document2:
+    toc: yes
+    number_sections: yes
+    toc_float: yes
 always_allow_html: yes
 link-citations: true
 colorlinks: yes
@@ -116,7 +116,7 @@ mc <- ger_testcomp(aov = av, comp = c("temp", "nacl"), type = "snk")
 
 ##  Class aptent taciti
 
-Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Figure: \@ref(fig:germplot). 
+Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices (Figure: \@ref(fig:germplot)). 
 
 # Discussion
 
@@ -383,4 +383,10 @@ include_graphics("files/fig_mv.png")
 
 `r if (knitr:::is_html_output()) '# Anexos {-}'`
 
-<embed src="files/mensh2017.pdf" width="100%" height="600" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+```{r}
+download.file(
+  url = "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005619&type=printable"
+  , destfile = "files/anexo.pdf", mode = "wb")
+```
+
+<embed src="files/anexo.pdf" height="600" width="100%" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
