@@ -7,18 +7,18 @@ author:
   - "$^{2}$ Agronomist MSc, email: flavjack@gmail.com"
 date: "`r if (knitr:::is_html_output()) format(Sys.time(), '%d %b %Y %X')`"
 description: document template for scientific report
+favicon: cnfg/icons/libro.png
 github-repo: flavjack/rticles
-favicon: cnfg/icons/favicon.png
 site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
 output: 
   bookdown::word_document2: 
-    reference_docx: cnfg/style_article.docx
+    reference_docx: files/style_article.docx
 always_allow_html: yes
 link-citations: true
 colorlinks: yes
-bibliography: [cnfg/book.bib, cnfg/pkgs.bib]
+bibliography: [files/book.bib, files/pkgs.bib]
 csl: https://www.zotero.org/styles/apa
 editor_options: 
   chunk_output_type: console
@@ -146,7 +146,7 @@ Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincid
 ```{r functions}
 
 gs %>% 
-  sheets_read("prosopis") %>% 
+  range_read("prosopis") %>% 
   select(rep:D5) %>% 
   head(10) %>% 
   kable(caption = "Germination dataset import from a googlesheet")
@@ -172,17 +172,17 @@ fb %>%
 
 ```{r germplot, fig.align='center', fig.cap= '(ref:gerplot)'}
 
-## Puntual analysis
+## Punctual analysis
 
 # germination analysis
 
 gsm <- ger_summary(SeedN = "seeds", evalName = "d", data = fb)
 
-# analisys of variance
+# analysis of variance
 
 av <- aov(formula = GRP ~ nacl*temp + rep, data = gsm)
 
-# mean comparision test
+# mean comparison test
 
 mc <- ger_testcomp(aov = av, comp = c("temp", "nacl"), type = "snk")
 
