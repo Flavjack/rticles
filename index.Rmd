@@ -7,7 +7,7 @@ author:
   - "$^{2}$ Agronomist MSc, email: flavjack@gmail.com"
 date: "`r if (knitr:::is_html_output()) format(Sys.time(), '%d %b %Y %X')`"
 description: document template for scientific report
-favicon: cnfg/icons/libro.png
+favicon: files/logo.png
 github-repo: flavjack/rticles
 site: bookdown::bookdown_site
 documentclass: book
@@ -234,6 +234,10 @@ include_graphics("files/fig_gerplot.png")
 \newpage
 
 ```{r, fig.align='center', fig.cap= "Plant of *Jatropha curcas*. A) Foliage, B) Leaf, C) Fruit."}
+
+download.file(
+  url = "https://raw.githubusercontent.com/Flavjack/rticles/master/files/fig_jc.jpg"
+  , destfile = "files/fig_jc.jpg", mode = "wb")
 
 fg <- jpeg::readJPEG("files/fig_jc.jpg") %>% 
   grid::rasterGrob(interpolate = TRUE)
