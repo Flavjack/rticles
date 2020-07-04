@@ -14,7 +14,7 @@ documentclass: book
 bookdown::gitbook:
 output: 
   bookdown::word_document2: 
-    reference_docx: files/style_article.docx
+    reference_docx: files/style_rticles.docx
   bookdown::html_document2:
     toc: yes
     number_sections: yes
