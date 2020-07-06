@@ -153,7 +153,7 @@ gs %>%
   range_read("prosopis") %>% 
   select(rep:D5) %>% 
   head(10) %>% 
-  kable(caption = "Germination dataset import from a googlesheet")
+  inti::include_table(caption = "Germination dataset import from a googlesheet")
 
 ```
 
