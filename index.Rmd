@@ -79,7 +79,7 @@ The data set used for this analysis is available in the following link: [DATA SE
 
 ## Nulla metus metus
 
-Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table \@ref(tab:functions)).
+Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table \@ref(tab:germin)).
 
 # Results
 
@@ -89,7 +89,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
 
 Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. 
 
-```{r include_code, echo=TRUE, eval=FALSE}
+```{r code, echo=TRUE, eval=FALSE}
 
 # load data
 
@@ -116,11 +116,11 @@ mc <- ger_testcomp(aov = av, comp = c("temp", "nacl"), type = "snk")
 
 ##  Class aptent taciti
 
-Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices (Figure: \@ref(fig:germplot)). 
+Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices (Figure: \@ref(fig:jc)). 
 
 # Discussion
 
-Curabitur tortor @leon2018Nitrogen and @dixit2015Adaptacion, Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table \@ref(tab:functions)).
+Curabitur tortor @leon2018Nitrogen and @dixit2015Adaptacion, Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Figure \@ref(fig:germplot)).
 
 Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor [@blum2005Drought]. 
 
@@ -147,19 +147,23 @@ Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincid
 
 `r if (knitr:::is_html_output()) '# Tables {-}'`
 
-```{r functions}
+```{r germin}
 
 gs %>% 
   range_read("prosopis") %>% 
   select(rep:D5) %>% 
   head(10) %>% 
-  inti::include_table(caption = "Germination dataset import from a googlesheet")
+  inti::include_table(
+    caption = "Germination dataset import from a googlesheet"
+    , notes = "@leon2018Nitrogen"
+    , label = "__Source:__"
+    )
 
 ```
 
 \newpage
 
-```{r}
+```{r webtab}
 
 fb %>% 
   web_table("Germination dataset to download in html")
@@ -172,9 +176,7 @@ fb %>%
 
 `r if (knitr:::is_html_output()) '# Figures {-}'`
 
-(ref:gerplot) Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. A) Bar graph with germination percentage in a factorial analisys. B)  Line graph from cumulative germination under different osmotic potentials.
-
-```{r germplot, fig.align='center', fig.cap= '(ref:gerplot)'}
+```{r germplot, fig.cap= fig$caption}
 
 ## Punctual analysis
 
@@ -231,17 +233,24 @@ save_plot("files/fig_gerplot.png",
           base_aspect_ratio = 2.5, 
           units = "mm")
 
-include_graphics("files/fig_gerplot.png")
+fig <- include_figure(
+  figure = "files/fig_gerplot.png"
+  , caption = "Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures."
+  , notes = " A) Bar graph with germination percentage in a factorial analisys. B)  Line graph from cumulative germination under different osmotic potentials."
+  , label = "__Where:__"
+  )
 
+fig$figure
 ```
 
 \newpage
 
-```{r, fig.align='center', fig.cap= "Plant of *Jatropha curcas*. A) Foliage, B) Leaf, C) Fruit."}
+```{r jc, fig.cap= fig$caption}
 
-download.file(
-  url = "https://raw.githubusercontent.com/Flavjack/rticles/master/files/fig_jc.jpg"
-  , destfile = "files/fig_jc.jpg", mode = "wb")
+if (!file.exists("files/fig_jc.jpg")){
+  download.file(
+  url = "https://raw.githubusercontent.com/Flavjack/rticles/master/files/fig_jc.jpg", destfile = "files/fig_jc.jpg", mode = "wb")
+}
 
 fg <- jpeg::readJPEG("files/fig_jc.jpg") %>% 
   grid::rasterGrob(interpolate = TRUE)
@@ -259,15 +268,19 @@ save_plot("files/fig_jcurcas.png",
           base_aspect_ratio = 1.2, 
           units = "mm")
 
-include_graphics("files/fig_jcurcas.png")
+fig <- include_figure(
+  figure = "files/fig_jcurcas.png"
+  , caption = "Plant of *Jatropha curcas*. A) Foliage, B) Leaf, C) Fruit."
+  )
 
+fig$figure
 ```
 
 \newpage
 
-```{r, fig.align= 'center', fig.cap= "Multivariate Analysis: Principal component Analysis and Hierarchical Clustering Analysis."}
+```{r mv, fig.cap= fig$caption}
 
-# Principal componet Analysis
+# Principal component Analysis
 
 pca <- gsm %>% 
   drop_na() %>% 
@@ -278,7 +291,6 @@ pca <- gsm %>%
       scale.unit = T,
       graph = F,
       quali.sup = c(1,2))
-
 
 # sink("files/pca.txt")
 # # Results
@@ -317,7 +329,6 @@ plot.PCA(pca,
 
 graphics.off()
 
-
 # Hierarchical Clustering Analysis
 
 clt <- pca %>% 
@@ -337,14 +348,12 @@ plot.HCPC(x = clt,
 
 graphics.off()
 
-
 ppi <- 300
 png("files/fig_cluster_map.png", width=7*ppi, height=7*ppi, res=ppi)
 
 plot.HCPC(x = clt, choice = "map")
 
 graphics.off()
-
 
 fg_01 <- png::readPNG("files/fig_pca_var.png") %>% 
   grid::rasterGrob(interpolate = TRUE)
@@ -375,18 +384,23 @@ save_plot("files/fig_mv.png",
           base_aspect_ratio = 1.2, 
           units = "mm")
 
-include_graphics("files/fig_mv.png")
+fig <- include_figure(
+  figure = "files/fig_mv.png"
+  , caption = "Multivariate Analysis: Principal component Analysis and Hierarchical Clustering Analysis."
+  )
 
+fig$figure
 ```
 
 <!-- Anexos -->
 
 `r if (knitr:::is_html_output()) '# Anexos {-}'`
 
-```{r}
+```{r anx}
+if (!file.exists("files/anexo.pdf")){
 download.file(
-  url = "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005619&type=printable"
-  , destfile = "files/anexo.pdf", mode = "wb")
+  url = "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005619&type=printable", destfile = "files/anexo.pdf", mode = "wb")
+  }
 ```
 
 <embed src="files/anexo.pdf" height="600" width="100%" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
