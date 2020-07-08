@@ -402,3 +402,7 @@ download.file(
 ```
 
 <embed src="files/anexo.pdf" height="600" width="100%" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+
+
+```{r appendices, child = 'anexo.Rmd', eval = FALSE}
+```
