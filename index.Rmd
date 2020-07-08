@@ -30,7 +30,6 @@ editor_options:
 
 ```{r setup, include=FALSE}
 source("http://lozanoisla.com/setup.r")
-source("http://lozanoisla.com/rticles.r")
 url <- "https://docs.google.com/spreadsheets/d/1QziIXGOwb8cl3GaARJq6Ez6aU7vND_UHKJnFcAKx0VI/edit#gid=137089581"
 gs <- as_sheets_id(url)
 # browseURL(url)
@@ -132,14 +131,13 @@ Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
 
 Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. 
 
-<!-- References -->
-
-`r if (knitr::is_html_output()){'
-# References 
-<div id="refs"></div>'}`
-`r if (!knitr::is_html_output()){'
 # References
-<div id="refs"></div>'}`
+
+<div id="refs"></div>
+
+```{r references}
+if(!file.exists("files/pkgs.bib")){write_bib(c(.packages()),'files/pkgs.bib')}
+```
 
 <!-- Tables -->
 
