@@ -3,7 +3,7 @@
 # -------------------------------------------------------------------------
 #> author .: Flavio Lozano Isla
 #> web    .: https://lozanoisla.com
-#> date   .: 2016-07-08
+#> date   .: 2016-07-09
 # -------------------------------------------------------------------------
 # -------------------------------------------------------------------------
 # -------------------------------------------------------------------------
@@ -39,17 +39,13 @@ if (any(installed_cran == FALSE)) {
 
 pkgs_git <- c(
     "inti" # Tools and Statistical Procedures in Plant Science
-  , "inserttable" # Insert table with copy and paste
   , "citr"  # Use zotero for citations
-  , "shinysky" # shiny app complement
   )
 
 installed_git <- pkgs_git %in% rownames(installed.packages())
 if (any(installed_git == FALSE)) {
   devtools::install_github("Flavjack/inti", upgrade = "always") 
-  devtools::install_github("lbusett/insert_table", upgrade = "always") 
   devtools::install_github("crsh/citr", upgrade = "always") 
-  devtools::install_github("AnalytixWare/ShinySky", upgrade = "always")
   } 
 
 invisible(lapply(c(pkgs_cran, pkgs_git), library, character.only = TRUE))
