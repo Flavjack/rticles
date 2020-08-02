@@ -34,6 +34,7 @@
   <link rel="shortcut icon" href="files/logo.png" type="image/x-icon" />
 <link rel="prev" href="index.html"/>
 <link rel="next" href="materials-and-methods.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -72,18 +73,17 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -103,7 +103,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -154,11 +154,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
+<li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#data-set"><i class="fa fa-check"></i><b>2.1</b> Data set</a></li>
 <li class="chapter" data-level="2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#nulla-metus-metus"><i class="fa fa-check"></i><b>2.2</b> Nulla metus metus</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#sed-convallis-tristique-sem"><i class="fa fa-check"></i><b>3.1</b> Sed convallis tristique sem</a></li>
 <li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#class-aptent-taciti"><i class="fa fa-check"></i><b>3.2</b> Class aptent taciti</a></li>
 </ul></li>
@@ -189,10 +191,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
+<div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
-<p>Lorem ipsum <span class="citation">Lozano-Isla et al. (<a href="references.html#ref-lozano-isla2018Effects" role="doc-biblioref">2018</a>)</span> dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc <span class="citation">(Maluszynski et al., <a href="references.html#ref-maluszynski2009Methodologies" role="doc-biblioref">2009</a>; Pompelli et al., <a href="references.html#ref-pompelliAllometricModelsNondestructive2012" role="doc-biblioref">2012</a>)</span>.</p>
-<p>Curabitur tortor <span class="citation">(Avenot et al., <a href="references.html#ref-avenot2009Characterizationa" role="doc-biblioref">2009</a>; Zárate &amp; Gianina, <a href="references.html#ref-zarate2017Respuesta" role="doc-biblioref">2017</a>)</span> Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrice. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.</p>
+<p>Lorem ipsum <span class="citation">(Abbai et al., <a href="#ref-abbai2019" role="doc-biblioref">2019</a>)</span> dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc <span class="citation">(Bergström et al., <a href="#ref-bergström2020" role="doc-biblioref">2020</a>; Bhatt et al., <a href="#ref-bhatt2019" role="doc-biblioref">2019</a>)</span>.</p>
+<p>Curabitur tortor <span class="citation">(Donald &amp; Hamblin, <a href="#ref-donald1976" role="doc-biblioref">1976</a>)</span> Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrice. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.</p>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-abbai2019">
+<p>Abbai, R., Singh, V. K., Nachimuthu, V. V., Sinha, P., Selvaraj, R., Vipparla, A. K., Singh, A. K., Singh, U. M., Varshney, R. K., &amp; Kumar, A. (2019). Haplotype analysis of key genes governing grain yield and quality traits across 3K rg panel reveals scope for the development of tailor-made rice with enhanced genetic gains. <em>Plant Biotechnology Journal</em>, <em>17</em>(8), 1612–1622. <a href="https://doi.org/10.1111/pbi.13087">https://doi.org/10.1111/pbi.13087</a></p>
+</div>
+<div id="ref-bergström2020">
+<p>Bergström, A., McCarthy, S. A., Hui, R., Almarri, M. A., Ayub, Q., Danecek, P., Chen, Y., Felkel, S., Hallast, P., Kamm, J., &amp; al. (2020). Insights into human genetic variation and population history from 929 diverse genomes. <em>Science</em>, <em>367</em>(6484). <a href="https://doi.org/10.1126/science.aay5012">https://doi.org/10.1126/science.aay5012</a></p>
+</div>
+<div id="ref-bhatt2019">
+<p>Bhatt, A., Bhat, N. R., Lozano-Isla, F., Gallacher, D., Santo, A., Batista-Silva, W., Fernandes, D., &amp; Pompelli, M. F. (2019). Germination asynchrony is increased by dual seed bank presence in two desert perennial halophytes. <em>Botany</em>, <em>97</em>(11), 639–649. <a href="https://doi.org/10.1139/cjb-2019-0071">https://doi.org/10.1139/cjb-2019-0071</a></p>
+</div>
+<div id="ref-donald1976">
+<p>Donald, C. M., &amp; Hamblin, J. (1976). The biological yield and harvest index of cereals as agronomic and plant breeding criteria. In N. C. Brady (Ed.), <em>Advances in agronomy</em> (Vol. 28, pp. 361–405). Academic Press. <a href="http://www.sciencedirect.com/science/article/pii/S0065211308605593">http://www.sciencedirect.com/science/article/pii/S0065211308605593</a></p>
+</div>
 </div>
             </section>
 
