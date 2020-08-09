@@ -55,7 +55,7 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.14/datatables.js"></script>
+<script src="libs/datatables-binding-0.15/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -202,7 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-3"><a href="results.html#cb1-3"></a><span class="kw">library</span>(GerminaR) </span>
 <span id="cb1-4"><a href="results.html#cb1-4"></a></span>
 <span id="cb1-5"><a href="results.html#cb1-5"></a>fb &lt;-<span class="st"> </span>prosopis <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1-6"><a href="results.html#cb1-6"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate_at</span>(<span class="kw">vars</span>(rep, nacl, temp), as.character)</span>
+<span id="cb1-6"><a href="results.html#cb1-6"></a><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="kw">across</span>(<span class="kw">c</span>(rep, nacl, temp),  <span class="op">~</span><span class="st"> </span><span class="kw">as.character</span>(.)))</span>
 <span id="cb1-7"><a href="results.html#cb1-7"></a></span>
 <span id="cb1-8"><a href="results.html#cb1-8"></a><span class="co"># germination analysis</span></span>
 <span id="cb1-9"><a href="results.html#cb1-9"></a></span>
@@ -211,7 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-12"><a href="results.html#cb1-12"></a></span>
 <span id="cb1-13"><a href="results.html#cb1-13"></a><span class="co"># analisys of variance</span></span>
 <span id="cb1-14"><a href="results.html#cb1-14"></a></span>
-<span id="cb1-15"><a href="results.html#cb1-15"></a>av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">formula =</span> GRP <span class="op">~</span><span class="st"> </span>nacl<span class="op">*</span>temp <span class="op">+</span><span class="st"> </span>rep, <span class="dt">data =</span> gsm)</span>
+<span id="cb1-15"><a href="results.html#cb1-15"></a>av &lt;-<span class="st"> </span><span class="kw">aov</span>(<span class="dt">formula =</span> grp <span class="op">~</span><span class="st"> </span>nacl<span class="op">*</span>temp <span class="op">+</span><span class="st"> </span>rep, <span class="dt">data =</span> gsm)</span>
 <span id="cb1-16"><a href="results.html#cb1-16"></a><span class="kw">summary</span>(av)</span>
 <span id="cb1-17"><a href="results.html#cb1-17"></a></span>
 <span id="cb1-18"><a href="results.html#cb1-18"></a><span class="co"># mean comparision test</span></span>

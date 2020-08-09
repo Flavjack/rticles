@@ -16,12 +16,13 @@ output:
   bookdown::word_document2: 
     reference_docx: files/style_rticles.docx
   bookdown::html_document2:
-    toc: yes
-    number_sections: yes
-    toc_float: yes
-always_allow_html: yes
+    theme: united # sandstone
+    toc: true
+    number_sections: true
+    toc_float: true
+always_allow_html: true
 link-citations: true
-colorlinks: yes
+colorlinks: true
 bibliography: [files/book.bib, files/pkgs.bib]
 zotero: true
 csl: https://www.zotero.org/styles/apa
@@ -41,7 +42,8 @@ fb <- xl %>%
   readxl::read_excel("prosopis")  %>% 
   rename_with(tolower) %>% 
   mutate(across(c("rep", "nacl", "temp"), as.factor )) %>% 
-  mutate(across(where(is.factor), ~gsub("\\s+|\\.", "_", .) )) 
+  mutate(across(where(is.factor), ~gsub("\\s+|\\.", "_", .) )) %>% 
+  as.data.frame()
 # str(fb)
 ```
 
@@ -94,7 +96,7 @@ Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor
 library(GerminaR) 
 
 fb <- prosopis %>% 
-  dplyr::mutate_at(vars(rep, nacl, temp), as.character)
+  dplyr::mutate(across(c(rep, nacl, temp),  ~ as.character(.)))
 
 # germination analysis
 
@@ -103,7 +105,7 @@ str(gsm)
 
 # analisys of variance
 
-av <- aov(formula = GRP ~ nacl*temp + rep, data = gsm)
+av <- aov(formula = grp ~ nacl*temp + rep, data = gsm)
 summary(av)
 
 # mean comparision test
@@ -184,7 +186,7 @@ gsm <- ger_summary(SeedN = "seeds", evalName = "d", data = fb)
 
 # analysis of variance
 
-av <- aov(formula = GRP ~ nacl*temp + rep, data = gsm)
+av <- aov(formula = grp ~ nacl*temp + rep, data = gsm)
 
 # mean comparison test
 
@@ -192,14 +194,15 @@ mc <- ger_testcomp(aov = av, comp = c("temp", "nacl"), type = "snk")
 
 # line or bar graphics
 
-gbp <- mc %>% 
-  plot_gr(type = "bar", 
-          x = "temp", x_lab = "Temperature (ºC)",
-          y = "mean", y_lab = "Germination ('%')",
-          group = "nacl", g_lab = "NaCl (Mpa)", 
-          y_lmt = c(0,120), y_brk = 10,
-          sig = "sg", erb = T,
-          color = F)
+gbp <- mc$table %>% 
+  fplot(type = "bar", 
+        x = "temp", xlab = "Temperature (ºC)",
+        y = "grp", ylab = "Germination ('%')",
+        groups = "nacl", glab = "NaCl (Mpa)", 
+        limits = c(0,150), brakes = 10,
+        sig = "sig", error = "std",
+        color = F
+        )
 
 ## Intime analysis
 
@@ -210,11 +213,11 @@ git <- ger_intime(Factor = "nacl", SeedN = "seeds", evalName = "d", method = "pe
 # graphic germination in time
 
 ggt <- git %>% 
-  plot_gr(type = "line", 
-          x = "evaluation", x_lab = "Day",
-          y = "mean", y_lab = "Germination ('%')",
-          group = "nacl", g_lab = "NaCl (Mpa)", 
-          y_lmt = c(0,120), y_brk = 10,
+  fplot(type = "line", 
+          x = "evaluation", xlab = "Day",
+          y = "mean", ylab = "Germination ('%')",
+          groups = "nacl", glab = "NaCl (Mpa)", 
+          limits = c(0,120), brakes = 10,
           color = F)
 
 ## Plot figures
@@ -283,7 +286,7 @@ fig$figure
 pca <- gsm %>% 
   drop_na() %>% 
   # select_if(., is.numeric) %>% 
-  select(nacl, temp, GRP, MGT, UNC, SYN) %>% 
+  select(nacl, temp, grp, mgt, unc, syn) %>% 
   
   PCA(X = ., 
       scale.unit = T,
