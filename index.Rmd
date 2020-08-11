@@ -16,15 +16,14 @@ output:
   bookdown::word_document2: 
     reference_docx: files/style_rticles.docx
   bookdown::html_document2:
-    theme: united # sandstone
     toc: true
     number_sections: true
     toc_float: true
 always_allow_html: true
 link-citations: true
 colorlinks: true
-bibliography: [files/book.bib, files/pkgs.bib]
 zotero: true
+bibliography: [files/book.bib, files/pkgs.bib]
 csl: https://www.zotero.org/styles/apa
 ---
 
