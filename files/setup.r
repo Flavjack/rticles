@@ -3,7 +3,7 @@
 # -------------------------------------------------------------------------
 #> author .: Flavio Lozano Isla
 #> web    .: https://lozanoisla.com
-#> date   .: 2016-07-09
+#> date   .: 2020-09-27
 # -------------------------------------------------------------------------
 # -------------------------------------------------------------------------
 # -------------------------------------------------------------------------
@@ -27,29 +27,30 @@ pkgs_cran <- c(
   , "grid" # For merge figures 
   , "png" # Import png files
   , "jpeg" # Import jpg files
-  , "emmeans" # Estimated Marginal Means
-  , "lme4" # Linear Mixed-Effects Models (LMM)
-  , "lmerTest" # Tests in Linear Mixed Effects Models
   )
-
-installed_cran <- pkgs_cran %in% rownames(installed.packages())
-if (any(installed_cran == FALSE)) {
-  install.packages(pkgs_cran[!installed_cran])
-} 
 
 pkgs_git <- c(
     "inti" # Tools and Statistical Procedures in Plant Science
   , "citr"  # Use zotero for citations
   )
 
-installed_git <- pkgs_git %in% rownames(installed.packages())
-if (any(installed_git == FALSE)) {
-  devtools::install_github("Flavjack/inti", upgrade = "always") 
-  devtools::install_github("crsh/citr", upgrade = "always") 
-  } 
+# installed_cran <- pkgs_cran %in% rownames(installed.packages())
+# if (any(installed_cran == FALSE)) {
+#   install.packages(pkgs_cran[!installed_cran])
+# }
+
+# installed_git <- pkgs_git %in% rownames(installed.packages())
+# if (any(installed_git == FALSE)) {
+#   devtools::install_github("Flavjack/inti", upgrade = "always") 
+#   devtools::install_github("crsh/citr", upgrade = "always") 
+#   } 
 
 invisible(lapply(c(pkgs_cran, pkgs_git), library, character.only = TRUE))
-rm(pkgs_cran, installed_cran, pkgs_git, installed_git)
+rm(pkgs_cran
+   , pkgs_git
+   # , installed_cran
+   # , installed_git
+   )
 
 # -------------------------------------------------------------------------
 # Knitr options -----------------------------------------------------------
