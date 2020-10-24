@@ -1,0 +1,15 @@
+tab:germin
+fig:germplot
+fig:jc
+fig:mv
+introduction
+materials-and-methods
+data-set
+nulla-metus-metus
+results
+sed-convallis-tristique-sem
+class-aptent-taciti
+discussion
+conclusions
+acknowledgments
+references

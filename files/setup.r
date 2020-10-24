@@ -1,56 +1,47 @@
-# -------------------------------------------------------------------------
 # Info --------------------------------------------------------------------
 # -------------------------------------------------------------------------
-#> author .: Flavio Lozano Isla
+#> author .: Flavio Lozano-Isla
 #> web    .: https://lozanoisla.com
-#> date   .: 2020-09-27
-# -------------------------------------------------------------------------
+#> date   .: 2020-09-28
 # -------------------------------------------------------------------------
 # -------------------------------------------------------------------------
 
-# -------------------------------------------------------------------------
 # Packages ----------------------------------------------------------------
 # -------------------------------------------------------------------------
 
-pkgs_cran <- c(
-    "devtools" # Developer tools
-  , "bookdown" # Write articles and technical documents
-  , "knitr" # Base for markdown documents
-  , "tidyverse" # Data manipulation
-  , "googlesheets4" # Read/write google sheets docs
-  , "googledrive" # Download/Upload files from googledrive
-  , "agricolae" # Agriculture data analysis and designs
-  , "GerminaR" # Germination analysis
-  , "FactoMineR" # Multivariate data analysis
-  , "heatmaply" # Correlation plot
-  , "cowplot" # Layout for grid figures 
-  , "grid" # For merge figures 
-  , "png" # Import png files
-  , "jpeg" # Import jpg files
+cran <- c("devtools" # Developer tools
+          , "knitr" # Base for markdown documents
+          , "bookdown" # Write articles and technical documents
+          , "tidyverse" # Data manipulation
+          , "googlesheets4" # Read/write google sheets docs
+          , "googledrive" # Download/Upload files from googledrive
+          , "agricolae" # Agriculture data analysis and designs
+          , "GerminaR" # Germination analysis
+          , "FactoMineR" # Multivariate data analysis
+          , "heatmaply" # Correlation plot
+          , "cowplot" # Layout for grid figures 
+          , "grid" # For merge figures 
+          , "png" # Import png files
+          , "jpeg" # Import jpg files
+          )
+
+git <- c(
+  "Flavjack/inti" # Tools and Statistical Procedures in Plant Science
+  , "crsh/citr" # Use zotero for citations
   )
 
-pkgs_git <- c(
-    "inti" # Tools and Statistical Procedures in Plant Science
-  , "citr"  # Use zotero for citations
-  )
+installed <- c(cran, sub(".*/", "", git)) %in% rownames(installed.packages())
 
-# installed_cran <- pkgs_cran %in% rownames(installed.packages())
-# if (any(installed_cran == FALSE)) {
-#   install.packages(pkgs_cran[!installed_cran])
-# }
+if (any(installed == FALSE)) {
+  cran_missing <- cran %in% c(cran, sub(".*/", "", git))[!installed == TRUE]
+  cran_install <- c(cran, sub(".*/", "", git))[cran_missing == TRUE]
+  install.packages( cran_install )
+  }
 
-# installed_git <- pkgs_git %in% rownames(installed.packages())
-# if (any(installed_git == FALSE)) {
-#   devtools::install_github("Flavjack/inti", upgrade = "always") 
-#   devtools::install_github("crsh/citr", upgrade = "always") 
-#   } 
-
-invisible(lapply(c(pkgs_cran, pkgs_git), library, character.only = TRUE))
-rm(pkgs_cran
-   , pkgs_git
-   # , installed_cran
-   # , installed_git
-   )
+invisible(lapply(sub(".*/", "", git), unloadNamespace))
+invisible(lapply(git, devtools::install_github))
+invisible(lapply(c(cran, sub(".*/", "", git)), library, character.only = TRUE))
+rm(cran, git, installed)
 
 # -------------------------------------------------------------------------
 # Knitr options -----------------------------------------------------------
@@ -82,3 +73,4 @@ options(
 
 googlesheets4::gs4_auth(T)
 googledrive::drive_auth(T)
+
