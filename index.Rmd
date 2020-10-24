@@ -13,10 +13,11 @@ site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
 output: 
-  bookdown::word_document2: 
+  bookdown::word_document2:
     reference_docx: files/style_rticles.docx
-    number_sections: false
+    # number_sections: false
   bookdown::html_document2:
+    delete_merged_file: TRUE
     toc: true
     number_sections: true
     toc_float: true
@@ -156,7 +157,7 @@ gs %>%
   inti::info_table(
     caption = "Germination dataset import from a googlesheet"
     , notes = "@schafleitner2007") %>% 
-  inti::include_table(label = "__Source:__")
+  inti::include_table(label = "__*Source:*__")
 ```
 
 \newpage
