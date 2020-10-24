@@ -15,9 +15,8 @@ bookdown::gitbook:
 output: 
   bookdown::word_document2:
     reference_docx: files/style_rticles.docx
-    # number_sections: false
+    number_sections: false
   bookdown::html_document2:
-    delete_merged_file: TRUE
     toc: true
     number_sections: true
     toc_float: true
