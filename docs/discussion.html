@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Discussion | Rticles: Scientific Documents with Bookdown R Package</title>
   <meta name="description" content="document template for scientific report" />
-  <meta name="generator" content="bookdown 0.21.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Discussion | Rticles: Scientific Documents with Bookdown R Package" />
   <meta property="og:type" content="book" />
@@ -34,7 +34,6 @@
   <link rel="shortcut icon" href="files/logo.png" type="image/x-icon" />
 <link rel="prev" href="results.html"/>
 <link rel="next" href="conclusions.html"/>
-<script src="libs/header-attrs-2.5.2/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -75,17 +74,18 @@
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -105,7 +105,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -151,18 +151,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li> <a href="https://www.linkedin.com/in/flavjack/" target="blank"> Flavio Lozano Isla </a> </li>
+<li> <a href="https://inkaverse.com/" target="blank"> Inkaverse Projects </a> </li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a>
-<ul>
+<li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
 <li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#data-set"><i class="fa fa-check"></i><b>2.1</b> Data set</a></li>
 <li class="chapter" data-level="2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#nulla-metus-metus"><i class="fa fa-check"></i><b>2.2</b> Nulla metus metus</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
-<ul>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
 <li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#sed-convallis-tristique-sem"><i class="fa fa-check"></i><b>3.1</b> Sed convallis tristique sem</a></li>
 <li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#class-aptent-taciti"><i class="fa fa-check"></i><b>3.2</b> Class aptent taciti</a></li>
 </ul></li>
@@ -174,7 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="figures.html"><a href="figures.html"><i class="fa fa-check"></i>Figures</a></li>
 <li class="chapter" data-level="" data-path="anexos.html"><a href="anexos.html"><i class="fa fa-check"></i>Anexos</a></li>
 <li class="divider"></li>
-<li> <a href="https://lozanoisla.com/projects/" target="blank"> Projects </a> </li>
+<li> <a href="https://flavjack.shinyapps.io/rticles/" target="blank"> Rticles app </a> </li>
 
 </ul>
 
@@ -193,16 +191,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="discussion" class="section level1" number="4">
+<div id="discussion" class="section level1">
 <h1><span class="header-section-number">4</span> Discussion</h1>
-<p>Curabitur tortor <span class="citation">(Lozano-Isla et al., <a href="#ref-GerminaR2019" role="doc-biblioref">2019</a>)</span>, Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Figure <a href="figures.html#fig:germplot">7.1</a>).</p>
+<p>Curabitur tortor <span class="citation">(Lozano-Isla et al., <a href="references.html#ref-GerminaR2019" role="doc-biblioref">2019</a>)</span>, Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Figure <a href="figures.html#fig:germplot">7.1</a>).</p>
 <p>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor .</p>
-</div>
-<h3>References</h3>
-<div id="refs" class="references hanging-indent">
-<div id="ref-GerminaR2019">
-<p>Lozano-Isla, Flavio, Benites-Alfaro, Omar Eduardo, Pompelli, &amp; Marcelo Francisco. (2019). GerminaR: An R package for germination analysis with the interactive web application “GerminaQuant for R”. <em>Ecological Research</em>, <em>34</em>(2), 339–346. <a href="https://doi.org/10.1111/1440-1703.1275">https://doi.org/10.1111/1440-1703.1275</a></p>
-</div>
 </div>
             </section>
 

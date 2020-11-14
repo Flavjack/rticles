@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Figures | Rticles: Scientific Documents with Bookdown R Package</title>
   <meta name="description" content="document template for scientific report" />
-  <meta name="generator" content="bookdown 0.21.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Figures | Rticles: Scientific Documents with Bookdown R Package" />
   <meta property="og:type" content="book" />
@@ -34,7 +34,6 @@
   <link rel="shortcut icon" href="files/logo.png" type="image/x-icon" />
 <link rel="prev" href="tables.html"/>
 <link rel="next" href="anexos.html"/>
-<script src="libs/header-attrs-2.5.2/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -75,17 +74,18 @@
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -105,7 +105,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -151,18 +151,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li> <a href="https://www.linkedin.com/in/flavjack/" target="blank"> Flavio Lozano Isla </a> </li>
+<li> <a href="https://inkaverse.com/" target="blank"> Inkaverse Projects </a> </li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a>
-<ul>
+<li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
 <li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#data-set"><i class="fa fa-check"></i><b>2.1</b> Data set</a></li>
 <li class="chapter" data-level="2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#nulla-metus-metus"><i class="fa fa-check"></i><b>2.2</b> Nulla metus metus</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
-<ul>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
 <li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#sed-convallis-tristique-sem"><i class="fa fa-check"></i><b>3.1</b> Sed convallis tristique sem</a></li>
 <li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#class-aptent-taciti"><i class="fa fa-check"></i><b>3.2</b> Class aptent taciti</a></li>
 </ul></li>
@@ -174,7 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="figures.html"><a href="figures.html"><i class="fa fa-check"></i>Figures</a></li>
 <li class="chapter" data-level="" data-path="anexos.html"><a href="anexos.html"><i class="fa fa-check"></i>Anexos</a></li>
 <li class="divider"></li>
-<li> <a href="https://lozanoisla.com/projects/" target="blank"> Projects </a> </li>
+<li> <a href="https://flavjack.shinyapps.io/rticles/" target="blank"> Rticles app </a> </li>
 
 </ul>
 
@@ -193,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="figures" class="section level1 unnumbered" number="">
+<div id="figures" class="section level1 unnumbered">
 <h1>Figures</h1>
 <div class="figure" style="text-align: center"><span id="fig:germplot"></span>
 <img src="files/fig_gerplot.png" alt="Germination  experiment with *Prosopis juliflor* under different osmotic potentials and temperatures. __Where:__ A) Bar graph with germination percentage in a factorial analisys. B)  Line graph from cumulative germination under different osmotic potentials." width="98%" />
@@ -203,14 +201,14 @@ Figure 7.1: Germination experiment with <em>Prosopis juliflor</em> under differe
 </div>
 <div style="page-break-after: always;"></div>
 <div class="figure" style="text-align: center"><span id="fig:jc"></span>
-<img src="files/fig_jcurcas.png" alt="Plant of *Jatropha curcas*. A) Foliage, B) Leaf, C) Fruit." width="98%" />
+<img src="files/fig_jcurcas.png" alt="Plant of *Jatropha curcas*.  A) Foliage,  B) Leaf,   C) Fruit." width="98%" />
 <p class="caption">
 Figure 7.2: Plant of <em>Jatropha curcas</em>. A) Foliage, B) Leaf, C) Fruit.
 </p>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="figure" style="text-align: center"><span id="fig:mv"></span>
-<img src="files/fig_mv.png" alt="Multivariate Analysis: Principal component Analysis and Hierarchical Clustering Analysis." width="98%" />
+<img src="files/fig_mv.png" alt="Multivariate Analysis:   Principal component Analysis and Hierarchical Clustering Analysis." width="98%" />
 <p class="caption">
 Figure 7.3: Multivariate Analysis: Principal component Analysis and Hierarchical Clustering Analysis.
 </p>
