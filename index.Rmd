@@ -13,13 +13,13 @@ site: bookdown::bookdown_site
 documentclass: book
 bookdown::gitbook:
 output: 
+  bookdown::word_document2:
+    reference_docx: files/style_rticles.docx
+    number_sections: false
   bookdown::html_document2:
     toc: true
     number_sections: true
     toc_float: true
-  bookdown::word_document2:
-    reference_docx: files/style_rticles.docx
-    number_sections: false
 always_allow_html: true
 link-citations: true
 colorlinks: true
@@ -385,7 +385,7 @@ fig %>% include_figure()
 ```{r anx}
 if (!file.exists("files/anexo.pdf")){
 download.file(
-  url = "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005619&type=printable", destfile = "files/anexo.pdf", mode = "wb")
+  url = "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pcbi.1005619/1/pcbi.1005619.pdf?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wombat-sa%40plos-prod.iam.gserviceaccount.com%2F20201217%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20201217T040315Z&X-Goog-Expires=3600&X-Goog-SignedHeaders=host&X-Goog-Signature=15379833610c8e56f3a59d9eeb3f58357b5eea02831dd671e15188f0d817154be2d10f08618a1017813057dd0e6467b03f472d6893c1830b025f1dcdb842e518dbb94f9cb48f5693d93d697f14ed184ad5b8c6fa4200c3d45e8c087e9667ea7cb5c3290c80cf4cb15f0df4ae54563e81adea4878be4eeb2aceca47abaa2cf00f0201db0ac5b9feb2377a33136aeea556f9076c93bd9ec1e3fe288b5da8249386b4fd5f0caa7c2e4befdf0b28f31f9f2636dbbe6631b879d724c19d933888e0b406c97c1b7373dcd3d633dc1f6f98bd045fe87e0ce261acea253dba350010e485591b5e027a327f1eb712b25a88fa9ade375291907ba4ab1cae99fa81540fb8bb", destfile = "files/anexo.pdf", mode = "wb")
   }
 ```
 
