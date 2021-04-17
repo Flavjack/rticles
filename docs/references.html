@@ -34,7 +34,8 @@
   <link rel="shortcut icon" href="files/logo.png" type="image/x-icon" />
 <link rel="prev" href="acknowledgments.html"/>
 <link rel="next" href="tables.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,12 +52,11 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.18/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -69,23 +69,22 @@
 <script src="libs/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
 <link href="libs/dt-ext-scroller-1.10.20/css/scroller.dataTables.min.css" rel="stylesheet" />
 <script src="libs/dt-ext-scroller-1.10.20/js/dataTables.scroller.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -105,7 +104,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -138,6 +137,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="files/style_rbooks.css" type="text/css" />
 </head>
@@ -157,11 +178,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
+<li class="chapter" data-level="2" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#data-set"><i class="fa fa-check"></i><b>2.1</b> Data set</a></li>
 <li class="chapter" data-level="2.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#nulla-metus-metus"><i class="fa fa-check"></i><b>2.2</b> Nulla metus metus</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#sed-convallis-tristique-sem"><i class="fa fa-check"></i><b>3.1</b> Sed convallis tristique sem</a></li>
 <li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#class-aptent-taciti"><i class="fa fa-check"></i><b>3.2</b> Class aptent taciti</a></li>
 </ul></li>
@@ -192,38 +215,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1">
+<div id="references" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> References</h1>
-<div id="refs">
-<div id="ref-abbai2019">
-<p>Abbai, R., Singh, V. K., Nachimuthu, V. V., Sinha, P., Selvaraj, R., Vipparla, A. K., Singh, A. K., Singh, U. M., Varshney, R. K., &amp; Kumar, A. (2019). Haplotype analysis of key genes governing grain yield and quality traits across 3K rg panel reveals scope for the development of tailor-made rice with enhanced genetic gains. <em>Plant Biotechnology Journal</em>, <em>17</em>(8), 1612–1622. <a href="https://doi.org/10.1111/pbi.13087">https://doi.org/10.1111/pbi.13087</a></p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Abbai, R., Singh, V. K., Nachimuthu, V. V., Sinha, P., Selvaraj, R., Vipparla, A. K., Singh, A. K., Singh, U. M., Varshney, R. K., &amp; Kumar, A. (2019). Haplotype analysis of key genes governing grain yield and quality traits across 3K RG panel reveals scope for the development of tailor-made rice with enhanced genetic gains. <em>Plant Biotechnology Journal</em>, <em>17</em>(8), 1612–1622. <a href="https://doi.org/10.1111/pbi.13087">https://doi.org/10.1111/pbi.13087</a>
 </div>
-<div id="ref-bergström2020">
-<p>Bergström, A., McCarthy, S. A., Hui, R., Almarri, M. A., Ayub, Q., Danecek, P., Chen, Y., Felkel, S., Hallast, P., Kamm, J., &amp; al. (2020). Insights into human genetic variation and population history from 929 diverse genomes. <em>Science</em>, <em>367</em>(6484). <a href="https://doi.org/10.1126/science.aay5012">https://doi.org/10.1126/science.aay5012</a></p>
+<div class="csl-entry">
+Bergström, A., McCarthy, S. A., Hui, R., Almarri, M. A., Ayub, Q., Danecek, P., Chen, Y., Felkel, S., Hallast, P., Kamm, J., &amp; al., et. (2020). Insights into human genetic variation and population history from 929 diverse genomes. <em>Science</em>, <em>367</em>(6484). <a href="https://doi.org/10.1126/science.aay5012">https://doi.org/10.1126/science.aay5012</a>
 </div>
-<div id="ref-bhatt2019">
-<p>Bhatt, A., Bhat, N. R., Lozano-Isla, F., Gallacher, D., Santo, A., Batista-Silva, W., Fernandes, D., &amp; Pompelli, M. F. (2019). Germination asynchrony is increased by dual seed bank presence in two desert perennial halophytes. <em>Botany</em>, <em>97</em>(11), 639–649. <a href="https://doi.org/10.1139/cjb-2019-0071">https://doi.org/10.1139/cjb-2019-0071</a></p>
+<div class="csl-entry">
+Bhatt, A., Bhat, N. R., Lozano-Isla, F., Gallacher, D., Santo, A., Batista-Silva, W., Fernandes, D., &amp; Pompelli, M. F. (2019). Germination asynchrony is increased by dual seed bank presence in two desert perennial halophytes. <em>Botany</em>, <em>97</em>(11), 639–649. <a href="https://doi.org/10.1139/cjb-2019-0071">https://doi.org/10.1139/cjb-2019-0071</a>
 </div>
-<div id="ref-R-agricolae">
-<p>de Mendiburu, F. (2020). <em>Agricolae: Statistical procedures for agricultural research</em>. <a href="https://CRAN.R-project.org/package=agricolae">https://CRAN.R-project.org/package=agricolae</a></p>
+<div class="csl-entry">
+de Mendiburu, F. (2020). <em>Agricolae: Statistical procedures for agricultural research</em>. <a href="https://CRAN.R-project.org/package=agricolae">https://CRAN.R-project.org/package=agricolae</a>
 </div>
-<div id="ref-donald1976">
-<p>Donald, C. M., &amp; Hamblin, J. (1976). The biological yield and harvest index of cereals as agronomic and plant breeding criteria. In N. C. Brady (Ed.), <em>Advances in agronomy</em> (Vol. 28, pp. 361–405). Academic Press. <a href="http://www.sciencedirect.com/science/article/pii/S0065211308605593">http://www.sciencedirect.com/science/article/pii/S0065211308605593</a></p>
+<div class="csl-entry">
+Donald, C. M., &amp; Hamblin, J. (1976). The biological yield and harvest index of cereals as agronomic and plant breeding criteria. In N. C. Brady (Ed.), <em>Advances in agronomy</em> (Vol. 28, pp. 361–405). Academic Press. <a href="http://www.sciencedirect.com/science/article/pii/S0065211308605593">http://www.sciencedirect.com/science/article/pii/S0065211308605593</a>
 </div>
-<div id="ref-R-FactoMineR">
-<p>Husson, F., Josse, J., Le, S., &amp; Mazet, J. (2020). <em>FactoMineR: Multivariate exploratory data analysis and data mining</em>. <a href="https://CRAN.R-project.org/package=FactoMineR">https://CRAN.R-project.org/package=FactoMineR</a></p>
+<div class="csl-entry">
+Husson, F., Josse, J., Le, S., &amp; Mazet, J. (2020). <em>FactoMineR: Multivariate exploratory data analysis and data mining</em>. <a href="https://CRAN.R-project.org/package=FactoMineR">https://CRAN.R-project.org/package=FactoMineR</a>
 </div>
-<div id="ref-R-GerminaR">
-<p>Lozano Isla, F., Benites Alfaro, O., Garcia de Santana, D., Ranal, M. A., &amp; Pompelli, M. F. (2020). <em>GerminaR: Indices and graphics for assess seed germination process</em>. <a href="https://flavjack.github.io/germinaquant/">https://flavjack.github.io/germinaquant/</a></p>
+<div class="csl-entry">
+Lozano Isla, F., Benites Alfaro, O., Garcia de Santana, D., Ranal, M. A., &amp; Pompelli, M. F. (2020). <em>GerminaR: Indices and graphics for assess seed germination process</em>. <a href="https://flavjack.github.io/germinaquant/">https://flavjack.github.io/germinaquant/</a>
 </div>
-<div id="ref-GerminaR2019">
-<p>Lozano-Isla, Flavio, Benites-Alfaro, Omar Eduardo, Pompelli, &amp; Marcelo Francisco. (2019). GerminaR: An R package for germination analysis with the interactive web application “GerminaQuant for R”. <em>Ecological Research</em>, <em>34</em>(2), 339–346. <a href="https://doi.org/10.1111/1440-1703.1275">https://doi.org/10.1111/1440-1703.1275</a></p>
+<div class="csl-entry">
+Lozano-Isla, Flavio, Benites-Alfaro, Omar Eduardo, Pompelli, &amp; Marcelo Francisco. (2019). <span>GerminaR</span>: <span>An R</span> package for germination analysis with the interactive web application <span>“<span>GerminaQuant</span> for <span>R</span>.”</span> <em>Ecological Research</em>, <em>34</em>(2), 339–346. <a href="https://doi.org/10.1111/1440-1703.1275">https://doi.org/10.1111/1440-1703.1275</a>
 </div>
-<div id="ref-R-base">
-<p>R Core Team. (2020). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a></p>
+<div class="csl-entry">
+R Core Team. (2020). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
 </div>
-<div id="ref-schafleitner2007">
-<p>Schafleitner, R., Gutierrez, R., Espino, R., Gaudin, A., Pérez, J., Martínez, M., Domínguez, A., Tincopa, L., Alvarado, C., Numberto, G., &amp; al. (2007). Field screening for variation of drought tolerance in solanum tuberosum l. By agronomical, physiological and genetic analysis. <em>Potato Research</em>, <em>50</em>(1), 71–85. <a href="https://doi.org/10.1007/s11540-007-9030-9">https://doi.org/10.1007/s11540-007-9030-9</a></p>
+<div class="csl-entry">
+Schafleitner, R., Gutierrez, R., Espino, R., Gaudin, A., Pérez, J., Martínez, M., Domínguez, A., Tincopa, L., Alvarado, C., Numberto, G., &amp; al., et. (2007). Field screening for variation of drought tolerance in solanum tuberosum l. By agronomical, physiological and genetic analysis. <em>Potato Research</em>, <em>50</em>(1), 71–85. <a href="https://doi.org/10.1007/s11540-007-9030-9">https://doi.org/10.1007/s11540-007-9030-9</a>
 </div>
 </div>
 <!-- Tables -->
